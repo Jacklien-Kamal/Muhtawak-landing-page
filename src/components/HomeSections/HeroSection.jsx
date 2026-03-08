@@ -50,9 +50,9 @@ export default function HeroSection() {
           cursor: 'pointer',
           transition: 'all 0.3s ease',
           background: role === r
-            ? 'linear-gradient(90deg, #7D4196 0%, #FF3494 100%)'
+            ? 'linear-gradient(to right, #6b003e 33%,#d20b52 66%,#d27252 100%)'
             : 'transparent',
-          color: role === r ? '#fff' : '#7D4196',
+          color: role === r ? '#fff' : '#782551',
           boxShadow: role === r ? '3px 4px 15px rgba(198, 58, 149, 0.35)' : 'none',
         }}
       >

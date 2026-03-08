@@ -199,7 +199,7 @@ label {
 
 .btn {
 	-moz-user-select: none;
-	background: transparent linear-gradient(90deg, #7D4196 0%, #FF3494 100%) 0% 0% no-repeat padding-box;
+	background: transparent linear-gradient(225deg, #6b003e 33%, #d20b52 66%, #d27252) 0% 0% no-repeat padding-box;
     box-shadow: 3px 4px 25px #C63A9580;
 	border: none;
 	border-radius: 50px;
@@ -736,7 +736,7 @@ label {
 	padding-right: 50px;
 }
 .btn.ss-btn {
-	background: transparent linear-gradient(90deg, #7D4196 0%, #FF3494 100%) 0% 0% no-repeat padding-box;
+	background: transparent linear-gradient(225deg, #6b003e 33%, #d20b52 66%, #d27252) 0% 0% no-repeat padding-box;
     box-shadow: 3px 4px 25px #C63A9580;
     color: #fff;
 }
@@ -1082,7 +1082,7 @@ margin-left: 20px;
     border-radius: 50%;
     background-clip: border-box;
     position: relative;
-    background: transparent linear-gradient(90deg, #7D4196 0%, #FF3494 100%) 0% 0% no-repeat padding-box;
+    background: transparent linear-gradient(225deg, #6b003e 33%, #d20b52 66%, #d27252) 0% 0% no-repeat padding-box;
     padding: 1px;
 }
 .second-services-content a span{
@@ -1113,7 +1113,7 @@ margin-left: 20px;
 .s-single-services.active {/*border-color: #ff3494; background:#eeffef;*/}
 .s-single-services.active .services-icon i{color:#fff; background:#ff3494;}
 .s-single-services.active .second-services-content h5{color: #ff3494;}
-.s-single-services.active .second-services-content a{background: transparent linear-gradient(90deg, #7D4196 0%, #FF3494 100%) 0% 0% no-repeat padding-box;box-shadow: 3px 4px 25px #C63A9580;color: #fff;
+.s-single-services.active .second-services-content a{background: transparent linear-gradient(225deg, #6b003e 33%, #d20b52 66%, #d27252) 0% 0% no-repeat padding-box;box-shadow: 3px 4px 25px #C63A9580;color: #fff;
 border: none;}
 
 .services-bg {
@@ -1286,7 +1286,7 @@ top: 3%;
 	padding-right: 50px;
 }
 .choose-btn a{
-  background: transparent linear-gradient(90deg, #7D4196 0%, #FF3494 100%) 0% 0% no-repeat padding-box;
+  background: transparent linear-gradient(225deg, #6b003e 33%, #d20b52 66%, #d27252) 0% 0% no-repeat padding-box;
 box-shadow: 3px 4px 25px #C63A9580;
 border-radius: 10px;
 width: 241px;
@@ -1697,7 +1697,7 @@ margin-bottom: 0;
 	width: 100%;
 	text-align: left;
 	padding-right: 55px;
-    background: transparent linear-gradient(90deg, #7D4196 0%, #FF3494 100%) 0% 0% no-repeat padding-box;
+    background: transparent linear-gradient(225deg, #6b003e 33%, #d20b52 66%, #d27252) 0% 0% no-repeat padding-box;
     border-radius: 10px;
 }
 .card .collapse.show {
@@ -1784,7 +1784,7 @@ margin-right: 20px;
 	font-size: 14px;
 	text-transform: uppercase;
 	color: #fff;
-    background: transparent linear-gradient(90deg, #7D4196 0%, #FF3494 100%) 0% 0% no-repeat padding-box;
+    background: transparent linear-gradient(225deg, #6b003e 33%, #d20b52 66%, #d27252) 0% 0% no-repeat padding-box;
     box-shadow: 3px 4px 15px #D22D4A4D;
     border-radius: 13px;
     padding: 5px 20px;
@@ -1896,7 +1896,7 @@ margin-right: 20px;
 	margin-bottom: 25px;
 }
 .bsingle__content .blog__btn .btn {
-  background: transparent linear-gradient(90deg, #7D4196 0%, #FF3494 100%) 0% 0% no-repeat padding-box;
+  background: transparent linear-gradient(225deg, #6b003e 33%, #d20b52 66%, #d27252) 0% 0% no-repeat padding-box;
 	font-size: 16px;
 	text-transform: uppercase;
 	color: #fff;
@@ -1954,7 +1954,7 @@ margin-right: 20px;
 	right: 0;
 	top: 0;
 	border: none;
-	background: transparent linear-gradient(90deg, #7D4196 0%, #FF3494 100%) 0% 0% no-repeat padding-box;
+	background: transparent linear-gradient(225deg, #6b003e 33%, #d20b52 66%, #d27252) 0% 0% no-repeat padding-box;
 	padding: 18px 23px;
 	color: #ffffff;
 	font-size: 14px;
@@ -1999,7 +1999,7 @@ margin-right: 20px;
 	margin: 0 3px;
 }
 .widget-social a:hover {
-	background: transparent linear-gradient(90deg, #7D4196 0%, #FF3494 100%) 0% 0% no-repeat padding-box;
+	background: transparent linear-gradient(225deg, #6b003e 33%, #d20b52 66%, #d27252) 0% 0% no-repeat padding-box;
 	color: #ffffff;
 	border-color: #fff;
 }
@@ -2060,7 +2060,7 @@ margin-right: 20px;
 	margin: 5px 3px;
 }
 .widget__tag ul li:hover a {
-	background: transparent linear-gradient(90deg, #7D4196 0%, #FF3494 100%) 0% 0% no-repeat padding-box;
+	background: transparent linear-gradient(225deg, #6b003e 33%, #d20b52 66%, #d27252) 0% 0% no-repeat padding-box;
 border-color: #fff;
 color: #ffffff;
 }
@@ -2153,7 +2153,7 @@ color: #ffffff;
   	margin-bottom: 18px;
 }
 .details__content blockquote {
-	background: transparent linear-gradient(90deg, #7D4196 0%, #FF3494 100%) 0% 0% no-repeat padding-box;
+	background: transparent linear-gradient(225deg, #6b003e 33%, #d20b52 66%, #d27252) 0% 0% no-repeat padding-box;
 	padding: 30px 35px;
 	padding-left: 90px;
 	position: relative;
@@ -2218,7 +2218,7 @@ color: #ffffff;
 }
 .post__tag ul li a:hover {
 	border-color: #fff;
-	background: transparent linear-gradient(90deg, #7D4196 0%, #FF3494 100%) 0% 0% no-repeat padding-box;
+	background: transparent linear-gradient(225deg, #6b003e 33%, #d20b52 66%, #d27252) 0% 0% no-repeat padding-box;
 	color: #ffffff;
 }
 .post__share h5 {
@@ -2384,7 +2384,7 @@ color: #ffffff;
 }
 .comment-text .avatar-name .comment-reply:hover {
 	border-color: #fff;
-	background: transparent linear-gradient(90deg, #7D4196 0%, #FF3494 100%) 0% 0% no-repeat padding-box;
+	background: transparent linear-gradient(225deg, #6b003e 33%, #d20b52 66%, #d27252) 0% 0% no-repeat padding-box;
 	color: #ffffff;
 }
 .comment-text .avatar-name .comment-reply i {
@@ -2567,7 +2567,7 @@ div.single-cta:last-child {
 .pricing-tab .pricing-tab-switcher {
     height: 30px;
     width: 60px;
-    background: transparent linear-gradient(90deg, #7D4196 0%, #FF3494 100%) 0% 0% no-repeat padding-box;
+    background: transparent linear-gradient(225deg, #6b003e 33%, #d20b52 66%, #d27252) 0% 0% no-repeat padding-box;
     display: inline-block;
     border-radius: 50px;
     position: relative;
@@ -2634,7 +2634,7 @@ width: 100%;
     left: 0;
 }
 .poppuler .btn {
-   background: transparent linear-gradient(90deg, #7D4196 0%, #FF3494 100%) 0% 0% no-repeat padding-box;
+   background: transparent linear-gradient(225deg, #6b003e 33%, #d20b52 66%, #d27252) 0% 0% no-repeat padding-box;
 color: #fff;
 border-color: #fff;
 padding: 10px 28px;
@@ -2712,7 +2712,7 @@ margin-top: 15px;
 }
 .pricing-btn .btn {
     color: #fff;
-    background: transparent linear-gradient(90deg, #7D4196 0%, #FF3494 100%) 0% 0% no-repeat padding-box;
+    background: transparent linear-gradient(225deg, #6b003e 33%, #d20b52 66%, #d27252) 0% 0% no-repeat padding-box;
     text-transform: uppercase;
     box-shadow: 3px 4px 25px #C63A9580;
     padding: 15px 35px;
@@ -2726,7 +2726,7 @@ margin-top: 15px;
     width: 100%;
 }
 .pricing-box.active .price-count h2{color: #fff;}
-.pricing-box.active .pricing-btn .btn {background: transparent linear-gradient(90deg, #7D4196 0%, #FF3494 100%) 0% 0% no-repeat padding-box;color: #fff;border-color: #fff;}
+.pricing-box.active .pricing-btn .btn {background: transparent linear-gradient(225deg, #6b003e 33%, #d20b52 66%, #d27252) 0% 0% no-repeat padding-box;color: #fff;border-color: #fff;}
 /* 19. contact */
 .contact-area {
 	background-repeat: no-repeat;
@@ -2849,7 +2849,7 @@ margin-top: 15px;
 }
 /* 20. footer */
 .footer-bg {
-	background:  transparent linear-gradient(90deg, #7D4196 0%, #FF3494 100%) 0% 0% no-repeat padding-box;;
+	background:  transparent linear-gradient(225deg, #6b003e 33%, #d20b52 66%, #d27252) 0% 0% no-repeat padding-box;;
 }
 .f-cta-area.gray-bg {
 	background: #f4f4fe;
