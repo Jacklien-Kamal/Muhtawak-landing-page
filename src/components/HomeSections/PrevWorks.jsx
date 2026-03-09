@@ -1,211 +1,145 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react';
+import { useI18n } from '../../hooks/i18nContext';
 
 const VIDEOS = [
-    'https://muhtawak-app-space.sgp1.digitaloceanspaces.com/videos/1755652162478/playlist.m3u8',
+  'https://muhtawak-app-space.sgp1.digitaloceanspaces.com/videos/1755652162478/playlist.m3u8',
   'https://muhtawak-app-space.sgp1.digitaloceanspaces.com/videos/1759474253124/playlist.m3u8https://muhtawak-app-space.sgp1.digitaloceanspaces.com/videos/1758829503811/playlist.m3u8',
   'https://muhtawak-app-space.sgp1.digitaloceanspaces.com/videos/1751471713313/playlist.m3u8',
   'https://muhtawak-app-space.sgp1.digitaloceanspaces.com/videos/1759474253124/playlist.m3u8',
-]
+];
 
 function HlsVideo({ src, style, videoProps }) {
-  const videoRef = useRef(null)
+  const videoRef = useRef(null);
 
   useEffect(() => {
-    let hls
-    const video = videoRef.current
-    if (!video) return
+    let hls;
+    const video = videoRef.current;
+    if (!video) return;
 
     const load = async () => {
       if (video.canPlayType('application/vnd.apple.mpegurl')) {
-        video.src = src
+        video.src = src;
       } else {
-        const Hls = (await import('hls.js')).default
+        const Hls = (await import('hls.js')).default;
         if (Hls.isSupported()) {
-          hls = new Hls({ autoStartLoad: true })
-          hls.loadSource(src)
-          hls.attachMedia(video)
+          hls = new Hls({ autoStartLoad: true });
+          hls.loadSource(src);
+          hls.attachMedia(video);
         }
       }
+      video.addEventListener('canplay', () => { video.playbackRate = 0.5; }, { once: true });
+    };
 
-      // ← Set playback speed here (0.5 = half speed, 0.75 = 75%)
-      video.addEventListener('canplay', () => {
-        video.playbackRate = 0.5
-      }, { once: true })
-    }
+    load();
+    return () => hls?.destroy();
+  }, [src]);
 
-    load()
-    return () => hls?.destroy()
-  }, [src])
-
-  return <video ref={videoRef} style={style} {...videoProps} />
+  return <video ref={videoRef} style={style} {...videoProps} />;
 }
 
+const CONTENT = {
+  en: {
+    tag: '✦ Real Content. Real Creators.',
+    heading: 'See What Our Creators Deliver',
+  },
+  ar: {
+    tag: '✦ محتوى حقيقي. صُنّاع حقيقيون.',
+    heading: 'شاهد ما يقدمه صُنّاع المحتوى لدينا',
+  },
+};
+
 export default function CreatorShowcase() {
-  const [active, setActive] = useState(null)
+  const { locale, isRTL } = useI18n();
+  const [active, setActive] = useState(null);
+
+  const t = CONTENT[locale.lang] ?? CONTENT.en;
 
   const positions = [
-    { top: '8%',  left: '2%',  rotate: '-4deg', scale: 1,    zIndex: active === 0 ? 10 : 2 },
-    { top: '5%',  left: '27%', rotate: '2deg',  scale: 1,    zIndex: active === 1 ? 10 : 2 },
-    { top: '8%',  left: '52%', rotate: '-2deg', scale: 1,    zIndex: active === 2 ? 10 : 2 },
-    { top: '6%',  left: '77%', rotate: '3deg',  scale: 1,    zIndex: active === 3 ? 10 : 2 },
-  ]
+    { top: '8%',  left: '2%',  rotate: '-4deg' },
+    { top: '5%',  left: '27%', rotate: '2deg'  },
+    { top: '8%',  left: '52%', rotate: '-2deg' },
+    { top: '6%',  left: '77%', rotate: '3deg'  },
+  ];
 
   return (
-    <section style={{
-      position: 'relative',
-      overflow: 'hidden',
-      padding: '80px 0 90px',
-      minHeight: '620px',
-    }}>
-      {/* Ambient blobs */}
-      
-
-      {/* Heading */}
-      <div style={{ textAlign: 'center', position: 'relative', zIndex: 5, marginBottom: '50px' }}>
-        <p style={{
-          fontFamily: "'Courier New', monospace",
-          fontSize: '11px', letterSpacing: '4px', textTransform: 'uppercase',
-          color: '#6b003e', marginBottom: '12px', fontWeight: 700,
-        }}>
-          ✦ Real Content. Real Creators.
+    <section
+      className="relative overflow-hidden py-[80px] pb-[90px] min-h-[620px]"
+      dir={isRTL ? 'rtl' : 'ltr'}
+    >
+      {/* ── Heading ── */}
+      <div className="text-center relative z-[5] mb-[50px]">
+        <p
+          className="text-[11px] tracking-[4px] uppercase font-bold mb-3"
+          style={{ fontFamily: "'Courier New', monospace", color: '#6b003e' }}
+        >
+          {t.tag}
         </p>
-        <h2 style={{
-          fontFamily: "'Georgia', serif",
-          fontSize: 'clamp(28px, 4vw, 46px)',
-          fontWeight: 400,
-          color: '#6b003e',
-          margin: 0,
-          letterSpacing: '-0.5px',
-          lineHeight: 1.2,
-        }}>
-          See What Our Creators Deliver
+        <h2
+          className="text-[clamp(28px,4vw,46px)] font-normal m-0 leading-[1.2] tracking-[-0.5px]"
+          style={{ fontFamily: "'Georgia', serif", color: '#6b003e' }}
+        >
+          {t.heading}
         </h2>
-        {/* <div style={{
-          width: '48px', height: '2px',
-          background: 'linear-gradient(90deg, #6b003e, #c0005a)',
-          margin: '20px auto 0',
-          borderRadius: '2px',
-        }} /> */}
       </div>
 
-      {/* Phone cards strip */}
-      <div style={{
-        position: 'relative',
-        height: '420px',
-        maxWidth: '1100px',
-        margin: '0 auto',
-        padding: '0 20px',
-      }}>
+      {/* ── Phone cards ── */}
+      <div className="relative h-[420px] max-w-[1100px] mx-auto px-5">
         {VIDEOS.map((src, i) => {
-          const pos = positions[i]
-          const isActive = active === i
+          const pos      = positions[i];
+          const isActive = active === i;
           return (
             <div
               key={i}
               onClick={() => setActive(i)}
+              className="absolute w-[200px] cursor-pointer rounded-[24px] overflow-hidden"
               style={{
-                position: 'absolute',
                 top: pos.top,
                 left: pos.left,
-                width: '200px',
                 transform: `rotate(${isActive ? '0deg' : pos.rotate}) scale(${isActive ? 1.12 : 0.97})`,
-                transition: 'transform 0.45s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.35s ease, z-index 0s',
-                zIndex: pos.zIndex,
-                cursor: 'pointer',
-                borderRadius: '24px',
-                overflow: 'hidden',
+                transition: 'transform 0.45s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.35s ease',
+                zIndex: isActive ? 10 : 2,
                 boxShadow: isActive
                   ? '0 32px 80px rgba(107,0,62,0.6), 0 0 0 2px rgba(192,0,90,0.5)'
                   : '0 12px 40px rgba(0,0,0,0.5)',
               }}
             >
-              {/* Phone chrome top bar */}
-              <div style={{
-                background: '#111',
-                height: '28px',
-                display: 'flex', alignItems: 'center', justifyContent: 'center',
-                borderBottom: '1px solid #222',
-              }}>
-                <div style={{
-                  width: '50px', height: '6px', borderRadius: '3px',
-                  background: '#2a2a2a',
-                }} />
+              {/* Phone top bar */}
+              <div className="bg-[#111] h-[28px] flex items-center justify-center border-b border-[#222]">
+                <div className="w-[50px] h-[6px] rounded-[3px] bg-[#2a2a2a]" />
               </div>
 
               {/* Video */}
-              <div style={{ position: 'relative', background: '#000' }}>
+              <div className="relative bg-black">
                 <HlsVideo
                   src={src}
                   style={{ width: '100%', height: '340px', objectFit: 'cover', display: 'block' }}
-                  videoProps={{
-                    autoPlay: true,
-                    muted: true,
-                    loop: true,
-                    playsInline: true,
-                  }}
+                  videoProps={{ autoPlay: true, muted: true, loop: true, playsInline: true }}
                 />
-                {/* Gradient overlay */}
-                {/* <div style={{
-                  position: 'absolute', inset: 0,
-                  background: isActive
-                    ? 'linear-gradient(to top, rgba(107,0,62,0.15) 0%, transparent 60%)'
-                    : 'linear-gradient(to top, rgba(0,0,0,0.55) 0%, transparent 50%)',
-                  transition: 'background 0.35s ease',
-                  pointerEvents: 'none',
-                }} /> */}
-
-                {/* Active badge */}
-                {/* {isActive && (
-                  <div style={{
-                    position: 'absolute', top: '10px', right: '10px',
-                    background: '#6b003e', borderRadius: '20px',
-                    padding: '3px 10px',
-                    fontSize: '9px', fontFamily: "'Courier New', monospace",
-                    letterSpacing: '2px', color: '#fff', textTransform: 'uppercase',
-                    fontWeight: 700,
-                  }}>
-                    ● Live
-                  </div>
-                )} */}
               </div>
 
-              {/* Phone chrome bottom bar */}
-              <div style={{
-                background: '#111',
-                height: '28px',
-                display: 'flex', alignItems: 'center', justifyContent: 'center',
-                borderTop: '1px solid #222',
-              }}>
-                <div style={{
-                  width: '32px', height: '32px', borderRadius: '50%',
-                  border: '1.5px solid #2a2a2a',
-                }} />
+              {/* Phone bottom bar */}
+              <div className="bg-[#111] h-[28px] flex items-center justify-center border-t border-[#222]">
+                <div className="w-[32px] h-[32px] rounded-full border-[1.5px] border-[#2a2a2a]" />
               </div>
             </div>
-          )
+          );
         })}
       </div>
 
-      {/* Dot indicators */}
-      <div style={{
-        display: 'flex', justifyContent: 'center', gap: '10px',
-        marginTop: '36px', position: 'relative', zIndex: 5,
-      }}>
+      {/* ── Dot indicators ── */}
+      <div className="flex justify-center gap-[10px] mt-9 relative z-[5]">
         {VIDEOS.map((_, i) => (
           <button
             key={i}
             onClick={() => setActive(i)}
+            className="h-[8px] rounded-[4px] border-none cursor-pointer p-0 transition-all duration-[350ms]"
             style={{
-              width:'8px',
-              height: '8px',
-              borderRadius: '4px',
-              background: active === i ? 'rgba(255,255,255,0.2)' : 'rgba(255,255,255,0.2)',
-              border: 'none', cursor: 'pointer', padding: 0,
-              transition: 'all 0.35s ease',
+              width: active === i ? '24px' : '8px',
+              background: active === i ? '#6b003e' : 'rgba(107,0,62,0.25)',
             }}
           />
         ))}
       </div>
     </section>
-  )
+  );
 }

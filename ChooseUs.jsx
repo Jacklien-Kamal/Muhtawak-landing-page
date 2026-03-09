@@ -27,7 +27,7 @@ const ChooseUs = () => (
       {/* choose-area-end */}
 
       {/* how-app-work */}
-      {/* <HowAppWorkSection /> */}
+      <HowAppWorkSection />
       {/* how-app-work-end */}
 
       {/* video-area */}
@@ -51,9 +51,9 @@ const ChooseUs = () => (
 
       {/* pricing-area-end */}
 
-{/* <CreatorShowcase/> */}
+<CreatorShowcase/>
       {/* testimonial-area */}
-      {/* <Reviews /> */}
+      <Reviews />
       {/* testimonial-area-end */}
    {/* services-area */}
       <OurFeatures />

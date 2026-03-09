@@ -34,12 +34,12 @@ const Header = () => {
   return (
     <header className="relative z-[999] ">
       <div
-        id="header-sticky"
+        // id="header-sticky"
         className={[
           'md:px-52 w-full fixed top-0 left-0 z-[9999] transition-all duration-500',
           sticky
-            ? 'bg-white shadow-[0_10px_15px_rgba(25,25,25,0.1)]'
-            : 'bg-transparent ',
+            ? 'bg-[#782551] text-white shadow-[0_10px_15px_rgba(25,25,25,0.1)]'
+            : 'bg-transparent text-[#190a32]',
         ].join(' ')}
       >
         <div className="container mx-auto px-4">
@@ -59,7 +59,7 @@ const Header = () => {
                   key={link.href}
                   href={link.href}
                   className={[
-                    'relative block font-medium text-sm transition-colors duration-300 px-5 py-[34px] text-[#190a32] hover:text-[#782551]',
+                    'relative block font-medium text-sm transition-colors duration-300 px-5 py-[34px]  hover:text-[#782551]',
                   ].join(' ')}
                 >
                   {link.label}

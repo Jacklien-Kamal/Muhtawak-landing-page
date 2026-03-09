@@ -8,7 +8,7 @@ export default function HeroSection() {
   const { hero } = content;
 
   const roleLabels = {
-    Creator: locale.lang === 'ar' ? 'منشئ محتوى' : 'Creator',
+    Creator: locale.lang === 'ar' ? 'صانع محتوى' : 'Creator',
     Agency:  locale.lang === 'ar' ? 'وكالة'       : 'Agency',
   };
 
@@ -109,11 +109,11 @@ export default function HeroSection() {
           </div>
 
           {/* ── Right Column ── */}
-          <div className="w-full lg:w-1/2">
+          <div className={`w-full lg:w-1/2 ${isRTL&&"-rotate-55 "}`}>
             <img
               src="img/bg/mobile.png"
               alt="app preview"
-              className="-ml-[120px] mt-[200px] max-w-full"
+              className={`-ml-[120px] ${isRTL&&" mr-28"} mt-[200px] max-w-full`}
             />
           </div>
 
