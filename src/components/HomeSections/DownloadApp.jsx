@@ -1,5 +1,6 @@
 import React from 'react';
 import { useRole } from '../../hooks/roleContext';
+import { FaGooglePlay } from 'react-icons/fa'
 
 export default function DownloadApp() {
   const { content } = useRole();
@@ -20,12 +21,12 @@ export default function DownloadApp() {
         <img src="img/bg/mobile2.png" alt="mobile" />
       </div>
 
-      <div className="container">
-        <div className="row">
+      <div className="container ">
+        <div className="row ">
           <div className="col-xl-5" />
 
-          <div className="col-xl-7">
-            <div className="choose-wrap">
+          <div className="col-xl-7 p">
+            <div className="choose-wrap   ">
 
               {/* ── Dynamic heading ── */}
               <div className="section-title w-title left-align mb-25">
@@ -49,7 +50,7 @@ export default function DownloadApp() {
                 </div>
 
                 {/* ── Store buttons (static — same for both roles) ── */}
-                <div className="choose-btn mt-30">
+                <div className="choose-btn ">
                   <a href="#">
                     <span className="icon">
                       <img src="img/icon/apple-icon.png" alt="App Store" />
@@ -58,14 +59,14 @@ export default function DownloadApp() {
                       Available on <strong style={{ fontSize: '15px' }}>APP STORE</strong>
                     </span>
                   </a>
-                  <a href="#" className="g-btn">
-                    <span className="icon">
-                      <img src="img/icon/g-play-icon.png" alt="Google Play" />
-                    </span>
-                    <span className="text" style={{ fontSize: '13px' }}>
-                      Available on <strong style={{ fontSize: '15px' }}>GOOGLE PLAY</strong>
-                    </span>
-                  </a>
+                                <a href="#" className="g-btn" >
+  <span className="icon">
+    <FaGooglePlay style={{ fontSize: '26px', color: '#782551' }} />
+  </span>
+  <span className="text" style={{ fontSize: '13px' }}>
+    Available on <strong style={{ fontSize: '15px' }}>GOOGLE PLAY</strong>
+  </span>
+</a>
                 </div>
 
               </div>

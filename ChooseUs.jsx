@@ -13,26 +13,25 @@ import Reviews from './src/components/HomeSections/Reviews';
 import BlogsSection from './src/components/HomeSections/BlogsSection';
 import { RoleProvider } from './src/hooks/roleContext';
 import ContactSection from './src/components/HomeSections/ContactSection';
+import CreatorShowcase from './src/components/HomeSections/PrevWorks';
 
 const ChooseUs = () => (
-  // ✅ Wrap everything in RoleProvider so every section can read the active role
-  <RoleProvider>
-    <main>
+    <main className=''>
       {/* slider-area */}
       <HeroSection />
       {/* slider-area-end */}
 
    
       {/* choose-area */}
-      <DownloadApp />
+      {/* <DownloadApp /> */}
       {/* choose-area-end */}
 
       {/* how-app-work */}
-      <HowAppWorkSection />
+      {/* <HowAppWorkSection /> */}
       {/* how-app-work-end */}
 
       {/* video-area */}
-      <VideoSection />
+      {/* <VideoSection /> */}
       {/* video-area-end */}
 
       {/* screen-area */}
@@ -48,22 +47,23 @@ const ChooseUs = () => (
       {/* newsletter-area-end */}
 
       {/* pricing-area */}
-      <PricingSection />
+      {/* <PricingSection /> */}
+
       {/* pricing-area-end */}
 
+{/* <CreatorShowcase/> */}
       {/* testimonial-area */}
-      <Reviews />
+      {/* <Reviews /> */}
       {/* testimonial-area-end */}
    {/* services-area */}
       <OurFeatures />
       {/* services-area-end */}
 
       {/* blog-area */}
-      <BlogsSection />
+      {/* <BlogsSection /> */}
       {/* blog-area-end */}
-      <ContactSection/>
+      {/* <ContactSection/> */}
     </main>
-  </RoleProvider>
 );
 
 export default ChooseUs;

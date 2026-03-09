@@ -1,15 +1,15 @@
 import React, { createContext, useContext, useState } from 'react';
-import { ROLE_CONTENT } from '../utils/dummy';
-
-
+import { useI18n } from './i18nContext';
 
 // ─── Context ──────────────────────────────────────────────────────────────────
 const RoleContext = createContext(null);
 
 export function RoleProvider({ children }) {
   const [role, setRole] = useState('Creator'); // 'Creator' | 'Agency'
+  const { locale } = useI18n();
 
-  const content = ROLE_CONTENT[role];
+  // Content is always sourced from the active locale → auto-updates on lang switch
+  const content = locale.roles[role];
 
   return (
     <RoleContext.Provider value={{ role, setRole, content }}>
