@@ -23,7 +23,7 @@ const ChooseUs = () => (
 
    
       {/* choose-area */}
-      {/* <DownloadApp /> */}
+      <DownloadApp />
       {/* choose-area-end */}
 
       {/* how-app-work */}
