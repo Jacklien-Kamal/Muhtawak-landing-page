@@ -2,16 +2,21 @@ import React from 'react';
 import Header from './components/Header';
 import ChooseUs from '../ChooseUs';
 import Footer from './components/Footer';
-// Importing components from your css folder as they appear in your file structure
-
+import { I18nProvider } from './hooks/i18nContext';
+import { RoleProvider } from './hooks/roleContext';
 
 function App() {
   return (
-    <div className="font-poppins text-bingle-gray">
-      <Header />
-      <ChooseUs />
-      <Footer/>
-    </div>
+    // I18nProvider must wrap RoleProvider because roleContext reads from locale
+    <I18nProvider>
+      <RoleProvider>
+        <div className="font-poppins text-bingle-gray">
+          <Header />
+          <ChooseUs />
+          <Footer />
+        </div>
+      </RoleProvider>
+    </I18nProvider>
   );
 }
 
