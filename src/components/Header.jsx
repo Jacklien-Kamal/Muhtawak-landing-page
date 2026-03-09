@@ -1,56 +1,184 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import LanguageSwitcher from './LanguageSwitcher/LanguageSwitcher';
+import { useI18n } from '../hooks/i18nContext';
 
 const Header = () => {
+  const { locale, isRTL } = useI18n();
+  const [sticky, setSticky] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const [otherOpen, setOtherOpen] = useState(false);
+
+  const t = locale.nav;
+
+  useEffect(() => {
+    const onScroll = () => setSticky(window.scrollY > 80);
+    window.addEventListener('scroll', onScroll);
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
+  const navLinks = [
+    { label: t.home,      href: '#parallax' },
+    { label: t.features,  href: '#features'  },
+    { label: t.howItWorks,href: '#how-it-works' },
+    { label: t.pricing,   href: '#pricing'   },
+    { label: t.faq,       href: '#faq'       },
+    { label: t.contact,   href: '#contact'   },
+  ];
+
+  const otherLinks = [
+    { label: t.pricing,      href: '#pricing'      },
+    { label: 'Blog',         href: 'blog.html'     },
+    { label: 'Blog Details', href: 'blog-details.html' },
+  ];
+
   return (
-<div>
- <header className="header-area">            
-  <div id="header-sticky" className="menu-area">
-    <div className="container">
-      <div className="second-menu">
-        <div className="row align-items-center">
-          <div className="col-xl-2 col-lg-2">
-            <div className="logo">
-              <a href="index.html"><img src="img/logo/logo.webp" alt="logo" /></a>
+    <header className="relative z-[999] ">
+      <div
+        id="header-sticky"
+        className={[
+          'md:px-52 w-full fixed top-0 left-0 z-[9999] transition-all duration-500',
+          sticky
+            ? 'bg-white shadow-[0_10px_15px_rgba(25,25,25,0.1)]'
+            : 'bg-transparent ',
+        ].join(' ')}
+      >
+        <div className="container mx-auto px-4">
+          <div className={`flex  items-center justify-between py-4 lg:py-0`}>
+
+            {/* ── Logo ── */}
+            <a href="index.html" className="flex-shrink-0">
+              <img src="img/logo/logo.webp" alt="logo" className="h-10 w-auto" />
+            </a>
+
+            {/* ── Desktop Nav ── */}
+            <nav
+              className={`hidden lg:flex items-center gap-0 ${isRTL ? 'flex-row' : ''}`}
+            >
+              {navLinks.map((link) => (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  className={[
+                    'relative block font-medium text-sm transition-colors duration-300 px-5 py-[34px] text-[#190a32] hover:text-[#782551]',
+                  ].join(' ')}
+                >
+                  {link.label}
+                </a>
+              ))}
+
+              {/* Other dropdown */}
+              <div
+                className="relative group"
+                onMouseEnter={() => setOtherOpen(true)}
+                onMouseLeave={() => setOtherOpen(false)}
+              >
+                <button
+                  className={[
+                    'flex items-center gap-1 font-medium text-sm transition-colors duration-300 px-5 py-[34px] bg-transparent border-none cursor-pointer text-[#190a32] hover:text-[#782551]',
+                  ].join(' ')}
+                >
+                  {isRTL ? 'أخرى' : 'Other'}
+                  <span className="text-[10px]">▾</span>
+                </button>
+
+                {/* Dropdown */}
+                {otherOpen && (
+                  <ul
+                    className={[
+                      'absolute top-full bg-white min-w-[220px] z-[9999]',
+                      'border-t-4 border-[#782551] shadow-[0_10px_15px_rgba(25,25,25,0.1)]',
+                      'mt-0 py-0',
+                      isRTL ? 'right-0' : 'left-0',
+                    ].join(' ')}
+                  >
+                    {otherLinks.map((item) => (
+                      <li
+                        key={item.href}
+                        className="border-b border-gray-100 last:border-0 w-full"
+                      >
+                        <a
+                          href={item.href}
+                          className="block px-4 py-[15px] text-sm text-[#190a32] font-medium hover:text-[#782551] transition-colors duration-200"
+                        >
+                          {item.label}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+            </nav>
+
+            {/* ── Right: Language Switcher ── */}
+            <div className="hidden xl:flex items-center">
+              <LanguageSwitcher />
             </div>
+
+            {/* ── Mobile Hamburger ── */}
+            <button
+              className="lg:hidden text-[#190a32] text-2xl cursor-pointer bg-transparent border-none"
+              onClick={() => setMobileOpen((o) => !o)}
+              aria-label="Toggle menu"
+            >
+              <i className={`icon ${mobileOpen ? 'dripicons-cross' : 'dripicons-align-right'}`} />
+            </button>
+
           </div>
-          <div className="col-xl-8 col-lg-9">
-            <div className="responsive"><i className="icon dripicons-align-right" /></div>
-            <div className="main-menu text-right text-xl-right">
-              <nav id="mobile-menu">
-                <ul>
-                  <li className="has-sub">
-                    <a href="#parallax">Home</a>
+
+          {/* ── Mobile Menu ── */}
+          {mobileOpen && (
+            <nav
+              className={`lg:hidden bg-white px-4 pb-4 ${isRTL ? 'text-right' : 'text-left'}`}
+            >
+              <ul>
+                {navLinks.map((link) => (
+                  <li key={link.href} className="border-b border-gray-100">
+                    <a
+                      href={link.href}
+                      onClick={() => setMobileOpen(false)}
+                      className="block py-3 px-4 text-sm font-medium text-[#707692] hover:text-[#782551] transition-colors duration-200"
+                    >
+                      {link.label}
+                    </a>
                   </li>
-                  <li><a href="#about">About Us</a></li>
-                  <li><a href="#features">Features</a></li>
-                  <li><a href="#screen">Screenshort</a></li>     
-                  <li className="has-sub"> 
-                    <a href="#screen">Other</a>
-                    <ul>													
-                      <li><a href="#pricing">Pricing</a></li>
-                      <li><a href="#testimonios">Testimonios</a></li>
-                      <li><a href="blog.html">Blog</a></li>     
-                      <li><a href="blog-details.html">Blog Deatils</a></li> 
+                ))}
+
+                {/* Mobile Other submenu */}
+                <li className="border-b border-gray-100">
+                  <button
+                    className="w-full text-left py-3 px-4 text-sm font-medium text-[#707692] hover:text-[#782551] bg-transparent border-none cursor-pointer transition-colors duration-200"
+                    onClick={() => setOtherOpen((o) => !o)}
+                  >
+                    {isRTL ? 'أخرى' : 'Other'} <span className="text-xs">{otherOpen ? '▴' : '▾'}</span>
+                  </button>
+                  {otherOpen && (
+                    <ul className="bg-gray-50 border-t border-gray-100">
+                      {otherLinks.map((item) => (
+                        <li key={item.href} className="border-b border-gray-100 last:border-0">
+                          <a
+                            href={item.href}
+                            onClick={() => setMobileOpen(false)}
+                            className="block py-3 px-8 text-sm text-[#190a32] hover:text-[#782551] transition-colors duration-200"
+                          >
+                            {item.label}
+                          </a>
+                        </li>
+                      ))}
                     </ul>
-                  </li>     
-                  <li><a href="#blog">Blog</a></li>
-                  <li><a href="#contact">Contact</a></li>                                            
-                </ul>
-              </nav>
-            </div>
-          </div>
-          <div className="col-xl-2 text-right d-none d-xl-block">
-            <div className="header-btn second-header-btn">
-              <a href="#" className="btn">Download</a>
-            </div>
-          </div>
+                  )}
+                </li>
+
+                {/* Language switcher in mobile */}
+                <li className="pt-3 px-4">
+                  <LanguageSwitcher />
+                </li>
+              </ul>
+            </nav>
+          )}
+
         </div>
       </div>
-    </div>
-  </div>
-</header>
-
-</div>
+    </header>
   );
 };
 
