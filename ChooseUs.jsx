@@ -47,7 +47,7 @@ const ChooseUs = () => (
       {/* newsletter-area-end */}
 
       {/* pricing-area */}
-      {/* <PricingSection /> */}
+      <PricingSection />
 
       {/* pricing-area-end */}
 

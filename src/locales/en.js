@@ -47,12 +47,11 @@ export const en = {
         ],
       },
       pricing: {
-        tag: 'Creator Plans',
-        heading: 'Simple Pricing for Creators',
+        tag: 'Agencys  Plans',
+        heading: 'Our Plans for Agencies',
         plans: [
-          { name: 'Free', price: '$0', period: '/month', features: ['5 Projects', 'Basic Analytics', 'Community Access', '1 GB Storage'], highlight: false, cta: 'Get Started' },
-          { name: 'Pro Creator', price: '$19', period: '/month', features: ['Unlimited Projects', 'Advanced Analytics', 'Monetization Tools', '50 GB Storage', 'Priority Support'], highlight: true, cta: 'Go Pro' },
-          { name: 'Studio', price: '$49', period: '/month', features: ['Everything in Pro', 'Team Collaboration', 'Custom Domain', '500 GB Storage', 'Dedicated Manager'], highlight: false, cta: 'Start Studio' },
+            { name: 'Package 16', price: '5600.00  ', period: '/month', features: ['16 videos ', 'Video with 60min duration', 'Priority Support'], highlight: true, cta: 'Get Statred' },
+          { name: 'Pro Package', price: '1500.00  ', period: '/month', features: ['5 videos', 'Video with 60min duration', ], highlight: false, cta: 'Go Pro ' },
         ],
       },
       faq: {
