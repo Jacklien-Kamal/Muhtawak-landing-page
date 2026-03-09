@@ -12,6 +12,7 @@ import PricingSection from './src/components/HomeSections/PricingSection';
 import Reviews from './src/components/HomeSections/Reviews';
 import BlogsSection from './src/components/HomeSections/BlogsSection';
 import { RoleProvider } from './src/hooks/roleContext';
+import ContactSection from './src/components/HomeSections/ContactSection';
 
 const ChooseUs = () => (
   // ✅ Wrap everything in RoleProvider so every section can read the active role
@@ -39,11 +40,11 @@ const ChooseUs = () => (
       {/* screen-area-end */}
 
       {/* faq-area */}
-      <FaqSection />
+      {/* <FaqSection /> */}
       {/* faq-area-end */}
 
       {/* newsletter-area */}
-      <NewsSection />
+      {/* <NewsSection /> */}
       {/* newsletter-area-end */}
 
       {/* pricing-area */}
@@ -60,6 +61,7 @@ const ChooseUs = () => (
       {/* blog-area */}
       <BlogsSection />
       {/* blog-area-end */}
+      <ContactSection/>
     </main>
   </RoleProvider>
 );

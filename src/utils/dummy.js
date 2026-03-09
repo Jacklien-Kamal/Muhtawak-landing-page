@@ -14,104 +14,40 @@ export const ROLE_CONTENT = {
       subheading:
         'From portfolio showcasing to fan engagement, our tools are designed to amplify your creative voice.',
       items: [
-        {
-          icon: 'flaticon-settings',
-          title: 'Portfolio Builder',
-          description:
-            'Beautifully display your work with drag-and-drop portfolio tools that impress clients and fans alike.',
-        },
-        {
-          icon: 'flaticon-magic-wand',
-          title: 'Content Scheduler',
-          description:
-            'Plan and auto-publish across platforms so you can focus on creating, not managing.',
-        },
-        {
-          icon: 'flaticon-smartphone',
-          title: 'Fan Engagement',
-          description:
-            'Connect with your audience through polls, Q&As, and exclusive content drops.',
-        },
-        {
-          icon: 'flaticon-ui',
-          title: 'Revenue Tools',
-          description:
-            'Sell digital products, offer subscriptions, and accept tips — all built right in.',
-        },
-        {
-          icon: 'flaticon-paper-plane',
-          title: 'Collab Network',
-          description:
-            'Find and connect with other creators for partnerships, duets, and joint projects.',
-        },
-        {
-          icon: 'flaticon-help',
-          title: 'Creator Analytics',
-          description:
-            'Understand what content resonates with deep audience insights and growth metrics.',
-        },
+        { icon: 'flaticon-settings', title: 'Portfolio Builder', description: 'Beautifully display your work with drag-and-drop portfolio tools that impress clients and fans alike.' },
+        { icon: 'flaticon-magic-wand', title: 'Content Scheduler', description: 'Plan and auto-publish across platforms so you can focus on creating, not managing.' },
+        { icon: 'flaticon-smartphone', title: 'Fan Engagement', description: 'Connect with your audience through polls, Q&As, and exclusive content drops.' },
+        { icon: 'flaticon-ui', title: 'Revenue Tools', description: 'Sell digital products, offer subscriptions, and accept tips — all built right in.' },
+        { icon: 'flaticon-paper-plane', title: 'Collab Network', description: 'Find and connect with other creators for partnerships, duets, and joint projects.' },
+        { icon: 'flaticon-help', title: 'Creator Analytics', description: 'Understand what content resonates with deep audience insights and growth metrics.' },
       ],
     },
     download: {
-  heading: 'Start Creating Content & Earning Today',
-  description:
-    "You don't need to be an influencer to earn! Download Muhtawak, sign up for free, and connect with top brands looking for authentic content creators like you.",
-  points: [
-    'Sign up for free — no experience needed',
-    'Get real opportunities with known brands',
-    'Each project has a fixed payout — get paid directly',
-    'More content you create, more you earn',
-  ],
-},
+      heading: 'Start Creating Content & Earning Today',
+      description: "You don't need to be an influencer to earn! Download Muhtawak, sign up for free, and connect with top brands looking for authentic content creators like you.",
+      points: [
+        'Sign up for free — no experience needed',
+        'Get real opportunities with known brands',
+        'Each project has a fixed payout — get paid directly',
+        'More content you create, more you earn',
+      ],
+    },
     howItWorks: {
       tag: 'Creator Workflow',
       heading: 'Go From Idea to Published in Minutes',
       steps: [
-        {
-          num: '01',
-          title: 'Build Your Profile',
-          description: 'Set up your creator identity with a customizable profile and portfolio.',
-        },
-        {
-          num: '02',
-          title: 'Upload Your Work',
-          description: 'Add your projects, videos, articles, or artwork with rich media support.',
-        },
-        {
-          num: '03',
-          title: 'Publish & Earn',
-          description: 'Share with your audience and start earning through built-in monetization.',
-        },
+        { num: '01', title: 'Build Your Profile', description: 'Set up your creator identity with a customizable profile and portfolio.' },
+        { num: '02', title: 'Upload Your Work', description: 'Add your projects, videos, articles, or artwork with rich media support.' },
+        { num: '03', title: 'Publish & Earn', description: 'Share with your audience and start earning through built-in monetization.' },
       ],
     },
     pricing: {
       tag: 'Creator Plans',
       heading: 'Simple Pricing for Creators',
       plans: [
-        {
-          name: 'Free',
-          price: '$0',
-          period: '/month',
-          features: ['5 Projects', 'Basic Analytics', 'Community Access', '1 GB Storage'],
-          highlight: false,
-          cta: 'Get Started',
-        },
-        {
-          name: 'Pro Creator',
-          price: '$19',
-          period: '/month',
-          features: ['Unlimited Projects', 'Advanced Analytics', 'Monetization Tools', '50 GB Storage', 'Priority Support'],
-          highlight: true,
-          cta: 'Go Pro',
-        },
-        {
-          name: 'Studio',
-          price: '$49',
-          period: '/month',
-          features: ['Everything in Pro', 'Team Collaboration', 'Custom Domain', '500 GB Storage', 'Dedicated Manager'],
-          highlight: false,
-          cta: 'Start Studio',
-        },
+        { name: 'Free', price: '$0', period: '/month', features: ['5 Projects', 'Basic Analytics', 'Community Access', '1 GB Storage'], highlight: false, cta: 'Get Started' },
+        { name: 'Pro Creator', price: '$19', period: '/month', features: ['Unlimited Projects', 'Advanced Analytics', 'Monetization Tools', '50 GB Storage', 'Priority Support'], highlight: true, cta: 'Go Pro' },
+        { name: 'Studio', price: '$49', period: '/month', features: ['Everything in Pro', 'Team Collaboration', 'Custom Domain', '500 GB Storage', 'Dedicated Manager'], highlight: false, cta: 'Start Studio' },
       ],
     },
     faq: {
@@ -128,9 +64,21 @@ export const ROLE_CONTENT = {
       tag: 'Creator Stories',
       heading: 'Loved by Creators Worldwide',
       testimonials: [
-        { name: 'Sofia R.', role: 'Illustrator', text: 'I tripled my client inquiries within a month of setting up my portfolio here. The tools are just *chef.' },
+        { name: 'Sofia R.', role: 'Illustrator', text: 'I tripled my client inquiries within a month of setting up my portfolio here. The tools are just chef\'s kiss.' },
         { name: 'Marcus T.', role: 'YouTuber', text: 'Finally a platform that actually helps me earn. The subscription feature alone pays for itself ten times over.' },
         { name: 'Lena K.', role: 'Photographer', text: 'The analytics helped me understand exactly what my audience loves. My engagement is up 200%.' },
+        { name: 'Ahmed S.', role: 'Video Creator', text: 'Muhtawak connected me with brands I never thought would notice me. My income doubled in 3 months.' },
+        { name: 'Nora J.', role: 'Lifestyle Blogger', text: 'The scheduling tools are a lifesaver. I plan a whole week of content in one sitting and it just runs.' },
+        { name: 'Karim L.', role: 'Graphic Designer', text: 'Getting paid for what I love was always the dream. Muhtawak made it my reality — fast and easily.' },
+      ],
+    },
+    video: {
+      heading: 'Create Content That Brands Love',
+      description: 'Sign up, record, and earn — it really is that simple. Muhtawak connects creators with brands looking for authentic content, so you can turn your creativity into real income.',
+      points: [
+        'Work anytime without fixed hours',
+        'Get real opportunities with known brands',
+        'Earn a fixed amount for every content you create',
       ],
     },
   },
@@ -147,107 +95,42 @@ export const ROLE_CONTENT = {
     features: {
       sectionTag: 'For Agencies',
       heading: 'Enterprise-Grade Agency Tools',
-      subheading:
-        'Streamline client management, automate reporting, and scale your agency operations with confidence.',
+      subheading: 'Streamline client management, automate reporting, and scale your agency operations with confidence.',
       items: [
-        {
-          icon: 'flaticon-settings',
-          title: 'Client Management',
-          description:
-            'Centralize every client relationship, contract, and communication in one organized workspace.',
-        },
-        {
-          icon: 'flaticon-magic-wand',
-          title: 'White-Label Reports',
-          description:
-            'Deliver stunning branded reports to clients automatically on any schedule you choose.',
-        },
-        {
-          icon: 'flaticon-smartphone',
-          title: 'Team Collaboration',
-          description:
-            'Assign tasks, set permissions, and keep every team member aligned on every project.',
-        },
-        {
-          icon: 'flaticon-ui',
-          title: 'Campaign Analytics',
-          description:
-            'Aggregate data from all channels into one dashboard for clear ROI visibility.',
-        },
-        {
-          icon: 'flaticon-paper-plane',
-          title: 'Automated Workflows',
-          description:
-            'Build approval chains, client review flows, and delivery pipelines with no-code automation.',
-        },
-        {
-          icon: 'flaticon-help',
-          title: 'Dedicated Support',
-          description:
-            'Get a dedicated account manager and SLA-backed support so your agency never skips a beat.',
-        },
+        { icon: 'flaticon-settings', title: 'Client Management', description: 'Centralize every client relationship, contract, and communication in one organized workspace.' },
+        { icon: 'flaticon-magic-wand', title: 'White-Label Reports', description: 'Deliver stunning branded reports to clients automatically on any schedule you choose.' },
+        { icon: 'flaticon-smartphone', title: 'Team Collaboration', description: 'Assign tasks, set permissions, and keep every team member aligned on every project.' },
+        { icon: 'flaticon-ui', title: 'Campaign Analytics', description: 'Aggregate data from all channels into one dashboard for clear ROI visibility.' },
+        { icon: 'flaticon-paper-plane', title: 'Automated Workflows', description: 'Build approval chains, client review flows, and delivery pipelines with no-code automation.' },
+        { icon: 'flaticon-help', title: 'Dedicated Support', description: 'Get a dedicated account manager and SLA-backed support so your agency never skips a beat.' },
       ],
     },
-  download: {
-  heading: 'Get Authentic Content for Your Brand',
-  description:
-    'Need content that reflects the real experience of your products? Muhtawak connects you with professional creators who produce original, engaging content to market your brand effectively.',
-  points: [
-    'Access a pool of vetted content creators',
-    'Brief creators directly through the app',
-    'Receive authentic, brand-aligned content fast',
-    'Scale your content production effortlessly',
-  ],
-},
+    download: {
+      heading: 'Get Authentic Content for Your Brand',
+      description: 'Need content that reflects the real experience of your products? Muhtawak connects you with professional creators who produce original, engaging content to market your brand effectively.',
+      points: [
+        'Access a pool of vetted content creators',
+        'Brief creators directly through the app',
+        'Receive authentic, brand-aligned content fast',
+        'Scale your content production effortlessly',
+      ],
+    },
     howItWorks: {
       tag: 'Agency Workflow',
       heading: 'From Onboarding to Results — Seamlessly',
       steps: [
-        {
-          num: '01',
-          title: 'Onboard Clients',
-          description: 'Use guided onboarding flows to get new clients set up and aligned fast.',
-        },
-        {
-          num: '02',
-          title: 'Execute Campaigns',
-          description: 'Coordinate your team, manage assets, and track progress in real time.',
-        },
-        {
-          num: '03',
-          title: 'Report & Retain',
-          description: 'Deliver automated white-label reports that wow clients and drive retention.',
-        },
+        { num: '01', title: 'Onboard Clients', description: 'Use guided onboarding flows to get new clients set up and aligned fast.' },
+        { num: '02', title: 'Execute Campaigns', description: 'Coordinate your team, manage assets, and track progress in real time.' },
+        { num: '03', title: 'Report & Retain', description: 'Deliver automated white-label reports that wow clients and drive retention.' },
       ],
     },
     pricing: {
       tag: 'Agency Plans',
       heading: 'Pricing Built for Teams',
       plans: [
-        {
-          name: 'Starter',
-          price: '$49',
-          period: '/month',
-          features: ['3 Client Seats', 'Basic Reporting', '5 Team Members', '10 GB Storage'],
-          highlight: false,
-          cta: 'Get Started',
-        },
-        {
-          name: 'Growth Agency',
-          price: '$149',
-          period: '/month',
-          features: ['20 Client Seats', 'White-Label Reports', '25 Team Members', '200 GB Storage', 'Priority Support'],
-          highlight: true,
-          cta: 'Scale Up',
-        },
-        {
-          name: 'Enterprise',
-          price: 'Custom',
-          period: '',
-          features: ['Unlimited Clients', 'Custom Integrations', 'Unlimited Team', 'Dedicated Infrastructure', 'SLA + Manager'],
-          highlight: false,
-          cta: 'Contact Sales',
-        },
+        { name: 'Starter', price: '$49', period: '/month', features: ['3 Client Seats', 'Basic Reporting', '5 Team Members', '10 GB Storage'], highlight: false, cta: 'Get Started' },
+        { name: 'Growth Agency', price: '$149', period: '/month', features: ['20 Client Seats', 'White-Label Reports', '25 Team Members', '200 GB Storage', 'Priority Support'], highlight: true, cta: 'Scale Up' },
+        { name: 'Enterprise', price: 'Custom', period: '', features: ['Unlimited Clients', 'Custom Integrations', 'Unlimited Team', 'Dedicated Infrastructure', 'SLA + Manager'], highlight: false, cta: 'Contact Sales' },
       ],
     },
     faq: {
@@ -267,6 +150,18 @@ export const ROLE_CONTENT = {
         { name: 'James O.', role: 'Agency Director', text: 'We cut our client reporting time by 80%. The automated white-label reports are a game changer for our retention.' },
         { name: 'Priya M.', role: 'Operations Manager', text: 'Finally one platform that keeps 30+ client projects organized. Our team loves it.' },
         { name: 'Derek S.', role: 'Founder, Growth Agency', text: 'We onboarded 12 new clients last quarter with zero ops headaches. Incredible platform.' },
+        { name: 'Sara H.', role: 'Account Director', text: 'The white-label portal blew our clients away. They think we built a custom tool just for them.' },
+        { name: 'Tom R.', role: 'Creative Director', text: 'Campaign analytics across all our clients in one view — this alone saved us 10 hours a week.' },
+        { name: 'Mia C.', role: 'Agency Co-founder', text: 'Scaling from 5 to 40 clients felt seamless. The automated workflows handle what used to take a whole team.' },
+      ],
+    },
+    video: {
+      heading: 'Authentic Content That Drives Results',
+      description: 'Stop settling for generic ads. Muhtawak gives your brand access to real creators who produce original, engaging content that resonates with your audience and drives conversions.',
+      points: [
+        'Content created by real users, not studios',
+        'Brief creators directly and review deliverables in-app',
+        'Scale your content volume without scaling your costs',
       ],
     },
   },
