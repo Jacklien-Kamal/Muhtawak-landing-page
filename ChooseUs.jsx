@@ -31,7 +31,7 @@ const ChooseUs = () => (
       {/* how-app-work-end */}
 
       {/* video-area */}
-      {/* <VideoSection /> */}
+      <VideoSection />
       {/* video-area-end */}
 
       {/* screen-area */}

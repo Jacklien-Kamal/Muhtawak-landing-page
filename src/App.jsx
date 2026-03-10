@@ -13,7 +13,7 @@ function App() {
         <div className="font-poppins text-bingle-gray">
           <Header />
           <ChooseUs />
-          {/* <Footer /> */}
+          <Footer />
         </div>
       </RoleProvider>
     </I18nProvider>

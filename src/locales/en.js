@@ -86,9 +86,29 @@ export const en = {
           'Earn a fixed amount for every content you create',
         ],
       },
+      footer: {
+  about: 'Sed ut perspiciatis unde om is nerror sit voluptatem accustium dolorem tium totam rem aperam quae.',
+  companyNews: 'Company News',
+  companyLinks: ['Partners', 'About Us', 'Career', 'Reviews', 'Terms & Conditions'],
+  usefulLinks: 'Useful Links',
+  usefulLinksList: ['Home', 'About Us', 'Services', 'Project', 'Our Team'],
+  contactUs: 'Contact Us',
+  address: '380 St Kilda Road, Melbourne, VIC 3004, Australia',
+  copyright: '© 2020 @ Bengle All design Zcube.',
+},
     },
 
     Agency: {
+      footer: {
+  about: 'Sed ut perspiciatis unde om is nerror sit voluptatem accustium dolorem tium totam rem aperam quae.',
+  companyNews: 'Company News',
+  companyLinks: ['Partners', 'About Us', 'Career', 'Reviews', 'Terms & Conditions'],
+  usefulLinks: 'Useful Links',
+  usefulLinksList: ['Home', 'About Us', 'Services', 'Project', 'Our Team'],
+  contactUs: 'Contact Us',
+  address: '380 St Kilda Road, Melbourne, VIC 3004, Australia',
+  copyright: '© 2020 @ Bengle All design Zcube.',
+},
       badge: ['Agency', 'Enterprise'],
       hero: {
         heading: 'Muhtawak for',
@@ -203,4 +223,14 @@ export const en = {
     faq: 'FAQ',
     contact: 'Contact',
   },
+  footer: {
+  about: 'Sed ut perspiciatis unde om is nerror sit voluptatem accustium dolorem tium totam rem aperam quae.',
+  companyNews: 'Company News',
+  companyLinks: ['Partners', 'About Us', 'Career', 'Reviews', 'Terms & Conditions'],
+  usefulLinks: 'Useful Links',
+  usefulLinksList: ['Home', 'About Us', 'Services', 'Project', 'Our Team'],
+  contactUs: 'Contact Us',
+  address: '380 St Kilda Road, Melbourne\nVIC 3004, Australia',
+  copyright: '© 2020 @ Bengle All design Zcube.',
+},
 };  
