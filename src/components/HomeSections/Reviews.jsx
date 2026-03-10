@@ -131,15 +131,15 @@ export default function Reviews() {
                           <img
                             src={avatars[globalIndex % avatars.length]}
                             alt="avatar"
-                            className="-mt-[10px] sm:-mt-[12px] md:-mt-[14px] flex-shrink-0 w-14 sm:w-auto"
+                            className="-mt-[10px] sm:-mt-[12px] md:-mt-[14px] flex-shrink-0 w-14 h-14 sm:h-auto mt-1 sm:w-auto"
                           />
                           <div className={`overflow-hidden block pt-3 sm:pt-4 md:pt-5 ${isRTL ? 'pr-2 sm:pr-3' : 'pl-0'}`}>
                             <h6 className="text-base sm:text-lg md:text-[20px] font-semibold text-[#190a32] mb-[4px] md:mb-[5px]">
                               {testimonial.name}
                             </h6>
-                            <span className="text-[12px] sm:text-[13px] md:text-[14px] text-[#7D4196]">
+                            {/* <span className="text-[12px] sm:text-[13px] md:text-[14px] text-[#7D4196]">
                               {testimonial.role}
-                            </span>
+                            </span> */}
                           </div>
                         </div>
 
