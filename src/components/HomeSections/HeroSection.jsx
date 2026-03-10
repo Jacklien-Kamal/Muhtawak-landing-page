@@ -15,7 +15,7 @@ export default function HeroSection() {
   return (
     <section
       id="parallax"
-      className="relative flex overflow-hidden min-h-[900px] -mt-[118px] z-[1] bg-center bg-cover md:px-52"
+      className="relative flex overflow-hidden min-h-[900px] -mt-[118px] z-[1] bg-center bg-cover px-3 md:px-52"
       style={{
         backgroundImage: locale.lang === 'ar'?'url(img/bg/flip-pink-header-bg.png)':'url(img/bg/pink-header-bg.png)',
         backgroundPosition:locale.lang === 'ar'? 'left 0':'right 0',
@@ -66,11 +66,11 @@ export default function HeroSection() {
 
               {/* Headline */}
               <h2
-                className="text-[70px] font-semibold text-[#190a32] mb-5 leading-tight"
+                className="text-4xl md:text-7xl font-semibold text-[#190a32] mb-5 leading-tight"
                 data-animation="fadeInUp"
                 data-delay=".4s"
               >
-                {hero.heading}{' '}
+                {hero.heading}{' '}<br></br>
                 <span className="text-[#782551]">{hero.highlight}</span>
               </h2>
 
