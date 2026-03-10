@@ -41,7 +41,7 @@ const Header = () => {
           'w-full md:px-52 fixed top-0 left-0 z-[9999] transition-all duration-500',
           sticky
             ? 'bg-[#782551] text-white shadow-[0_10px_15px_rgba(25,25,25,0.1)]'
-            : 'bg-transparent text-[#190a32]',
+            : 'bg-[#782551] lg:bg-transparent text-[#190a32]',
         ].join(' ')}
       >
         <div className="container mx-auto px-4">
@@ -116,15 +116,16 @@ const Header = () => {
             >
               {mobileOpen ? (
                 /* ✕ close icon */
-                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="white" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
                 </svg>
               ) : (
                 /* ☰ hamburger icon — short middle line */
-                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16" />
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M10 12h10" />
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M4 18h16" />
+                 <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="white" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M5 5h16" />
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M11 10h10" />
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M7 15h14" />
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M3 20h18" />
                 </svg>
               )}
             </button>

@@ -17,7 +17,7 @@ export default function HowAppWorkSection() {
   return (
     <section
       id="features"
-      className="relative pt-10 sm:pt-12 md:pt-16 lg:pt-[70px] pb-12 sm:pb-16 md:pb-20 lg:pb-[100px] px-4 sm:px-8 md:px-16 lg:px-28 xl:px-56"
+      className="relative pt-[70px] pb-[100px] px-56"
       dir={isRTL ? 'rtl' : 'ltr'}
       style={{
         backgroundImage: 'url(img/shape/header-sape4.png)',
@@ -26,7 +26,7 @@ export default function HowAppWorkSection() {
         backgroundRepeat: 'no-repeat',
       }}
     >
-      <div className="mx-auto px-0 sm:px-4">
+      <div className=" mx-auto px-4">
         <div className="flex flex-wrap items-center">
 
           {/* ── Left: text content ── */}
@@ -35,19 +35,19 @@ export default function HowAppWorkSection() {
 
               {/* Section tag */}
               {tag && (
-                <span className="text-[14px] sm:text-[16px] font-medium uppercase text-[#782551] tracking-[2px] block mb-4 sm:mb-5">
+                <span className="text-[16px] font-medium uppercase text-[#782551] tracking-[2px] block mb-5">
                   {tag}
                 </span>
               )}
 
-              {/* Heading */}
-              <h2 className="text-2xl sm:text-3xl md:text-[34px] lg:text-[38px] font-semibold text-[#190a32] leading-tight mb-0">
+              {/* .section-title h2 — font-size:38px, color:#190a32, font-weight:600 */}
+              <h2 className="text-[38px] font-semibold text-[#190a32] leading-tight mb-0">
                 {heading}
               </h2>
 
-              {/* Steps list */}
+              {/* .app-work-content ul — mt-20, background-position:45px center */}
               <ul
-                className="mt-4 sm:mt-5 md:mt-[20px] p-0 m-0 list-none"
+                className="mt-[20px] p-0 m-0 list-none"
                 style={{
                   backgroundImage: 'url(img/bg/how-line.png)',
                   backgroundRepeat: 'no-repeat',
@@ -55,25 +55,27 @@ export default function HowAppWorkSection() {
                 }}
               >
                 {steps.map((step, i) => (
+                  /*
+                    .app-work-content li:
+                      display:flex; margin-bottom:40px
+                    first/last: padding-left:0
+                  */
                   <li
                     key={i}
-                    className={`flex items-start mb-7 sm:mb-8 md:mb-[40px] last:mb-0 ${isRTL ? 'flex-row' : ''}`}
+                    className={`flex items-start mb-[40px] last:mb-0 ${isRTL ? 'flex-row' : ''}`}
                   >
-                    {/* Icon */}
+                    {/* .icon */}
                     <div className="flex-shrink-0">
-                      <img
-                        src={icons[i % icons.length]}
-                        alt={step.title}
-                        className="w-10 h-10 sm:w-12 sm:h-12 md:w-auto md:h-auto"
-                      />
+                      <img src={icons[i % icons.length]} alt={step.title} />
                     </div>
 
-                    {/* Text */}
-                    <div className={`pt-1 sm:pt-2 md:pt-[10px] ${isRTL ? 'pr-4 sm:pr-6 md:pr-[30px] pl-0' : 'pl-4 sm:pl-6 md:pl-[30px] pr-0'}`}>
-                      <h4 className="text-base sm:text-lg md:text-[20px] font-semibold text-[#190a32] mb-2 md:mb-[10px] flex items-center gap-2 flex-wrap">
+                    {/* .text — padding:10px 30px 0 */}
+                    <div className={`pt-[10px] ${isRTL ? 'pr-[30px] pl-0' : 'pl-[30px] pr-0'}`}>
+                      {/* h4 — font-size:20px, font-weight:600, color:#190a32 */}
+                      <h4 className="text-[20px] font-semibold text-[#190a32] mb-[10px]">
                         {step.num && (
                           <span
-                            className="inline-flex items-center justify-center text-[12px] sm:text-[14px] font-bold rounded-full w-6 h-6 sm:w-[28px] sm:h-[28px] text-white flex-shrink-0"
+                            className="inline-block text-[14px] font-bold rounded-full w-[28px] h-[28px] text-center leading-[28px] text-white me-2 flex-shrink-0"
                             style={{ background: 'linear-gradient(135deg,#6b003e,#782551)' }}
                           >
                             {step.num}
@@ -81,7 +83,8 @@ export default function HowAppWorkSection() {
                         )}
                         {step.title}
                       </h4>
-                      <p className="text-[13px] sm:text-[14px] text-[#666666] leading-6 mb-0">
+                      {/* p — font-size:14px, color:#666, margin-bottom:0 */}
+                      <p className="text-[14px] text-[#666666] leading-6 mb-0">
                         {step.description}
                       </p>
                     </div>
@@ -92,11 +95,11 @@ export default function HowAppWorkSection() {
           </div>
 
           {/* ── Right: illustration ── */}
-          <div className={`w-full xl:w-1/2 flex mt-8 xl:mt-0 ${isRTL ? 'justify-center xl:justify-start' : 'justify-center xl:justify-end'}`}>
+          <div className={`w-full xl:w-1/2 flex ${isRTL ? 'justify-start' : 'justify-end'}`}>
             <img
-              src={isRTL ? 'img/bg/flip-app-work-img.png' : 'img/bg/app-work-img.png'}
+              src={isRTL?"img/bg/flip-app-work-img.png":"img/bg/app-work-img.png"}
               alt="app-work-img"
-              className="max-w-[80%] sm:max-w-[60%] md:max-w-[70%] xl:max-w-full h-auto"
+              className="max-w-full h-auto"
             />
           </div>
 
