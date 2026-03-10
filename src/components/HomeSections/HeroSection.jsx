@@ -113,7 +113,7 @@ export default function HeroSection() {
             <img
               src="img/bg/mobile.png"
               alt="app preview"
-              className={`-ml-[120px] ${isRTL&&" mr-28"} mt-[200px] max-w-full`}
+              className={`nd:-ml-[120px] md:${isRTL&&" mr-28"} md:mt-[200px] max-w-full`}
             />
           </div>
 

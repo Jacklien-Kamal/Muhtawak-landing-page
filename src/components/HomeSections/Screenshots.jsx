@@ -13,14 +13,20 @@ const slides = [
 export default function Screenshots() {
   const { locale, isRTL } = useI18n();
   const { content } = useRole();
-  const [active, setActive] = useState(2); // center slide
+  const [active, setActive] = useState(2);
 
-  const getStyle = (i) => {
-    const diff = i - active;
+  // Circular diff: wraps so slides on the "other side" appear as neighbors
+  const circularDiff = (i, active, total) => {
+    let diff = i - active;
+    if (diff > total / 2)  diff -= total;
+    if (diff < -total / 2) diff += total;
+    return diff;
+  };
+
+  const getStyle = (diff) => {
     const absDiff = Math.abs(diff);
-
     if (absDiff === 0) return {
-      transform: 'scale(1.15) translateY(0px)',
+      transform: 'scale(1.15)',
       zIndex: 10,
       opacity: 1,
       filter: 'none',
@@ -42,10 +48,51 @@ export default function Screenshots() {
   const prev = () => setActive((a) => (a - 1 + slides.length) % slides.length);
   const next = () => setActive((a) => (a + 1) % slides.length);
 
+  const renderCoverflow = ({ slideWidth, spacing, half, height, arrowSize, arrowOffset }) => (
+    <div className="relative flex items-center justify-center" style={{ height }}>
+      <div className={`flex items-center justify-center w-full ${isRTL ? 'flex-row-reverse' : ''}`}>
+        {slides.map((src, i) => {
+          const diff = circularDiff(i, active, slides.length);
+          return (
+            <div
+              key={i}
+              onClick={() => setActive(i)}
+              className="absolute cursor-pointer transition-all duration-500 ease-in-out"
+              style={{
+                width: slideWidth,
+                ...getStyle(diff),
+                left: `calc(50% + ${diff * spacing}px - ${half}px)`,
+              }}
+            >
+              <img
+                src={src}
+                alt={`screenshot ${i + 1}`}
+                className="w-full h-auto rounded-2xl shadow-[3px_4px_25px_rgba(0,0,0,0.2)]"
+              />
+            </div>
+          );
+        })}
+      </div>
+
+      {/* <button
+        onClick={isRTL ? next : prev}
+        aria-label="Previous"
+        className="absolute z-20 bg-white text-[#782551] rounded-full shadow-md flex items-center justify-center transition hover:bg-[#782551] hover:text-white"
+        style={{ left: arrowOffset, width: arrowSize, height: arrowSize, fontSize: arrowSize * 0.55 }}
+      >‹</button>
+      <button
+        onClick={isRTL ? prev : next}
+        aria-label="Next"
+        className="absolute z-20 bg-white text-[#782551] rounded-full shadow-md flex items-center justify-center transition hover:bg-[#782551] hover:text-white"
+        style={{ right: arrowOffset, width: arrowSize, height: arrowSize, fontSize: arrowSize * 0.55 }}
+      >›</button> */}
+    </div>
+  );
+
   return (
     <section
       id="screen"
-      className="relative pt-[100px] pb-[70px] overflow-hidden"
+      className="relative pt-14 sm:pt-16 md:pt-20 lg:pt-[100px] pb-10 sm:pb-12 md:pb-[70px] overflow-hidden"
       style={{
         backgroundImage: 'url(img/shape/header-sape4.png)',
         backgroundPosition: 'right center',
@@ -57,17 +104,17 @@ export default function Screenshots() {
 
         {/* ── Section Title ── */}
         <div className="flex justify-center">
-          <div className="w-full lg:w-8/12 text-center px-10 mb-[50px]">
+          <div className="w-full lg:w-8/12 text-center px-4 sm:px-6 md:px-10 mb-8 sm:mb-10 md:mb-[50px]">
             {content?.screenshots?.label && (
-              <span className="text-base font-medium uppercase text-[#782551] tracking-[2px] block mb-5">
+              <span className="text-sm sm:text-base font-medium uppercase text-[#782551] tracking-[2px] block mb-3 sm:mb-5">
                 {content.screenshots.label}
               </span>
             )}
-            <h2 className="text-[38px] font-semibold text-[#190a32] pb-[15px] mb-0 leading-tight">
+            <h2 className="text-2xl sm:text-3xl md:text-[34px] lg:text-[38px] font-semibold text-[#190a32] pb-3 md:pb-[15px] mb-0 leading-tight">
               {content?.screenshots?.heading
                 ?? (locale.lang === 'ar' ? 'لقطات شاشة التطبيق' : 'Our App Screenshots')}
             </h2>
-            <p className="text-sm text-[#666666] leading-6 mb-0 mt-4">
+            <p className="text-sm text-[#666666] leading-6 mb-0 mt-3 sm:mt-4">
               {content?.screenshots?.subheading
                 ?? (locale.lang === 'ar'
                   ? 'اكتشف واجهة التطبيق السهلة والجذابة من خلال لقطات الشاشة.'
@@ -76,49 +123,56 @@ export default function Screenshots() {
           </div>
         </div>
 
-        {/* ── Coverflow Carousel ── */}
-        <div className="relative flex items-center justify-center h-[500px] md:h-[600px]">
+        {/* ── Mobile: small coverflow, 3 slides visible ── */}
+        <div className="block sm:hidden">
+          {renderCoverflow({
+            slideWidth: 95,
+            spacing: 75,
+            half: 47,
+            height: 300,
+            arrowSize: 32,
+            arrowOffset: 4,
+          })}
+        </div>
 
-          {/* Slides */}
-          <div className={`flex items-center justify-center gap-4 w-full ${isRTL ? 'flex-row-reverse' : ''}`}>
-            {slides.map((src, i) => (
-              <div
-                key={i}
-                onClick={() => setActive(i)}
-                className="absolute cursor-pointer transition-all duration-500 ease-in-out w-[220px] md:w-[260px]"
-                style={{
-                  ...getStyle(i),
-                  left: `calc(50% + ${(i - active) * 180}px - 110px)`,
-                }}
-              >
-                <img
-                  src={src}
-                  alt={`screenshot ${i + 1}`}
-                  className="w-full h-auto rounded-2xl shadow-[3px_4px_25px_rgba(0,0,0,0.2)]"
-                />
-              </div>
-            ))}
-          </div>
+        {/* ── Tablet ── */}
+        <div className="hidden sm:block md:hidden">
+          {renderCoverflow({
+            slideWidth: 160,
+            spacing: 140,
+            half: 80,
+            height: 440,
+            arrowSize: 40,
+            arrowOffset: 8,
+          })}
+        </div>
 
-          {/* Prev / Next arrows */}
-          <button
-            onClick={isRTL ? next : prev}
-            className="absolute left-4 md:left-10 z-20 bg-white text-[#782551] w-11 h-11 rounded-full shadow-md flex items-center justify-center text-lg transition hover:bg-[#782551] hover:text-white"
-            aria-label="Previous"
-          >
-            ‹
-          </button>
-          <button
-            onClick={isRTL ? prev : next}
-            className="absolute right-4 md:right-10 z-20 bg-white text-[#782551] w-11 h-11 rounded-full shadow-md flex items-center justify-center text-lg transition hover:bg-[#782551] hover:text-white"
-            aria-label="Next"
-          >
-            ›
-          </button>
+        {/* ── Desktop ── */}
+        <div className="hidden md:block lg:hidden">
+          {renderCoverflow({
+            slideWidth: 200,
+            spacing: 160,
+            half: 100,
+            height: 500,
+            arrowSize: 44,
+            arrowOffset: 24,
+          })}
+        </div>
+
+        {/* ── Large desktop ── */}
+        <div className="hidden lg:block">
+          {renderCoverflow({
+            slideWidth: 260,
+            spacing: 200,
+            half: 130,
+            height: 600,
+            arrowSize: 44,
+            arrowOffset: 40,
+          })}
         </div>
 
         {/* ── Pagination dots ── */}
-        <div className="flex justify-center gap-2 mt-8">
+        <div className="flex justify-center gap-2 mt-6 sm:mt-8">
           {slides.map((_, i) => (
             <button
               key={i}

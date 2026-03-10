@@ -17,33 +17,35 @@ const Header = () => {
   }, []);
 
   const navLinks = [
-    { label: t.home,      href: '#parallax' },
-    { label: t.features,  href: '#features'  },
-    { label: t.howItWorks,href: '#how-it-works' },
-    { label: t.pricing,   href: '#pricing'   },
-    { label: t.faq,       href: '#faq'       },
-    { label: t.contact,   href: '#contact'   },
+    { label: t.home,       href: '#parallax'    },
+    { label: t.features,   href: '#features'    },
+    { label: t.howItWorks, href: '#how-it-works' },
+    { label: t.pricing,    href: '#pricing'     },
+    { label: t.faq,        href: '#faq'         },
+    { label: t.contact,    href: '#contact'     },
   ];
 
   const otherLinks = [
-    { label: t.pricing,      href: '#pricing'      },
-    { label: 'Blog',         href: 'blog.html'     },
+    { label: t.pricing,      href: '#pricing'          },
+    { label: 'Blog',         href: 'blog.html'         },
     { label: 'Blog Details', href: 'blog-details.html' },
   ];
 
+  // Icon color should always contrast against the current header bg
+  const iconColor = sticky ? '#ffffff' : '#190a32';
+
   return (
-    <header className="relative z-[999] ">
+    <header className="relative z-[999]">
       <div
-        // id="header-sticky"
         className={[
-          'md:px-52 w-full fixed top-0 left-0 z-[9999] transition-all duration-500',
+          'w-full md:px-52 fixed top-0 left-0 z-[9999] transition-all duration-500',
           sticky
             ? 'bg-[#782551] text-white shadow-[0_10px_15px_rgba(25,25,25,0.1)]'
             : 'bg-transparent text-[#190a32]',
         ].join(' ')}
       >
         <div className="container mx-auto px-4">
-          <div className={`flex  items-center justify-between py-4 lg:py-0`}>
+          <div className="flex items-center justify-between py-4 lg:py-0">
 
             {/* ── Logo ── */}
             <a href="index.html" className="flex-shrink-0">
@@ -51,16 +53,12 @@ const Header = () => {
             </a>
 
             {/* ── Desktop Nav ── */}
-            <nav
-              className={`hidden lg:flex items-center gap-0 ${isRTL ? 'flex-row' : ''}`}
-            >
+            <nav className={`hidden lg:flex items-center gap-0 ${isRTL ? 'flex-row' : ''}`}>
               {navLinks.map((link) => (
                 <a
                   key={link.href}
                   href={link.href}
-                  className={[
-                    'relative block font-medium text-sm transition-colors duration-300 px-5 py-[34px]  hover:text-[#782551]',
-                  ].join(' ')}
+                  className="relative block font-medium text-sm transition-colors duration-300 px-5 py-[34px] hover:text-[#f4a0cc]"
                 >
                   {link.label}
                 </a>
@@ -73,15 +71,13 @@ const Header = () => {
                 onMouseLeave={() => setOtherOpen(false)}
               >
                 <button
-                  className={[
-                    'flex items-center gap-1 font-medium text-sm transition-colors duration-300 px-5 py-[34px] bg-transparent border-none cursor-pointer text-[#190a32] hover:text-[#782551]',
-                  ].join(' ')}
+                  className="flex items-center gap-1 font-medium text-sm transition-colors duration-300 px-5 py-[34px] bg-transparent border-none cursor-pointer hover:text-[#f4a0cc] inherit"
+                  style={{ color: 'inherit' }}
                 >
                   {isRTL ? 'أخرى' : 'Other'}
                   <span className="text-[10px]">▾</span>
                 </button>
 
-                {/* Dropdown */}
                 {otherOpen && (
                   <ul
                     className={[
@@ -92,10 +88,7 @@ const Header = () => {
                     ].join(' ')}
                   >
                     {otherLinks.map((item) => (
-                      <li
-                        key={item.href}
-                        className="border-b border-gray-100 last:border-0 w-full"
-                      >
+                      <li key={item.href} className="border-b border-gray-100 last:border-0 w-full">
                         <a
                           href={item.href}
                           className="block px-4 py-[15px] text-sm text-[#190a32] font-medium hover:text-[#782551] transition-colors duration-200"
@@ -109,27 +102,38 @@ const Header = () => {
               </div>
             </nav>
 
-            {/* ── Right: Language Switcher ── */}
+            {/* ── Right: Language Switcher (desktop) ── */}
             <div className="hidden xl:flex items-center">
               <LanguageSwitcher />
             </div>
 
             {/* ── Mobile Hamburger ── */}
             <button
-              className="lg:hidden text-[#190a32] text-2xl cursor-pointer bg-transparent border-none"
+              className="lg:hidden cursor-pointer bg-transparent border-none p-2 rounded-md transition-colors duration-200"
               onClick={() => setMobileOpen((o) => !o)}
               aria-label="Toggle menu"
+              style={{ color: iconColor }}
             >
-              <i className={`icon ${mobileOpen ? 'dripicons-cross' : 'dripicons-align-right'}`} />
+              {mobileOpen ? (
+                /* ✕ close icon */
+                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              ) : (
+                /* ☰ hamburger icon — short middle line */
+                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16" />
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M10 12h10" />
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M4 18h16" />
+                </svg>
+              )}
             </button>
 
           </div>
 
           {/* ── Mobile Menu ── */}
           {mobileOpen && (
-            <nav
-              className={`lg:hidden bg-white px-4 pb-4 ${isRTL ? 'text-right' : 'text-left'}`}
-            >
+            <nav className={`lg:hidden bg-white px-4 pb-4 ${isRTL ? 'text-right' : 'text-left'}`}>
               <ul>
                 {navLinks.map((link) => (
                   <li key={link.href} className="border-b border-gray-100">
@@ -146,10 +150,11 @@ const Header = () => {
                 {/* Mobile Other submenu */}
                 <li className="border-b border-gray-100">
                   <button
-                    className="w-full text-left py-3 px-4 text-sm font-medium text-[#707692] hover:text-[#782551] bg-transparent border-none cursor-pointer transition-colors duration-200"
+                    className={`w-full py-3 px-4 text-sm font-medium text-[#707692] hover:text-[#782551] bg-transparent border-none cursor-pointer transition-colors duration-200 flex items-center gap-1 ${isRTL ? 'flex-row-reverse justify-end' : 'justify-start'}`}
                     onClick={() => setOtherOpen((o) => !o)}
                   >
-                    {isRTL ? 'أخرى' : 'Other'} <span className="text-xs">{otherOpen ? '▴' : '▾'}</span>
+                    {isRTL ? 'أخرى' : 'Other'}
+                    <span className="text-xs">{otherOpen ? '▴' : '▾'}</span>
                   </button>
                   {otherOpen && (
                     <ul className="bg-gray-50 border-t border-gray-100">
