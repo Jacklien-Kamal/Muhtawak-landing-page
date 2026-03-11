@@ -20,6 +20,7 @@ const ChooseUs = () => (
       {/* slider-area */}
       <HeroSection />
       {/* slider-area-end */}
+<CreatorShowcase/>
 
    
       {/* choose-area */}
@@ -51,7 +52,6 @@ const ChooseUs = () => (
 
       {/* pricing-area-end */}
 
-<CreatorShowcase/>
       {/* testimonial-area */}
       <Reviews />
       {/* testimonial-area-end */}
@@ -60,7 +60,7 @@ const ChooseUs = () => (
       {/* services-area-end */}
 
       {/* blog-area */}
-      {/* <BlogsSection /> */}
+      <BlogsSection />
       {/* blog-area-end */}
       {/* <ContactSection/> */}
     </main>
