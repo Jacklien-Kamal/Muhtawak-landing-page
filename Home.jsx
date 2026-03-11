@@ -11,11 +11,16 @@ import NewsSection from './src/components/HomeSections/NewsSection';
 import PricingSection from './src/components/HomeSections/PricingSection';
 import Reviews from './src/components/HomeSections/Reviews';
 import BlogsSection from './src/components/HomeSections/BlogsSection';
-import { RoleProvider } from './src/hooks/roleContext';
+import { RoleProvider, useRole } from './src/hooks/roleContext';
 import ContactSection from './src/components/HomeSections/ContactSection';
 import CreatorShowcase from './src/components/HomeSections/PrevWorks';
 
-const ChooseUs = () => (
+const Home = () =>{
+  const { role, content } = useRole();
+console.log(role);
+
+ return(
+  
     <main className=''>
       {/* slider-area */}
       <HeroSection />
@@ -48,8 +53,7 @@ const ChooseUs = () => (
       {/* newsletter-area-end */}
 
       {/* pricing-area */}
-      <PricingSection />
-
+      {role=="Agency" && <PricingSection />}
       {/* pricing-area-end */}
 
       {/* testimonial-area */}
@@ -62,8 +66,8 @@ const ChooseUs = () => (
       {/* blog-area */}
       <BlogsSection />
       {/* blog-area-end */}
-      {/* <ContactSection/> */}
+      <ContactSection/>
     </main>
-);
+);}
 
-export default ChooseUs;
+export default Home;

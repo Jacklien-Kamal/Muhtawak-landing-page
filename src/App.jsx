@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from './components/Header';
-import ChooseUs from '../ChooseUs';
+import Home  from '../Home';
 import Footer from './components/Footer';
 import { I18nProvider } from './hooks/i18nContext';
 import { RoleProvider } from './hooks/roleContext';
@@ -12,7 +12,7 @@ function App() {
       <RoleProvider>
         <div className="font-poppins text-bingle-gray">
           <Header />
-          <ChooseUs />
+          <Home />
           <Footer />
         </div>
       </RoleProvider>

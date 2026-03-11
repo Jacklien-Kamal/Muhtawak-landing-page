@@ -1,38 +1,73 @@
+// Header.jsx
 import React, { useState, useEffect } from 'react';
 import LanguageSwitcher from './LanguageSwitcher/LanguageSwitcher';
 import { useI18n } from '../hooks/i18nContext';
 
 const Header = () => {
   const { locale, isRTL } = useI18n();
-  const [sticky, setSticky] = useState(false);
+  const [sticky, setSticky]       = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [otherOpen, setOtherOpen] = useState(false);
+  const [otherOpen, setOtherOpen]   = useState(false);
+  const [activeSection, setActiveSection] = useState('');
 
   const t = locale.nav;
 
+  const navLinks = [
+    { label: t.home,       href: 'parallax'     },
+    { label: t.features,   href: 'features'     },
+    { label: t.howItWorks, href: 'how-it-works'  },
+    { label: t.pricing,    href: 'pricing'      },
+    // { label: t.faq,        href: 'faq'          },
+    { label: t.contact,    href: 'contact'      },
+  ];
+
+  const otherLinks = [
+    { label: t.pricing,      href: 'pricing'           },
+    { label: isRTL ? 'المدونة' : 'Blog',         href: 'blog'          },
+    { label: isRTL ? 'تفاصيل المقال' : 'Blog Details', href: 'blog-details'  },
+  ];
+
+  // ── Sticky on scroll ──
   useEffect(() => {
     const onScroll = () => setSticky(window.scrollY > 80);
     window.addEventListener('scroll', onScroll);
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  const navLinks = [
-    { label: t.home,       href: '#parallax'    },
-    { label: t.features,   href: '#features'    },
-    { label: t.howItWorks, href: '#how-it-works' },
-    { label: t.pricing,    href: '#pricing'     },
-    { label: t.faq,        href: '#faq'         },
-    { label: t.contact,    href: '#contact'     },
-  ];
+  // ── Active section via IntersectionObserver ──
+  useEffect(() => {
+    const sectionIds = navLinks.map((l) => l.href);
 
-  const otherLinks = [
-    { label: t.pricing,      href: '#pricing'          },
-    { label: 'Blog',         href: 'blog.html'         },
-    { label: 'Blog Details', href: 'blog-details.html' },
-  ];
+    const observers = sectionIds.map((id) => {
+      const el = document.getElementById(id);
+      if (!el) return null;
 
-  // Icon color should always contrast against the current header bg
-  const iconColor = sticky ? '#ffffff' : '#190a32';
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) setActiveSection(id);
+        },
+        { threshold: 0.3, rootMargin: '-80px 0px 0px 0px' }
+      );
+      observer.observe(el);
+      return observer;
+    });
+
+    return () => observers.forEach((obs) => obs?.disconnect());
+  }, [navLinks]);
+
+  // ── Smooth scroll handler ──
+  const scrollTo = (e, id) => {
+    e.preventDefault();
+    const el = document.getElementById(id);
+    if (!el) return;
+    const offset = 80; // header height
+    const top = el.getBoundingClientRect().top + window.scrollY - offset;
+    window.scrollTo({ top, behavior: 'smooth' });
+    setMobileOpen(false);
+    setActiveSection(id);
+  };
+
+  const isActive = (href) => activeSection === href;
 
   return (
     <header className="relative z-[999]">
@@ -48,19 +83,29 @@ const Header = () => {
           <div className="flex items-center justify-between py-4 lg:py-0">
 
             {/* ── Logo ── */}
-            <a href="index.html" className="flex-shrink-0">
+            <a href="#parallax" onClick={(e) => scrollTo(e, 'parallax')} className="flex-shrink-0">
               <img src="img/logo/logo.webp" alt="logo" className="h-10 w-auto" />
             </a>
 
             {/* ── Desktop Nav ── */}
             <nav className={`hidden lg:flex items-center gap-0 ${isRTL ? 'flex-row' : ''}`}>
               {navLinks.map((link) => (
-                <a
+                <a  
                   key={link.href}
-                  href={link.href}
-                  className="relative block font-medium text-sm transition-colors duration-300 px-5 py-[34px] hover:text-[#f4a0cc]"
+                  href={`#${link.href}`}
+                  onClick={(e) => scrollTo(e, link.href)}
+                  className={[
+                    'relative block font-medium text-sm transition-colors duration-300 px-5 py-[34px]',
+                    isActive(link.href)
+                      ? 'text-[#f88765]'
+                      : 'hover:text-[#f4a0cc]',
+                  ].join(' ')}
                 >
                   {link.label}
+                  {/* active underline indicator */}
+                  {isActive(link.href) && (
+                    <span className="absolute bottom-[20px] left-1/2 -translate-x-1/2 h-[3px] w-6 rounded-full bg-[#d06e4f]" />
+                  )}
                 </a>
               ))}
 
@@ -71,7 +116,7 @@ const Header = () => {
                 onMouseLeave={() => setOtherOpen(false)}
               >
                 <button
-                  className="flex items-center gap-1 font-medium text-sm transition-colors duration-300 px-5 py-[34px] bg-transparent border-none cursor-pointer hover:text-[#f4a0cc] inherit"
+                  className="flex items-center gap-1 font-medium text-sm transition-colors duration-300 px-5 py-[34px] bg-transparent border-none cursor-pointer hover:text-[#f4a0cc]"
                   style={{ color: 'inherit' }}
                 >
                   {isRTL ? 'أخرى' : 'Other'}
@@ -90,7 +135,8 @@ const Header = () => {
                     {otherLinks.map((item) => (
                       <li key={item.href} className="border-b border-gray-100 last:border-0 w-full">
                         <a
-                          href={item.href}
+                          href={`#${item.href}`}
+                          onClick={(e) => scrollTo(e, item.href)}
                           className="block px-4 py-[15px] text-sm text-[#190a32] font-medium hover:text-[#782551] transition-colors duration-200"
                         >
                           {item.label}
@@ -109,19 +155,16 @@ const Header = () => {
 
             {/* ── Mobile Hamburger ── */}
             <button
-              className="lg:hidden cursor-pointer bg-transparent border-none p-2 rounded-md transition-colors duration-200"
+              className="lg:hidden cursor-pointer bg-transparent border-none p-2 rounded-md"
               onClick={() => setMobileOpen((o) => !o)}
               aria-label="Toggle menu"
-              style={{ color: iconColor }}
             >
               {mobileOpen ? (
-                /* ✕ close icon */
                 <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="white" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
                 </svg>
               ) : (
-                /* ☰ hamburger icon — short middle line */
-                 <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="white" strokeWidth={2}>
+                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="white" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M5 5h16" />
                   <path strokeLinecap="round" strokeLinejoin="round" d="M11 10h10" />
                   <path strokeLinecap="round" strokeLinejoin="round" d="M7 15h14" />
@@ -139,9 +182,14 @@ const Header = () => {
                 {navLinks.map((link) => (
                   <li key={link.href} className="border-b border-gray-100">
                     <a
-                      href={link.href}
-                      onClick={() => setMobileOpen(false)}
-                      className="block py-3 px-4 text-sm font-medium text-[#707692] hover:text-[#782551] transition-colors duration-200"
+                      href={`#${link.href}`}
+                      onClick={(e) => scrollTo(e, link.href)}
+                      className={[
+                        'block py-3 px-4 text-sm font-medium transition-colors duration-200',
+                        isActive(link.href)
+                          ? 'text-[#782551] font-semibold'
+                          : 'text-[#707692] hover:text-[#782551]',
+                      ].join(' ')}
                     >
                       {link.label}
                     </a>
@@ -162,8 +210,8 @@ const Header = () => {
                       {otherLinks.map((item) => (
                         <li key={item.href} className="border-b border-gray-100 last:border-0">
                           <a
-                            href={item.href}
-                            onClick={() => setMobileOpen(false)}
+                            href={`#${item.href}`}
+                            onClick={(e) => scrollTo(e, item.href)}
                             className="block py-3 px-8 text-sm text-[#190a32] hover:text-[#782551] transition-colors duration-200"
                           >
                             {item.label}

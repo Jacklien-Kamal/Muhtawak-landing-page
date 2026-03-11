@@ -186,38 +186,42 @@ export const en = {
         ],
       },
       blogs: {
-  heading: 'Our Latest Blog & News',
-  description: 'Tips, guides and insights for content creators and brands on the Muhtawak platform.',
-  posts: [
-    {
-      img: 'img/blog/inner_b1.jpg',
-      date: '20 Jan 2025',
-      title: 'How to Create Content That Brands Actually Want to Pay For',
-      excerpt: 'Discover what top brands look for when hiring content creators — and how to make your profile stand out on Muhtawak.',
-      author: 'Muhtawak Team',
-      authorRole: 'Author',
-      authorImg: 'img/blog/admin-img.png',
-    },
-    {
-      img: 'img/blog/inner_b2.jpg',
-      date: '15 Feb 2025',
-      title: '5 Ways to Grow Your Earnings as a Content Creator',
-      excerpt: 'From choosing the right projects to building long-term brand relationships — here is how creators maximize their income on the platform.',
-      author: 'Muhtawak Team',
-      authorRole: 'Author',
-      authorImg: 'img/blog/admin-img.png',
-    },
-    {
-      img: 'img/blog/inner_b3.jpg',
-      date: '01 Mar 2025',
-      title: 'Why Brands Are Shifting to Real UGC Over Traditional Ads',
-      excerpt: 'User-generated content outperforms polished ads in engagement and trust. Learn how brands on Muhtawak are leveraging authentic creators.',
-      author: 'Muhtawak Team',
-      authorRole: 'Author',
-      authorImg: 'img/blog/admin-img.png',
-    },
-  ],
-},
+        heading: "Our Latest Blog & News",
+        description:
+          "Tips, guides and insights for content creators and brands on the Muhtawak platform.",
+        posts: [
+          {
+            img: "img/blog/inner_b1.jpg",
+            date: "20 Jan 2025",
+            title: "How to Create Content That Brands Actually Want to Pay For",
+            excerpt:
+              "Discover what top brands look for when hiring content creators — and how to make your profile stand out on Muhtawak.",
+            author: "Muhtawak Team",
+            authorRole: "Author",
+            authorImg: "img/blog/admin-img.png",
+          },
+          {
+            img: "img/blog/inner_b2.jpg",
+            date: "15 Feb 2025",
+            title: "5 Ways to Grow Your Earnings as a Content Creator",
+            excerpt:
+              "From choosing the right projects to building long-term brand relationships — here is how creators maximize their income on the platform.",
+            author: "Muhtawak Team",
+            authorRole: "Author",
+            authorImg: "img/blog/admin-img.png",
+          },
+          {
+            img: "img/blog/inner_b3.jpg",
+            date: "01 Mar 2025",
+            title: "Why Brands Are Shifting to Real UGC Over Traditional Ads",
+            excerpt:
+              "User-generated content outperforms polished ads in engagement and trust. Learn how brands on Muhtawak are leveraging authentic creators.",
+            author: "Muhtawak Team",
+            authorRole: "Author",
+            authorImg: "img/blog/admin-img.png",
+          },
+        ],
+      },
       footer: {
         about:
           "Sed ut perspiciatis unde om is nerror sit voluptatem accustium dolorem tium totam rem aperam quae.",
@@ -241,7 +245,18 @@ export const en = {
         address: "380 St Kilda Road, Melbourne, VIC 3004, Australia",
         copyright: "© 2020 @ Bengle All design Zcube.",
       },
-      
+      contact: {
+        heading: "Get In Touch",
+        description:
+          "Have a question or want to collaborate? Leave your details and we will get back to you as soon as possible.",
+        fields: {
+          name: "Your Name",
+          email: "Your Email",
+          phone: "Your Phone",
+          message: "Write your message...",
+        },
+        button: "Send Message",
+      },
     },
 
     Agency: {
@@ -356,49 +371,28 @@ export const en = {
         ],
       },
       pricing: {
-        tag: "Agency Plans",
-        heading: "Pricing Built for Teams",
+        tag: "Agencys  Plans",
+        heading: "Our Plans for Agencies",
         plans: [
           {
-            name: "Starter",
-            price: "$49",
+            name: "Package 16",
+            price: "5600.00  ",
             period: "/month",
             features: [
-              "3 Client Seats",
-              "Basic Reporting",
-              "5 Team Members",
-              "10 GB Storage",
-            ],
-            highlight: false,
-            cta: "Get Started",
-          },
-          {
-            name: "Growth Agency",
-            price: "$149",
-            period: "/month",
-            features: [
-              "20 Client Seats",
-              "White-Label Reports",
-              "25 Team Members",
-              "200 GB Storage",
+              "16 videos ",
+              "Video with 60min duration",
               "Priority Support",
             ],
             highlight: true,
-            cta: "Scale Up",
+            cta: "Get Statred",
           },
           {
-            name: "Enterprise",
-            price: "Custom",
-            period: "",
-            features: [
-              "Unlimited Clients",
-              "Custom Integrations",
-              "Unlimited Team",
-              "Dedicated Infrastructure",
-              "SLA + Manager",
-            ],
+            name: "Pro Package",
+            price: "1500.00  ",
+            period: "/month",
+            features: ["5 videos", "Video with 60min duration"],
             highlight: false,
-            cta: "Contact Sales",
+            cta: "Go Pro ",
           },
         ],
       },
@@ -470,39 +464,55 @@ export const en = {
           "Scale your content volume without scaling your costs",
         ],
       },
- blogs: {
-  heading: 'Our Latest Blog & News',
-  description: 'Tips, guides and insights for content creators and brands on the Muhtawak platform.',
-  posts: [
-    {
-      img: 'img/blog/inner_b1.jpg',
-      date: '20 Jan 2025',
-      title: 'How to Create Content That Brands Actually Want to Pay For',
-      excerpt: 'Discover what top brands look for when hiring content creators — and how to make your profile stand out on Muhtawak.',
-      author: 'Muhtawak Team',
-      authorRole: 'Author',
-      authorImg: 'img/blog/admin-img.png',
-    },
-    {
-      img: 'img/blog/inner_b2.jpg',
-      date: '15 Feb 2025',
-      title: '5 Ways to Grow Your Earnings as a Content Creator',
-      excerpt: 'From choosing the right projects to building long-term brand relationships — here is how creators maximize their income on the platform.',
-      author: 'Muhtawak Team',
-      authorRole: 'Author',
-      authorImg: 'img/blog/admin-img.png',
-    },
-    {
-      img: 'img/blog/inner_b3.jpg',
-      date: '01 Mar 2025',
-      title: 'Why Brands Are Shifting to Real UGC Over Traditional Ads',
-      excerpt: 'User-generated content outperforms polished ads in engagement and trust. Learn how brands on Muhtawak are leveraging authentic creators.',
-      author: 'Muhtawak Team',
-      authorRole: 'Author',
-      authorImg: 'img/blog/admin-img.png',
-    },
-  ],
-},
+      blogs: {
+        heading: "Our Latest Blog & News",
+        description:
+          "Tips, guides and insights for content creators and brands on the Muhtawak platform.",
+        posts: [
+          {
+            img: "img/blog/inner_b1.jpg",
+            date: "20 Jan 2025",
+            title: "How to Create Content That Brands Actually Want to Pay For",
+            excerpt:
+              "Discover what top brands look for when hiring content creators — and how to make your profile stand out on Muhtawak.",
+            author: "Muhtawak Team",
+            authorRole: "Author",
+            authorImg: "img/blog/admin-img.png",
+          },
+          {
+            img: "img/blog/inner_b2.jpg",
+            date: "15 Feb 2025",
+            title: "5 Ways to Grow Your Earnings as a Content Creator",
+            excerpt:
+              "From choosing the right projects to building long-term brand relationships — here is how creators maximize their income on the platform.",
+            author: "Muhtawak Team",
+            authorRole: "Author",
+            authorImg: "img/blog/admin-img.png",
+          },
+          {
+            img: "img/blog/inner_b3.jpg",
+            date: "01 Mar 2025",
+            title: "Why Brands Are Shifting to Real UGC Over Traditional Ads",
+            excerpt:
+              "User-generated content outperforms polished ads in engagement and trust. Learn how brands on Muhtawak are leveraging authentic creators.",
+            author: "Muhtawak Team",
+            authorRole: "Author",
+            authorImg: "img/blog/admin-img.png",
+          },
+        ],
+      },
+      contact: {
+        heading: "Get In Touch",
+        description:
+          "Have a question or want to collaborate? Leave your details and we will get back to you as soon as possible.",
+        fields: {
+          name: "Your Name",
+          email: "Your Email",
+          phone: "Your Phone",
+          message: "Write your message...",
+        },
+        button: "Send Message",
+      },
     },
   },
 
@@ -576,5 +586,17 @@ export const en = {
     contactUs: "Contact Us",
     address: "380 St Kilda Road, Melbourne\nVIC 3004, Australia",
     copyright: "© 2020 @ Bengle All design Zcube.",
+  },
+  contact: {
+    heading: "Get In Touch",
+    description:
+      "Have a question or want to collaborate? Leave your details and we will get back to you as soon as possible.",
+    fields: {
+      name: "Your Name",
+      email: "Your Email",
+      phone: "Your Phone",
+      message: "Write your message...",
+    },
+    button: "Send Message",
   },
 };

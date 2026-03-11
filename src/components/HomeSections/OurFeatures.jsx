@@ -26,7 +26,7 @@ export default function OurFeatures() {
 
   return (
     <section
-      id="about"
+      id="features"
       className="relative pt-14 sm:pt-16 md:pt-20 lg:pt-[100px] pb-10 sm:pb-14 md:pb-[80px]"
       style={{
         backgroundImage: 'url(img/shape/header-sape2.png)',
