@@ -11,7 +11,7 @@ export default function ContactSection() {
   return (
     <section
       id="contact"
-      className="relative pt-[50px] pb-[100px] overflow-hidden"
+      className="relative pt-[50px] pb-[100px] overflow-hidden md:px-52"
       dir={isRTL ? 'rtl' : 'ltr'}
       style={{
         backgroundImage: 'url(img/shape/header-sape8.png)',
