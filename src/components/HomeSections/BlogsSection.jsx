@@ -1,4 +1,5 @@
 import React, { useRef, useState, useEffect, useCallback } from 'react'
+import { Link } from 'react-router-dom'
 import { useRole } from '../../hooks/roleContext'
 import { useI18n } from '../../hooks/i18nContext'
 
@@ -50,7 +51,7 @@ export default function BlogsSection() {
   return (
     <section
       id="blog"
-      className="relative pt-[70px] pb-[70px] md:px-52 "
+      className="relative pt-[70px] pb-[70px] md:px-52"
       dir={isRTL ? 'rtl' : 'ltr'}
       style={{
         backgroundImage: 'url(img/shape/header-sape8.png)',
@@ -58,13 +59,13 @@ export default function BlogsSection() {
         backgroundRepeat: 'no-repeat',
       }}
     >
-      <div className=" mx-auto px-4">
+      <div className="mx-auto px-4">
 
         {/* Section Header */}
         <div className="flex justify-center items-center">
-          <div className=" w-full">
-            <div className={`text-center mb-[50px] `}>
-              <h2 className="text-[38px] font-semibold text-[#190a32] pb-[15px] mb-0 leading-snug text-center" >
+          <div className="w-full">
+            <div className="text-center mb-[50px]">
+              <h2 className="text-[38px] font-semibold text-[#190a32] pb-[15px] mb-0 leading-snug text-center">
                 {heading}
               </h2>
               <p className="text-sm text-[#666] leading-6">{description}</p>
@@ -75,7 +76,7 @@ export default function BlogsSection() {
         {/* ── Desktop: 3-column grid ── */}
         <div className="hidden md:flex flex-wrap -mx-4">
           {posts.map((post, i) => (
-            <BlogCard key={i} post={post} isRTL={isRTL} />
+            <BlogCard key={i} post={post} index={i} isRTL={isRTL} />
           ))}
         </div>
 
@@ -95,7 +96,7 @@ export default function BlogsSection() {
           >
             {posts.map((post, i) => (
               <div key={i} className="w-full flex-shrink-0 px-2">
-                <BlogCard post={post} isRTL={isRTL} mobile />
+                <BlogCard post={post} index={i} isRTL={isRTL} mobile />
               </div>
             ))}
           </div>
@@ -121,16 +122,16 @@ export default function BlogsSection() {
   )
 }
 
-function BlogCard({ post, isRTL, mobile }) {
+function BlogCard({ post, index, isRTL, mobile }) {
   return (
     <div className={`${mobile ? 'w-full' : 'lg:w-1/3 w-full px-4'}`}>
       <div className="mb-[30px] bg-white overflow-hidden rounded-[10px] shadow-[3px_4px_25px_rgba(0,0,0,0.1)] transition-shadow duration-300 hover:shadow-[0px_10px_80px_rgba(193,193,193,0.41)]">
 
         {/* Thumbnail */}
         <div className="overflow-hidden">
-          <a href="blog-details.html">
+          <Link to={`/blog/${index}`}>
             <img src={post.img} alt="img" className="w-full transition-all duration-300" />
-          </a>
+          </Link>
         </div>
 
         {/* Content */}
@@ -140,22 +141,21 @@ function BlogCard({ post, isRTL, mobile }) {
           <div className="mb-[40px]">
             <ul className={`flex gap-2 ${isRTL ? 'justify-end' : ''}`}>
               <li>
-                <a
-                  href="#"
-                  className="text-xs text-white uppercase shadow-[3px_4px_15px_rgba(210,45,74,0.3)] rounded-[13px] px-5 py-[5px] transition-all duration-300"
+                <span
+                  className="text-xs text-white uppercase shadow-[3px_4px_15px_rgba(210,45,74,0.3)] rounded-[13px] px-5 py-[5px]"
                   style={{ background: 'linear-gradient(90deg,#6b003e,#6b003e)' }}
                 >
                   {post.date}
-                </a>
+                </span>
               </li>
             </ul>
           </div>
 
           {/* Title */}
           <h4 className="text-[18px] font-semibold text-[#190a32] mb-5 h-12 leading-[1.3]">
-            <a href="blog-details.html" className=" hover:text-[#782551] transition-colors duration-300">
+            <Link to={`/blog/${index}`} className="hover:text-[#782551] transition-colors duration-300">
               {post.title}
-            </a>
+            </Link>
           </h4>
 
           {/* Excerpt */}
@@ -172,7 +172,7 @@ function BlogCard({ post, isRTL, mobile }) {
                 />
               </li>
               <li className="text-sm text-[#666]">
-                <h6 className="text-[#190a32] font-semibold text-base ">{post.author}</h6>
+                <h6 className="text-[#190a32] font-semibold text-base">{post.author}</h6>
                 {post.authorRole}
               </li>
             </ul>
