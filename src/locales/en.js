@@ -243,7 +243,7 @@ export const en = {
         ],
         contactUs: "Contact Us",
         address: "380 St Kilda Road, Melbourne, VIC 3004, Australia",
-        copyright: "© 2020 @ Bengle All design Zcube.",
+        copyright: "© 2026 Muhtawak. All rights reserved",
       },
       contact: {
         heading: "Get In Touch",
@@ -281,7 +281,7 @@ export const en = {
         ],
         contactUs: "Contact Us",
         address: "380 St Kilda Road, Melbourne, VIC 3004, Australia",
-        copyright: "© 2020 @ Bengle All design Zcube.",
+        copyright: "© 2026 Muhtawak. All rights reserved",
       },
       badge: ["Agency", "Enterprise"],
       hero: {
@@ -569,6 +569,9 @@ export const en = {
     pricing: "Pricing",
     faq: "FAQ",
     contact: "Contact",
+    creatorsWork: "Creators Work",
+    downloadApp: "Download App",
+    reviews: "Reviews",
   },
   footer: {
     about:
@@ -585,7 +588,7 @@ export const en = {
     usefulLinksList: ["Home", "About Us", "Services", "Project", "Our Team"],
     contactUs: "Contact Us",
     address: "380 St Kilda Road, Melbourne\nVIC 3004, Australia",
-    copyright: "© 2020 @ Bengle All design Zcube.",
+        copyright: "© 2026 Muhtawak. All rights reserved",
   },
   contact: {
     heading: "Get In Touch",
@@ -598,5 +601,6 @@ export const en = {
       message: "Write your message...",
     },
     button: "Send Message",
+    creatorsWork: "creators Works",
   },
 };

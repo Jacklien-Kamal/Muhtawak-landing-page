@@ -7,7 +7,6 @@ import { RoleProvider } from './hooks/roleContext';
 
 function App() {
   return (
-    // I18nProvider must wrap RoleProvider because roleContext reads from locale
     <I18nProvider>
       <RoleProvider>
         <div className="font-poppins text-bingle-gray">

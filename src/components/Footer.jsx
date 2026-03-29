@@ -141,7 +141,7 @@ function SectionHeading({ title, isRTL }) {
 /* ── Contact row ── */
 function ContactItem({ icon, children, isRTL }) {
   return (
-    <li className={`flex items-start gap-3 ${isRTL ? 'flex-row-reverse' : ''}`}>
+    <li className={`flex items-start gap-3 ${isRTL ? 'flex-row' : ''}`}>
       <span
         className="w-10 h-10 rounded-full flex items-center justify-center shrink-0 text-white"
         style={{ background: 'rgba(255,255,255,0.15)', border: '1.5px solid rgba(255,255,255,0.3)' }}

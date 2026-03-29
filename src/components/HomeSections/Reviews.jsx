@@ -66,7 +66,7 @@ export default function Reviews() {
 
   return (
     <section
-      id="testimonios"
+      id="reviews"
       className="relative pt-14 sm:pt-16 md:pt-20 lg:pt-[100px] pb-10 sm:pb-12 md:pb-[70px] px-4 sm:px-8 md:px-16 lg:px-28 xl:px-52"
       dir={isRTL ? 'rtl' : 'ltr'}
       style={{

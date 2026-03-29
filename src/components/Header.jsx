@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import LanguageSwitcher from './LanguageSwitcher/LanguageSwitcher';
 import { useI18n } from '../hooks/i18nContext';
+import { useRole } from '../hooks/roleContext';
 
 const Header = () => {
   const { locale, isRTL } = useI18n();
@@ -9,22 +10,29 @@ const Header = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [otherOpen, setOtherOpen]   = useState(false);
   const [activeSection, setActiveSection] = useState('');
+  const { role } = useRole();
 
   const t = locale.nav;
 
-  const navLinks = [
-    { label: t.home,       href: 'parallax'     },
-    { label: t.features,   href: 'features'     },
-    { label: t.howItWorks, href: 'how-it-works'  },
-    { label: t.pricing,    href: 'pricing'      },
-    // { label: t.faq,        href: 'faq'          },
-    { label: t.contact,    href: 'contact'      },
-  ];
+const navLinks = [
+  { label: t.home,       href: 'parallax' },
+  { label: t.creatorsWork,   href: 'creatorsWork' },
+  { label: t.downloadApp,   href: 'downloadApp' },
+  { label: t.howItWorks, href: 'how-it-works' },
+  ...(role === "Agency"
+    ? [{ label: t.pricing, href: 'pricing' }]
+    : []),
+  { label: t.features,   href: 'features' },
+
+
+];
 
   const otherLinks = [
-    { label: t.pricing,      href: 'pricing'           },
+    // { label: isRTL ? 'تفاصيل المقال' : 'Blog Details', href: 'blog-details'  },
+    { label: t.reviews,    href: 'reviews' },
     { label: isRTL ? 'المدونة' : 'Blog',         href: 'blog'          },
-    { label: isRTL ? 'تفاصيل المقال' : 'Blog Details', href: 'blog-details'  },
+      { label: t.contact,    href: 'contact' },
+
   ];
 
   // ── Sticky on scroll ──

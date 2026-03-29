@@ -10,6 +10,7 @@ export default function DownloadApp() {
 
   return (
     <section
+    id='downloadApp'
       className="relative pt-16 sm:pt-20 md:pt-24 lg:pt-[100px] pb-10 sm:pb-12 md:pb-[60px] overflow-hidden px-6 sm:px-8 md:px-16 lg:px-28 xl:px-52"
       style={{
         backgroundImage: 'url(img/shape/header-sape3.png)',

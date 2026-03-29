@@ -250,7 +250,7 @@ export const ar = {
         ],
         contactUs: "تواصل معنا",
         address: "شارع الملك فهد، الرياض، المملكة العربية السعودية",
-        copyright: ".Bengle جميع الحقوق محفوظة © 2020",
+        copyright: " 2026 © جميع الحقوق محفوظة لمحتواك ",
       },
     },
 
@@ -276,7 +276,7 @@ export const ar = {
         ],
         contactUs: "تواصل معنا",
         address: "شارع الملك فهد، الرياض، المملكة العربية السعودية",
-        copyright: ".Bengle جميع الحقوق محفوظة © 2020",
+        copyright: "© 2026 جميع الحقوق محفوظة لمحتواك",
       },
       badge: ["وكالة", "مؤسسة"],
       hero: {
@@ -557,6 +557,10 @@ export const ar = {
     pricing: "الأسعار",
     faq: "الأسئلة الشائعة",
     contact: "تواصل معنا",
+    creatorsWork:"اعمال صناع المحتوي  ",
+        downloadApp:"حمل التطبيق",
+        reviews:"تقييمات"
+
   },
   footer: {
     about:
@@ -573,7 +577,7 @@ export const ar = {
     usefulLinksList: ["الرئيسية", "من نحن", "الخدمات", "المشاريع", "فريقنا"],
     contactUs: "تواصل معنا",
     address: "شارع الملك فهد، الرياض\nالمملكة العربية السعودية",
-    copyright: ".Bengle جميع الحقوق محفوظة © 2020",
+        copyright: "© 2026 جميع الحقوق محفوظة لمحتواك",
   },
   contact: {
     heading: "تواصل معنا",
@@ -587,4 +591,5 @@ export const ar = {
     },
     button: "إرسال",
   },
+  creatorsWork:"creators Work"
 };

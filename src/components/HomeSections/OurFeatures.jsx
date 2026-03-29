@@ -50,7 +50,7 @@ export default function OurFeatures() {
         </div>
 
         {/* ── Feature Cards ── */}
-        <div className={`flex flex-wrap -mx-2 sm:-mx-3 md:-mx-4 ${isRTL ? 'flex-row-reverse' : ''}`}>
+        <div className={`flex flex-wrap -mx-2 sm:-mx-3 md:-mx-4 ${isRTL ? 'flex-row' : ''}`}>
           {features.map((feature, index) => {
             const isActive = index === activeIndex;
             return (
@@ -83,12 +83,12 @@ export default function OurFeatures() {
                   </h5>
 
                   {/* Description */}
-                  <p className="text-sm text-[#666666] leading-6 mb-0">
+                  <p className="text-sm text-[#666666] leading-6 mb-0 h-16">
                     {feature.description}
                   </p>
 
                   {/* Icon badge */}
-                  <div className="flex justify-center mb-0 mt-6 sm:mt-8 md:mt-9">
+                  <div className={` flex  justify-center mb-0 mt-6 sm:mt-8 md:mt-9`}>
                     <span
                       className={[
                         'w-12 h-12 sm:w-14 sm:h-14 cursor-pointer rounded-full flex items-center justify-center text-base sm:text-lg font-semibold transition-all duration-300',
@@ -97,7 +97,7 @@ export default function OurFeatures() {
                           : 'text-[#782551] border-2 border-[#782551] bg-white',
                       ].join(' ')}
                     >
-                      {index + 1}
+                    {isRTL?(index + 1).toLocaleString('ar-EG'):index + 1}  
                     </span>
                   </div>
                 </div>

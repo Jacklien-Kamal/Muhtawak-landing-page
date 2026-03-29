@@ -99,6 +99,7 @@ export default function CreatorShowcase() {
 
   return (
     <section
+    id='creatorsWork'
       className="relative overflow-hidden py-12 sm:py-16 md:py-[80px] pb-14 sm:pb-16 md:pb-[90px]"
       dir={isRTL ? 'rtl' : 'ltr'}
     >
@@ -201,7 +202,7 @@ export default function CreatorShowcase() {
       </div>
 
       {/* ── Dot indicators ── */}
-      <div className="flex justify-center gap-[10px] mt-8 sm:mt-9 relative z-[5]">
+      <div className={`flex ${isRTL?"flex-row-reverse":"flex-row"} justify-center gap-[10px] mt-8 sm:mt-9 relative z-[5]`}>
         {VIDEOS.map((_, i) => (
           <button
             key={i}

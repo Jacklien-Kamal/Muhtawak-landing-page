@@ -96,16 +96,16 @@ const Home = () => {
         </FadeInSection>
       )}
 
-      {/* Reviews — fade from left */}
-      <FadeInSection direction="left">
-        <Reviews />
-      </FadeInSection>
+
 
       {/* Features — fade from right */}
       <FadeInSection direction="right">
         <OurFeatures />
       </FadeInSection>
-
+      {/* Reviews — fade from left */}
+      <FadeInSection direction="left">
+        <Reviews />
+      </FadeInSection>
       {/* Blogs — fade up */}
       <FadeInSection direction="up">
         <BlogsSection />

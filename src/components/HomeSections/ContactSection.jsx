@@ -75,7 +75,7 @@ export default function ContactSection() {
                 <div className="w-full px-3 mb-5">
                   <div className="relative">
                     <input
-                      type="tel"
+                      type="number"
                       placeholder={fields.phone}
                       className="w-full h-[80px] px-[40px] bg-[#f4f4fe] border-0 text-[15px] text-black rounded-[10px] shadow-[3px_4px_15px_rgba(0,0,0,0.1)] placeholder-[#8990b0] focus:outline-none focus:ring-2 focus:ring-[#782551] transition-all duration-300"
                     />
