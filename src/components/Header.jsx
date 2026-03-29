@@ -91,7 +91,7 @@ const navLinks = [
           <div className="flex items-center justify-between py-4 lg:py-0">
 
             {/* ── Logo ── */}
-            <a href="#parallax" onClick={(e) => scrollTo(e, 'parallax')} className="flex-shrink-0">
+            <a href="/"  className="flex-shrink-0">
               <img src="img/logo/logo.webp" alt="logo" className="h-10 w-auto" />
             </a>
 
