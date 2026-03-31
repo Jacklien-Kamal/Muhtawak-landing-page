@@ -191,7 +191,7 @@ export const en = {
           "Tips, guides and insights for content creators and brands on the Muhtawak platform.",
         posts: [
           {
-            img: "img/blog/inner_b1.jpg",
+            img: "img/blog/b3.jpg",
             date: "20 Jan 2025",
             title: "How to Create Content That Brands Actually Want to Pay For",
             excerpt:
@@ -201,7 +201,7 @@ export const en = {
             authorImg: "img/blog/admin-img.png",
           },
           {
-            img: "img/blog/inner_b2.jpg",
+            img: "img/blog/b4.jpg",
             date: "15 Feb 2025",
             title: "5 Ways to Grow Your Earnings as a Content Creator",
             excerpt:
@@ -211,7 +211,7 @@ export const en = {
             authorImg: "img/blog/admin-img.png",
           },
           {
-            img: "img/blog/inner_b3.jpg",
+            img: "img/blog/b5.jpg",
             date: "01 Mar 2025",
             title: "Why Brands Are Shifting to Real UGC Over Traditional Ads",
             excerpt:
@@ -470,7 +470,7 @@ export const en = {
           "Tips, guides and insights for content creators and brands on the Muhtawak platform.",
         posts: [
           {
-            img: "img/blog/inner_b1.jpg",
+            img: "img/blog/(1).jpeg",
             date: "20 Jan 2025",
             title: "How to Create Content That Brands Actually Want to Pay For",
             excerpt:
@@ -480,7 +480,7 @@ export const en = {
             authorImg: "img/blog/admin-img.png",
           },
           {
-            img: "img/blog/inner_b2.jpg",
+            img: "img/blog/(1).jpg",
             date: "15 Feb 2025",
             title: "5 Ways to Grow Your Earnings as a Content Creator",
             excerpt:
@@ -490,7 +490,7 @@ export const en = {
             authorImg: "img/blog/admin-img.png",
           },
           {
-            img: "img/blog/inner_b3.jpg",
+            img: "img/blog/(2).jpg",
             date: "01 Mar 2025",
             title: "Why Brands Are Shifting to Real UGC Over Traditional Ads",
             excerpt:

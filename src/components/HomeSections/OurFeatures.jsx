@@ -4,9 +4,9 @@ import { useI18n } from '../../hooks/i18nContext';
 
 const FEATURE_IMAGES = {
   Creator: [
-    'https://muhtawak.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FworkAnytime.8e5bc14e.jpg&w=640&q=75',
-    'https://muhtawak.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FrealOpportunities.9483afd5.jpg&w=640&q=75',
-    'https://muhtawak.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FearnPerContent.1a375893.jpg&w=640&q=75',
+    'img/bg/f1.png',
+    'img/bg/f3.png',
+    'img/bg/f2.png',
   ],
   Agency: [
     'https://muhtawak.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FfastDelivery.80cef0ae.jpg&w=640&q=75',

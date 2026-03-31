@@ -29,9 +29,9 @@ export default function DownloadApp() {
       />
 
       {/* ── Phone mockup image (hidden on small screens) ── */}
-      <div className={`hidden lg:block absolute top-[3%] ${isRTL ? 'left-[8%] xl:left-[12.5%]' : 'left-[6%] xl:left-[10.5%]'}`}>
-        <img src="img/bg/mobile2.png" alt="mobile" className="w-3/5 xl:w-4/5" />
-      </div>
+      {/* <div className={`hidden lg:block absolute top-[3%] ${isRTL ? 'left-[8%] xl:left-[12.5%]' : 'left-[6%] xl:left-[10.5%]'}`}>
+        <img src="img/bg/mobile2.png" alt="mobile" className="w-3/5 xl:w-3/5" />
+      </div> */}
 
       <div className="mx-auto px-0 sm:px-4">
         <div className={`flex flex-wrap ${isRTL ? 'flex-row-reverse' : ''}`}>

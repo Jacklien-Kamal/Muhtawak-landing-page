@@ -109,7 +109,7 @@ export default function HeroSection() {
           </div>
 
           {/* ── Right Column ── */}
-          <div className={`w-full lg:w-1/2 ${isRTL&&"-rotate-55 "}`}>
+          <div className={`w-full lg:w-[40%] `}>
             <img
               src="img/bg/mobile.png"
               alt="app preview"

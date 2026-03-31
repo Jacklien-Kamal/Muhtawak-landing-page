@@ -25,8 +25,8 @@ const ARTICLE_CONTENT = {
       quote: `"Authenticity is the currency of the creator economy. Brands don't just want reach — they want trust."`,
       quoteAuthor: 'Muhtawak Team',
       bodyAfterQuote: `Finally, your portfolio on Muhtawak is your pitch. Make sure it showcases your best work across formats — video, photo, written — and includes examples of any past brand collaborations. Even if you're just starting out, a well-organized portfolio signals professionalism and seriousness to any brand browsing the platform.`,
-      inlineImg: 'img/blog/b_details01.jpg',
-      figureImg: 'img/blog/b_details02.jpg',
+      inlineImg: '/img/blog/b3.jpg',
+      figureImg: '/img/blog/b3.jpg',
       tags: ['Content Creation', 'Brand Deals', 'Creator Tips'],
     },
     ar: {
@@ -38,8 +38,8 @@ const ARTICLE_CONTENT = {
       quote: `"الأصالة هي عملة اقتصاد المحتوى. العلامات التجارية لا تريد الوصول فقط — بل تريد الثقة."`,
       quoteAuthor: 'فريق محتواك',
       bodyAfterQuote: `أخيراً، محفظتك على محتواك هي عرضك التقديمي. تأكد من أنها تعرض أفضل أعمالك عبر أشكال مختلفة — فيديو وصورة ونص — وتتضمن أمثلة على أي تعاون سابق مع علامات تجارية. حتى لو كنت في بداياتك، فإن محفظة منظمة جيداً توصل رسالة الاحترافية والجدية لأي علامة تجارية تتصفح المنصة.`,
-      inlineImg: 'img/blog/b_details01.jpg',
-      figureImg: 'img/blog/b_details02.jpg',
+      inlineImg: '/img/blog/b3.jpg',
+      figureImg: '/img/blog/b3.jpg',
       tags: ['إنشاء المحتوى', 'صفقات العلامات التجارية', 'نصائح للصانعين'],
     },
   },
@@ -53,8 +53,8 @@ const ARTICLE_CONTENT = {
       quote: `"Your rate grows when your results speak louder than your follower count."`,
       quoteAuthor: 'Muhtawak Team',
       bodyAfterQuote: `Finally, communicate professionally and deliver on time — every single time. Brands on Muhtawak leave ratings after each collaboration, and a strong track record of reliability is the most powerful asset a creator can build. Creators with top ratings are featured first in brand searches and receive exclusive high-budget opportunities before anyone else.`,
-      inlineImg: 'img/blog/b_details01.jpg',
-      figureImg: 'img/blog/b_details02.jpg',
+      inlineImg: '/img/blog/b4.jpg',
+      figureImg: '/img/blog/b4.jpg',
       tags: ['Earnings', 'Creator Growth', 'Brand Partnerships'],
     },
     ar: {
@@ -66,8 +66,8 @@ const ARTICLE_CONTENT = {
       quote: `"سعرك يرتفع حين تتكلم نتائجك بصوت أعلى من عدد متابعيك."`,
       quoteAuthor: 'فريق محتواك',
       bodyAfterQuote: `أخيراً، تواصل باحترافية وسلّم في الوقت المحدد — في كل مرة. العلامات التجارية على محتواك تترك تقييمات بعد كل تعاون، وسجل موثوقية قوي هو أقوى أصل يمكن لصانع المحتوى بناؤه. الصانعون ذوو التقييمات العالية يظهرون أولاً في بحث العلامات التجارية ويتلقون فرص ميزانية حصرية قبل أي شخص آخر.`,
-      inlineImg: 'img/blog/b_details01.jpg',
-      figureImg: 'img/blog/b_details02.jpg',
+      inlineImg: '/img/blog/b4.jpg',
+      figureImg: '/img/blog/b4.jpg',
       tags: ['الأرباح', 'نمو الصانع', 'شراكات العلامات التجارية'],
     },
   },
@@ -81,8 +81,8 @@ const ARTICLE_CONTENT = {
       quote: `"UGC converts at 4x the rate of brand-produced content — because people trust people."`,
       quoteAuthor: 'Muhtawak Team',
       bodyAfterQuote: `The brands seeing the strongest results on Muhtawak are the ones who give creators clear briefs but genuine creative freedom. Over-directing a creator produces content that looks scripted and defeats the purpose. The magic of UGC is in the authentic voice of the creator — and smart brands know to let that voice come through.`,
-      inlineImg: 'img/blog/b_details01.jpg',
-      figureImg: 'img/blog/b_details02.jpg',
+      inlineImg: '/img/blog/b5.jpg',
+      figureImg: '/img/blog/b5.jpg',
       tags: ['UGC', 'Brand Marketing', 'Digital Ads'],
     },
     ar: {
@@ -94,8 +94,8 @@ const ARTICLE_CONTENT = {
       quote: `"يحقق UGC معدل تحويل أعلى 4 مرات من المحتوى الذي تنتجه العلامات التجارية — لأن الناس يثقون بالناس."`,
       quoteAuthor: 'فريق محتواك',
       bodyAfterQuote: `العلامات التجارية التي تحقق أقوى نتائج على محتواك هي تلك التي تعطي الصانعين توجيهات واضحة لكن مع حرية إبداعية حقيقية. التوجيه المفرط للصانع ينتج محتوى يبدو مكتوباً ويهزم الغرض. سحر UGC يكمن في الصوت الأصيل للصانع — والعلامات التجارية الذكية تعرف أن تترك ذلك الصوت يظهر.`,
-      inlineImg: 'img/blog/b_details01.jpg',
-      figureImg: 'img/blog/b_details02.jpg',
+      inlineImg: '/img/blog/b5.jpg',
+      figureImg: '/img/blog/b5.jpg',
       tags: ['المحتوى المستخدم', 'تسويق العلامات التجارية', 'الإعلانات الرقمية'],
     },
   },
@@ -234,7 +234,7 @@ export default function BlogDetails() {
             <div style={{ flex: '1 1 620px', minWidth: 0 }}>
 
               {/* Hero image */}
-              <FallbackImg src={post.img} alt={post.title} height={440} style={{
+              <FallbackImg src={article.inlineImg} alt={post.title} height={440} style={{
                 width: '100%', objectFit: 'cover', borderRadius: 14,
                 boxShadow: '0 10px 50px rgba(107,0,62,0.18)', marginBottom: 32, display: 'block',
               }} />
@@ -390,7 +390,7 @@ export default function BlogDetails() {
               )}
 
               {/* Related posts */}
-              {related.length > 0 && (
+              {/* {related.length > 0 && (
                 <div style={{ marginBottom: 52 }}>
                   <h4 style={{ fontSize: 22, fontWeight: 700, color: C.primary, marginBottom: 24 }}>
                     {isRTL ? 'مقالات ذات صلة' : 'Related Posts'}
@@ -405,7 +405,7 @@ export default function BlogDetails() {
                           onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-6px)'; e.currentTarget.style.boxShadow = '0 14px 44px rgba(107,0,62,0.2)'; }}
                           onMouseLeave={e => { e.currentTarget.style.transform = 'none'; e.currentTarget.style.boxShadow = '0 4px 24px rgba(107,0,62,0.1)'; }}
                         >
-                          <FallbackImg src={p.img} alt="" height={155} style={{ width: '100%', objectFit: 'cover', display: 'block' }} />
+                          <img src={p.img} alt="" height={155} style={{ width: '100%', objectFit: 'cover', display: 'block' }} />
                           <div style={{ padding: '16px 18px', background: '#fff' }}>
                             <div style={{
                               display: 'inline-block', background: C.grad, color: '#fff',
@@ -419,7 +419,7 @@ export default function BlogDetails() {
                     ))}
                   </div>
                 </div>
-              )}
+              )} */}
 
               {/* Author box */}
               <div style={{

@@ -186,7 +186,7 @@ export const ar = {
           "نصائح وأدلة وأفكار لصنّاع المحتوى والعلامات التجارية على منصة محتواك.",
         posts: [
           {
-            img: "img/blog/inner_b1.jpg",
+            img: "img/blog/b3.jpg",
             date: "٢٠ يناير ٢٠٢٥",
             title: "كيف تصنع محتوى تدفع عليه العلامات التجارية بالفعل؟",
             excerpt:
@@ -196,7 +196,7 @@ export const ar = {
             authorImg: "img/blog/admin-img.png",
           },
           {
-            img: "img/blog/inner_b2.jpg",
+            img: "img/blog/b4.jpg",
             date: "١٥ فبراير ٢٠٢٥",
             title: "٥ طرق لتزيد أرباحك كصانع محتوى",
             excerpt:
@@ -206,7 +206,7 @@ export const ar = {
             authorImg: "img/blog/admin-img.png",
           },
           {
-            img: "img/blog/inner_b3.jpg",
+            img: "img/blog/b5.jpg",
             date: "٠١ مارس ٢٠٢٥",
             title:
               "لماذا تتجه العلامات التجارية نحو المحتوى الحقيقي بدلاً من الإعلانات التقليدية؟",
@@ -219,16 +219,17 @@ export const ar = {
         ],
       },
       contact: {
-  heading: 'تواصل معنا',
-  description: 'هل لديك سؤال أو تريد التعاون معنا؟ اترك بياناتك وسنتواصل معك في أقرب وقت.',
-  fields: {
-    name:    'الاسم',
-    email:   'البريد الإلكتروني',
-    phone:   'رقم الجوال',
-    message: 'اكتب رسالتك...',
-  },
-  button: 'إرسال',
-},
+        heading: "تواصل معنا",
+        description:
+          "هل لديك سؤال أو تريد التعاون معنا؟ اترك بياناتك وسنتواصل معك في أقرب وقت.",
+        fields: {
+          name: "الاسم",
+          email: "البريد الإلكتروني",
+          phone: "رقم الجوال",
+          message: "اكتب رسالتك...",
+        },
+        button: "إرسال",
+      },
       footer: {
         about:
           "منصة محتواك تربط المبدعين بالعلامات التجارية لإنتاج محتوى أصيل وجذاب يحقق نتائج حقيقية.",
@@ -557,10 +558,9 @@ export const ar = {
     pricing: "الأسعار",
     faq: "الأسئلة الشائعة",
     contact: "تواصل معنا",
-    creatorsWork:"اعمال صناع المحتوي  ",
-        downloadApp:"حمل التطبيق",
-        reviews:"تقييمات"
-
+    creatorsWork: "اعمال صناع المحتوي  ",
+    downloadApp: "حمل التطبيق",
+    reviews: "تقييمات",
   },
   footer: {
     about:
@@ -577,7 +577,7 @@ export const ar = {
     usefulLinksList: ["الرئيسية", "من نحن", "الخدمات", "المشاريع", "فريقنا"],
     contactUs: "تواصل معنا",
     address: "شارع الملك فهد، الرياض\nالمملكة العربية السعودية",
-        copyright: "© 2026 جميع الحقوق محفوظة لمحتواك",
+    copyright: "© 2026 جميع الحقوق محفوظة لمحتواك",
   },
   contact: {
     heading: "تواصل معنا",
@@ -591,5 +591,5 @@ export const ar = {
     },
     button: "إرسال",
   },
-  creatorsWork:"creators Work"
+  creatorsWork: "creators Work",
 };

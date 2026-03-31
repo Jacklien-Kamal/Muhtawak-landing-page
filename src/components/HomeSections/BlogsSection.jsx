@@ -130,7 +130,7 @@ function BlogCard({ post, index, isRTL, mobile }) {
         {/* Thumbnail */}
         <div className="overflow-hidden">
           <Link to={`/blog/${index}`}>
-            <img src={post.img} alt="img" className="w-full transition-all duration-300" />
+            <img src={post.img} alt="img" className="w-full h-48 object-cover transition-all duration-300" />
           </Link>
         </div>
 

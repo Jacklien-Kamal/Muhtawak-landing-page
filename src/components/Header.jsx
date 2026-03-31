@@ -103,10 +103,10 @@ const navLinks = [
                   href={`#${link.href}`}
                   onClick={(e) => scrollTo(e, link.href)}
                   className={[
-                    'relative block font-medium text-sm transition-colors duration-300 px-5 py-[34px]',
+                    'relative block  font-medium text-sm transition-colors duration-300 px-5 py-[34px]',
                     isActive(link.href)
                       ? 'text-[#f88765]'
-                      : 'hover:text-[#f4a0cc]',
+                      : 'text-white hover:text-[#f4a0cc]',
                   ].join(' ')}
                 >
                   {link.label}
