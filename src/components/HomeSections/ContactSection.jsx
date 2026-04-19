@@ -27,7 +27,7 @@ export default function ContactSection() {
           <div className="w-full lg:w-1/2 px-4 mb-10 lg:mb-0">
             <div className={`${isRTL ? 'mr-0 ml-[-160px]' : 'ml-[-160px] mr-0'} max-lg:ml-0 max-lg:mr-0`}>
               <img
-                src="img/bg/illustration.png"
+                src={isRTL?"img/bg/illustration.png":"img/bg/illustrationTr.png"}
                 alt="contact illustration"
                 className="w-full max-w-[500px] mx-auto lg:mx-0"
               />

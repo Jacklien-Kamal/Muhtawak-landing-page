@@ -67,14 +67,25 @@ export default function Reviews() {
   return (
     <section
       id="reviews"
-      className="relative pt-14 sm:pt-16 md:pt-20 lg:pt-[100px] pb-10 sm:pb-12 md:pb-[70px] px-4 sm:px-8 md:px-16 lg:px-28 xl:px-52"
+      className="relative pt-14 sm:pt-16 md:pt-20 lg:pt-[100px] pb-10 sm:pb-12 md:pb-[70px]  px-4 sm:px-8 md:px-16 lg:px-28 xl:px-52"
       dir={isRTL ? 'rtl' : 'ltr'}
-      style={{
-        backgroundImage: isRTL ? 'url(img/bg/easy-m-bg.png)' : 'url(img/bg/client-bg.png)',
-        backgroundRepeat: 'no-repeat',
-        backgroundPosition: isRTL ? 'left center' : 'right center',
-      }}
+      // style={{
+      //   backgroundImage: isRTL ? 'url(img/bg/easy-m-bg.png)' : 'url(img/bg/client-bg.png)',
+      //   backgroundRepeat: 'no-repeat',
+      //   backgroundPosition: isRTL ? 'left center' : 'right center',
+      // }}
     >
+    <div
+        className={`"hidden lg:block absolute top-[5%] ${isRTL?'-left-50':'-right-50'} w-72 lg:w-[500px] xl:w-[1038px] h-[400px] lg:h-[500px] bg-no-repeat bg-center"`}
+        style={{
+          backgroundImage: isRTL ? 'url(img/bg/easy-m-bg.png)' : 'url(img/bg/client-bg.png)',
+          backgroundSize: '100%',
+          backgroundPosition: isRTL?'left center':'right center',
+          backGroundRepeat: 'no-repeat', 
+                  backgroundSize: 'contain',
+
+        }}
+      />
       <div className="container mx-auto px-0 sm:px-4">
         <div className="flex flex-wrap">
 

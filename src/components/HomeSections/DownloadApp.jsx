@@ -21,10 +21,14 @@ export default function DownloadApp() {
     >
       {/* ── Phone background image (hidden on small screens) ── */}
       <div
-        className="hidden lg:block absolute top-[9%] left-0 w-72 lg:w-[500px] xl:w-[738px] h-[400px] lg:h-[569px] bg-no-repeat bg-center"
+        className="hidden lg:block absolute top-[5%] -left-50 w-72 lg:w-[500px] xl:w-[1038px] h-[400px] lg:h-[500px] bg-no-repeat bg-center"
         style={{
           backgroundImage: 'url(img/bg/easy-m-bg.png)',
           backgroundSize: '100%',
+          backgroundPosition: 'left center',
+          backGroundRepeat: 'no-repeat', 
+                  backgroundSize: 'contain',
+
         }}
       />
 
