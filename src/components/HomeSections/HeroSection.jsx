@@ -23,10 +23,7 @@ export default function HeroSection() {
         backgroundSize: '65%',
       }}
     >
-      {/* Shape decorations */}
-      <div className="absolute z-[9] top-0 -left-[115px]">
-        <img src="img/shape/header-sape.png" alt="shape" />
-      </div>
+   
       <div className="absolute z-[9]" style={{ top: '70px', left: '48%' }} />
 
       <div className="container mx-auto px-4">
