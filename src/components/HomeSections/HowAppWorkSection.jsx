@@ -93,7 +93,7 @@ id="how-it-works"
           {/* ── Right: illustration ── */}
           <div className={`w-full xl:w-1/2 flex mt-8 xl:mt-0 ${isRTL ? 'justify-center xl:justify-start' : 'justify-center xl:justify-end'}`}>
             <img
-              src={isRTL ? 'img/bg/flip-app-work-img.png' : 'img/bg/app-work-img.png'}
+              src={isRTL ? 'img/bg/flip-app-work-img.png' : 'img/bg/flip-app-work-img.png'}
               alt="app-work-img"
               className="max-w-[80%] sm:max-w-[60%] md:max-w-[70%] xl:max-w-full h-auto"
             />
