@@ -6,17 +6,17 @@ import { FaGooglePlay, FaCheckCircle } from 'react-icons/fa';
 export default function DownloadApp() {
   const { content } = useRole();
   const { locale, isRTL } = useI18n();
-  const { heading, description, points ,subDes} = content.download;
+  const { heading, description, points, subDes } = content.download;
 
   return (
     <section
-    id='downloadApp'
+      id='downloadApp'
       className="relative pt-16 sm:pt-20 md:pt-24 lg:pt-[100px] pb-10 sm:pb-12 md:pb-24 overflow-hidden px-6 sm:px-8 md:px-16 lg:px-28 xl:px-52"
       style={{
         backgroundImage: 'url(img/shape/header-sape3.png)',
         backgroundPosition: 'right center',
         backgroundSize: 'auto',
-        backgroundRepeat: 'no-repeat',
+        backgroundRepeat: 'contain',
       }}
     >
       {/* ── Phone background image (hidden on small screens) ── */}
@@ -24,10 +24,9 @@ export default function DownloadApp() {
         className="hidden lg:block absolute top-[5%] -left-50 w-72 lg:w-[500px] xl:w-[1038px] h-[400px] lg:h-[500px] bg-no-repeat bg-center"
         style={{
           backgroundImage: 'url(img/bg/easy-m-bg.png)',
-          backgroundSize: '100%',
           backgroundPosition: 'left center',
-          backGroundRepeat: 'no-repeat', 
-                  backgroundSize: 'contain',
+          backGroundRepeat: 'no-repeat',
+          backgroundSize: 'contain',
 
         }}
       />
@@ -57,18 +56,16 @@ export default function DownloadApp() {
               {/* Description */}
 
               <p
-              style={{whiteSpace:"pre-line"}}
-                className={`text-md text-[#666666] leading-6 mb-3 sm:mb-4 md:mb-[15px] ${
-                  isRTL ? 'pl-0 sm:pl-[30px] md:pl-[50px]' : 'pr-0 sm:pr-[30px] md:pr-[50px]'
-                }`}
+                style={{ whiteSpace: "pre-line" }}
+                className={`text-md text-[#666666] leading-6 mb-3 sm:mb-4 md:mb-[15px] ${isRTL ? 'pl-0 sm:pl-[30px] md:pl-[50px]' : 'pr-0 sm:pr-[30px] md:pr-[50px]'
+                  }`}
               >
                 {description}
               </p>
               <p
-              style={{whiteSpace:"pre-line"}}
-                className={`text-lg text-primary font-semibold leading-6 mb-3 sm:mb-4 md:mb-[15px] ${
-                  isRTL ? 'pl-0 sm:pl-[30px] md:pl-[50px]' : 'pr-0 sm:pr-[30px] md:pr-[50px]'
-                }`}
+                style={{ whiteSpace: "pre-line" }}
+                className={`text-lg text-primary font-semibold leading-6 mb-3 sm:mb-4 md:mb-[15px] ${isRTL ? 'pl-0 sm:pl-[30px] md:pl-[50px]' : 'pr-0 sm:pr-[30px] md:pr-[50px]'
+                  }`}
               >
                 {subDes}
               </p>
@@ -86,7 +83,7 @@ export default function DownloadApp() {
               </ul>
 
               {/* ── Store Buttons ── */}
-              <div className={`flex flex-col sm:flex-row flex-wrap gap-4 sm:gap-5 md:gap-6 ${isRTL ? 'items-start sm:flex-row' : ''}`}>
+              <div className={`flex  flex-row  gap-4 sm:gap-5 md:gap-6 ${isRTL ? 'items-start sm:flex-row' : ''}`}>
 
                 {/* App Store */}
                 <a

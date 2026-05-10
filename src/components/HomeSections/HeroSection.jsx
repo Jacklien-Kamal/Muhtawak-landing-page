@@ -30,7 +30,7 @@ export default function HeroSection() {
       <div className="absolute z-[9]" style={{ top: '70px', left: '48%' }} />
 
       <div className="container mx-auto px-4">
-        <div className="flex flex-wrap items-center">
+        <div className="flex md:flex-wrap items-center">
 
           {/* ── Left Column ── */}
           <div className="w-full lg:w-1/2">
@@ -120,11 +120,11 @@ export default function HeroSection() {
           </div>
 
           {/* ── Right Column ── */}
-          <div className={`w-full lg:w-[43%] `}>
+          <div className={`w-[60%] lg:w-[43%] `}>
             <img
               src={isRTL?"img/bg/phone-arr.png":"img/bg/phone-en.png"}
               alt="app preview"
-              className={` md:ml-24 md:mt-80  max-w-full`}
+              className={` md:ml-24 mt-60 md:mt-80  max-w-full`}
             />
           </div>
 
