@@ -9,7 +9,7 @@ export default function HeroSection() {
 
   const roleLabels = {
     Creator: locale.lang === 'ar' ? 'صانع محتوى' : 'Creator',
-    Agency:  locale.lang === 'ar' ? 'وكالة'       : 'Agency',
+    Agency:  locale.lang === 'ar' ? 'شركة'       : 'Agency',
   };
 
   return (
@@ -36,7 +36,7 @@ export default function HeroSection() {
               {/* Role Switcher */}
               <div className="mb-[30px]">
                 <div
-                  className="inline-flex rounded-full p-[5px] gap-1"
+                  className="w-80 inline-flex rounded-full p-[5px] gap-1"
                   style={{ background: '#f0ebf8' }}
                 >
                   {['Creator', 'Agency'].map((r) => (
@@ -44,10 +44,10 @@ export default function HeroSection() {
                       key={r}
                       onClick={() => setRole(r)}
                       className={[
-                        'px-7 py-2 rounded-full border-none font-semibold text-sm cursor-pointer transition-all duration-300',
+                        'px-10 py-2 rounded-full border-none font-semibold text-sm cursor-pointer transition-all duration-300',
                         role === r
                           ? 'text-white shadow-[3px_4px_15px_rgba(198,58,149,0.35)]'
-                          : 'bg-transparent text-[#782551]',
+                          : 'bg-transparent text-xl text-[#782551]',
                       ].join(' ')}
                       style={
                         role === r
@@ -73,7 +73,7 @@ export default function HeroSection() {
 
               {/* Description */}
               <p
-                className="text-gray-600 text-base leading-relaxed mb-0"
+                className="text-gray-600 md:text-2xl leading-relaxed mb-0"
                 data-animation="fadeInUp"
                 data-delay=".6s"
                 style={{ whiteSpace: "pre-line" }}

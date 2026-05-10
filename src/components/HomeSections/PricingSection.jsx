@@ -146,12 +146,15 @@ export default function PricingSection() {
                         <span className="text-3xl font-bold leading-none">
                           {plan.price}
                         </span>
+                       
                         {/* .subscription — font-size:16px, color:#666 */}
                         <span className="text-xl font-normal text-[#666666] self-end mb-2">
                           {period}
                         </span>
+                        
                       </div>
                     </div>
+                   
 
                     {/* h5 — color:#7D4196, font-size:25px, font-weight:500, margin-top:15px */}
                     <h5 className="text-[#7D4196] text-[25px] font-medium  pb-4 px-4">

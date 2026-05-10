@@ -165,7 +165,7 @@ export default function OurFeatures() {
                         <img
                           src={images[index]}
                           alt={feature.title}
-                          className="w-20 h-20 sm:w-24 sm:h-24 md:w-[100px] md:h-[100px] object-cover rounded-[10%]"
+                          className="w-20 h-20 sm:w-24 sm:h-24 md:w-36 md:h-36 object-cover rounded-[10%]"
                         />
                       </div>
 

@@ -13,6 +13,7 @@ import BlogsSection from './src/components/HomeSections/BlogsSection';
 import ContactSection from './src/components/HomeSections/ContactSection';
 import CreatorShowcase from './src/components/HomeSections/PrevWorks';
 import { useRole } from './src/hooks/roleContext';
+import AgencyHowAppWorkSection from './src/components/HomeSections/AgencyHowAppWork';
 
 /* ─── Reusable animated wrapper ─── */
 // استبدل FadeInSection بالكود ده
@@ -70,16 +71,23 @@ const Home = () => {
         <FadeInSection direction="right" delay={0.05}>
           <CreatorShowcase />
         </FadeInSection>)}
-      {/* How it works — fade from right */}
-      <FadeInSection direction="right">
+{role=="Creator"?  <FadeInSection direction="right">
         <HowAppWorkSection />
-      </FadeInSection>
+      </FadeInSection>:  <FadeInSection direction="right">
+        <AgencyHowAppWorkSection />
+      </FadeInSection>}
+    
 
       {/* Video — fade up */}
       <FadeInSection direction="up">
         <VideoSection />
       </FadeInSection>
 
+
+      {/* Features — fade from right */}
+      <FadeInSection direction="right">
+        <OurFeatures />
+      </FadeInSection>
 
 
 
@@ -92,11 +100,6 @@ const Home = () => {
       )}
 
 
-
-      {/* Features — fade from right */}
-      <FadeInSection direction="right">
-        <OurFeatures />
-      </FadeInSection>
 
       {/* Screenshots — fade up */}
       <FadeInSection direction="up">

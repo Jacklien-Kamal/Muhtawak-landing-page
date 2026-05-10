@@ -16,25 +16,30 @@ const Header = () => {
 
   const navLinks = [
     { label: t.home, href: 'parallax' },
-        { label: t.howItWorks, href: 'how-it-works' },
-            { label: t.features, href: 'features' },
-            { label: t.screenshots, href: 'screenshots' },
-
-    { label: t.reviews, href: 'reviews' },
-    { label: isRTL ? 'المدونة' : 'Blog', href: 'blog' },
-
     ...(role === "Agency"
       ? [{ label: t.creatorsWork, href: 'creatorsWork' }]
       : []),
+    { label: t.howItWorks, href: 'how-it-works' },
+    { label: t.features, href: 'features' },
     ...(role === "Agency"
       ? [{ label: t.pricing, href: 'pricing' }]
       : []),
+    { label: t.screenshots, href: 'screenshots' },
+ ...(role === "Creator"
+      ? [{ label: t.reviews, href: 'pricing' }]
+      : []),
+   
+
+
+
 
 
   ];
 
   const otherLinks = [
-        { label: t.downloadApp, href: 'downloadApp' },
+          { label: isRTL ? 'المدونة' : 'Blog', href: 'blog' },
+
+    { label: t.downloadApp, href: 'downloadApp' },
 
     ...(role === "Agency"
       ? [{ label: t.contact, href: 'contact' }]
@@ -98,7 +103,7 @@ const Header = () => {
 
             {/* ── Logo ── */}
             <a href="/" className="flex-shrink-0">
-              {!sticky ?<span> <img src="/img/logo/logo-name-white.png" alt="logo" className="h-8 w-auto md:hidden" /> <img src="/img/logo/logo.webp" alt="logo" className="hidden md:block h-10 w-auto" /> </span>: <img src="/img/logo/logo-name-white.png" alt="logo" className="h-8 md:h-10 w-auto" />}
+              {!sticky ? <span> <img src="/img/logo/logo-name-white.png" alt="logo" className="h-8 w-auto md:hidden" /> <img src="/img/logo/logo.webp" alt="logo" className="hidden md:block h-10 w-auto" /> </span> : <img src="/img/logo/logo-name-white.png" alt="logo" className="h-8 md:h-10 w-auto" />}
             </a>
 
             {/* ── Desktop Nav ── */}

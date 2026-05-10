@@ -250,261 +250,268 @@ export const en = {
   },
 },
 
-    Agency: {
-      footer: {
-        about:
-          "Sed ut perspiciatis unde om is nerror sit voluptatem accustium dolorem tium totam rem aperam quae.",
-        companyNews: "Company News",
-        companyLinks: [
-          "Partners",
-          "About Us",
-          "Career",
-          "Reviews",
-          "Terms & Conditions",
-        ],
-        usefulLinks: "Useful Links",
-        usefulLinksList: [
-          "Home",
-          "About Us",
-          "Services",
-          "Project",
-          "Our Team",
-        ],
-        contactUs: "Contact Us",
-        address: "380 St Kilda Road, Melbourne, VIC 3004, Australia",
-        copyright: "© 2026 Muhtawak. All rights reserved",
-      },
-      badge: ["Agency", "Enterprise"],
-      hero: {
-        heading: "Muhtawak for",
-        highlight: "Agencies",
+ Agency: {
+  footer: {
+    about:
+      "Muhtawak platform connects creators with brands to produce authentic, engaging content that delivers real results.",
+    companyNews: "Company News",
+    companyLinks: [
+      "Partners",
+      "About Us",
+      "Careers",
+      "Reviews",
+      "Terms & Conditions",
+    ],
+    usefulLinks: "Useful Links",
+    usefulLinksList: [
+      "Home",
+      "About Us",
+      "Services",
+      "Projects",
+      "Our Team",
+    ],
+    contactUs: "Contact Us",
+    address: "Riyadh, Al Mursalat, Digital Entrepreneurship Center",
+    copyright: "© 2026 All rights reserved to Muhtawak",
+  },
+  badge: ["Company", "Agency"],
+  hero: {
+    heading: "Muhtawak for",
+    highlight: "Businesses",
+    description: "Real content… that sells more",
+    subDes:
+      "With Muhtawak you can order UGC videos made exclusively for you by creators who understand your audience — no hassle, transparent pricing",
+    cta: "Download the App Now",
+  },
+  features: {
+    sectionTag: "For Businesses",
+    heading: "Enterprise-Grade Business Tools",
+    subheading:
+      "Simplify client management, automate reporting, and scale your agency operations with confidence.",
+    items: [
+      {
+        icon: "flaticon-settings",
+        title: "Client Management",
         description:
-          "Need authentic content that reflects the real experience of your products? We provide professional content creators who produce original and engaging content to market your products in the best way!",
-        cta: "Book a Demo",
+          "Centralize every client relationship, contract, and communication in one organized workspace.",
       },
-      features: {
-        sectionTag: "For Agencies",
-        heading: "Enterprise-Grade Agency Tools",
-        subheading:
-          "Streamline client management, automate reporting, and scale your agency operations with confidence.",
-        items: [
-          {
-            icon: "flaticon-settings",
-            title: "Client Management",
-            description:
-              "Centralize every client relationship, contract, and communication in one organized workspace.",
-          },
-          {
-            icon: "flaticon-magic-wand",
-            title: "White-Label Reports",
-            description:
-              "Deliver stunning branded reports to clients automatically on any schedule you choose.",
-          },
-          {
-            icon: "flaticon-smartphone",
-            title: "Team Collaboration",
-            description:
-              "Assign tasks, set permissions, and keep every team member aligned on every project.",
-          },
-          {
-            icon: "flaticon-ui",
-            title: "Campaign Analytics",
-            description:
-              "Aggregate data from all channels into one dashboard for clear ROI visibility.",
-          },
-          {
-            icon: "flaticon-paper-plane",
-            title: "Automated Workflows",
-            description:
-              "Build approval chains, client review flows, and delivery pipelines with no-code automation.",
-          },
-          {
-            icon: "flaticon-help",
-            title: "Dedicated Support",
-            description:
-              "Get a dedicated account manager and SLA-backed support so your agency never skips a beat.",
-          },
-        ],
-      },
-      download: {
-        heading: "Get Authentic Content for Your Brand",
+      {
+        icon: "flaticon-magic-wand",
+        title: "White-Label Reports",
         description:
-          "Need content that reflects the real experience of your products? Muhtawak connects you with professional creators who produce original, engaging content to market your brand effectively.",
-        points: [
-          "Access a pool of vetted content creators",
-          "Brief creators directly through the app",
-          "Receive authentic, brand-aligned content fast",
-          "Scale your content production effortlessly",
-        ],
+          "Automatically deliver branded reports to clients on any schedule you choose.",
       },
-      howItWorks: {
-        tag: "Agency Workflow",
-        heading: "From Onboarding to Results — Seamlessly",
-        steps: [
-          {
-            num: "01",
-            title: "Onboard Clients",
-            description:
-              "Use guided onboarding flows to get new clients set up and aligned fast.",
-          },
-          {
-            num: "02",
-            title: "Execute Campaigns",
-            description:
-              "Coordinate your team, manage assets, and track progress in real time.",
-          },
-          {
-            num: "03",
-            title: "Report & Retain",
-            description:
-              "Deliver automated white-label reports that wow clients and drive retention.",
-          },
-        ],
-      },
-      pricing: {
-        tag: "Agencys  Plans",
-        heading: "Our Plans for Agencies",
-        plans: [
-          {
-            name: "Package 16",
-            price: "5600.00  ",
-            period: "/month",
-            features: [
-              "16 videos ",
-              "Video with 60min duration",
-              "Priority Support",
-            ],
-            highlight: true,
-            cta: "Get Statred",
-          },
-          {
-            name: "Pro Package",
-            price: "1500.00  ",
-            period: "/month",
-            features: ["5 videos", "Video with 60min duration"],
-            highlight: false,
-            cta: "Go Pro ",
-          },
-        ],
-      },
-      faq: {
-        tag: "Agency FAQ",
-        heading: "Common Agency Questions",
-        items: [
-          {
-            q: "Can I manage multiple clients from one account?",
-            a: "Yes. Our multi-tenant workspace lets you switch between clients instantly, each with isolated data.",
-          },
-          {
-            q: "Do you support white-labeling?",
-            a: "Fully. Apply your agency branding to client portals, reports, and notification emails.",
-          },
-          {
-            q: "What integrations are available?",
-            a: "We integrate with Slack, HubSpot, Google Ads, Meta Ads, and 100+ tools via Zapier and native APIs.",
-          },
-          {
-            q: "Is there a trial period?",
-            a: "Yes — a full 14-day free trial with no credit card required, including all Agency features.",
-          },
-        ],
-      },
-      reviews: {
-        tag: "Agency Success",
-        heading: "Trusted by Leading Agencies",
-        testimonials: [
-          {
-            name: "James O.",
-            role: "Agency Director",
-            text: "We cut our client reporting time by 80%. The automated white-label reports are a game changer for our retention.",
-          },
-          {
-            name: "Priya M.",
-            role: "Operations Manager",
-            text: "Finally one platform that keeps 30+ client projects organized. Our team loves it.",
-          },
-          {
-            name: "Derek S.",
-            role: "Founder, Growth Agency",
-            text: "We onboarded 12 new clients last quarter with zero ops headaches. Incredible platform.",
-          },
-          {
-            name: "Sara H.",
-            role: "Account Director",
-            text: "The white-label portal blew our clients away. They think we built a custom tool just for them.",
-          },
-          {
-            name: "Tom R.",
-            role: "Creative Director",
-            text: "Campaign analytics across all our clients in one view — this alone saved us 10 hours a week.",
-          },
-          {
-            name: "Mia C.",
-            role: "Agency Co-founder",
-            text: "Scaling from 5 to 40 clients felt seamless. The automated workflows handle what used to take a whole team.",
-          },
-        ],
-      },
-      video: {
-        heading: "Authentic Content That Drives Results",
+      {
+        icon: "flaticon-smartphone",
+        title: "Team Collaboration",
         description:
-          "Stop settling for generic ads. Muhtawak gives your brand access to real creators who produce original, engaging content that resonates with your audience and drives conversions.",
-        points: [
-          "Content created by real users, not studios",
-          "Brief creators directly and review deliverables in-app",
-          "Scale your content volume without scaling your costs",
-        ],
+          "Assign tasks, set permissions, and keep every team member aligned on every project.",
       },
-      blogs: {
-        heading: "Our Latest Blog & News",
+      {
+        icon: "flaticon-ui",
+        title: "Campaign Analytics",
         description:
-          "Tips, guides and insights for content creators and brands on the Muhtawak platform.",
-        posts: [
-          {
-            img: "img/blog/(1).jpeg",
-            date: "20 Jan 2025",
-            title: "How to Create Content That Brands Actually Want to Pay For",
-            excerpt:
-              "Discover what top brands look for when hiring content creators — and how to make your profile stand out on Muhtawak.",
-            author: "Muhtawak Team",
-            authorRole: "Author",
-            authorImg: "img/blog/admin-img.png",
-          },
-          {
-            img: "img/blog/(1).jpg",
-            date: "15 Feb 2025",
-            title: "5 Ways to Grow Your Earnings as a Content Creator",
-            excerpt:
-              "From choosing the right projects to building long-term brand relationships — here is how creators maximize their income on the platform.",
-            author: "Muhtawak Team",
-            authorRole: "Author",
-            authorImg: "img/blog/admin-img.png",
-          },
-          {
-            img: "img/blog/(2).jpg",
-            date: "01 Mar 2025",
-            title: "Why Brands Are Shifting to Real UGC Over Traditional Ads",
-            excerpt:
-              "User-generated content outperforms polished ads in engagement and trust. Learn how brands on Muhtawak are leveraging authentic creators.",
-            author: "Muhtawak Team",
-            authorRole: "Author",
-            authorImg: "img/blog/admin-img.png",
-          },
-        ],
+          "Aggregate data from all channels into a single dashboard for a clear view of ROI.",
       },
-      contact: {
-        heading: "Get In Touch",
+      {
+        icon: "flaticon-paper-plane",
+        title: "Automated Workflows",
         description:
-          "Have a question or want to collaborate? Leave your details and we will get back to you as soon as possible.",
-        fields: {
-          name: "Your Name",
-          email: "Your Email",
-          phone: "Your Phone",
-          message: "Write your message...",
-        },
-        button: "Send Message",
+          "Build approval chains, client review flows, and delivery pipelines with no-code automation.",
       },
+      {
+        icon: "flaticon-help",
+        title: "Dedicated Support",
+        description:
+          "Get a dedicated account manager and SLA-backed support so your agency never stops.",
+      },
+    ],
+  },
+  download: {
+    heading: "Get Authentic Content for Your Brand",
+    description:
+      "Need content that reflects the real experience of your products? Muhtawak connects you with professional creators who produce authentic, engaging content to market your brand effectively.",
+    points: [
+      "Access a pool of verified content creators",
+      "Brief creators directly through the app",
+      "Receive authentic, brand-aligned content quickly",
+      "Scale content production with ease",
+    ],
+  },
+  howItWorks: {
+    tag: "How It Works",
+    heading: "Start ordering your content in a few simple steps:",
+    steps: [
+      {
+        num: "01",
+        title: "Download the App",
+        description: "Download the Muhtawak app and start your journey effortlessly.",
+      },
+      {
+        num: "02",
+        title: "Create Your Account",
+        description: "Register with your full details for a more precise experience and better results.",
+      },
+      {
+        num: "03",
+        title: "Browse Content Creators",
+        description: "Explore creators' portfolios and choose the best fit for your brand.",
+      },
+      {
+        num: "04",
+        title: "Create Your Order",
+        description: "Define your project details and content requirements.",
+      },
+      {
+        num: "05",
+        title: "Choose How to Execute",
+        description:
+          `● Pick a specific content creator\n● Or post your project as an opportunity and let creators apply.`,
+      },
+      {
+        num: "06",
+        title: "Execute & Track Your Order",
+        description: "Monitor progress and communicate directly with the content creator.",
+      },
+      {
+        num: "07",
+        title: "Receive & Review the Work",
+        description: "Receive the final content and rate your experience upon completion.",
+      },
+    ],
+  },
+  pricing: {
+    tag: "Business Plans",
+    heading: "Our Business Packages",
+    plans: [
+      {
+        name: "Starter Package",
+        price: "1575.00",
+        period: "/month",
+        sale: "10%",
+        features: ["5 Videos", "60-second video duration", "10% discount"],
+        highlight: true,
+        cta: "Get Started",
+      },
+      {
+        name: "Professional Package",
+        price: "4462.5",
+        period: "/month",
+        sale: "15%",
+        features: ["15 Videos", "60-second video duration", "15% discount"],
+        highlight: false,
+        cta: "Get the Professional Package",
+      },
+    ],
+  },
+  faq: {
+    tag: "Business FAQs",
+    heading: "Frequently Asked Questions from Businesses",
+    items: [
+      {
+        q: "Can I manage multiple clients from one account?",
+        a: "Yes. Our multi-tenant workspace lets you switch between clients instantly, each with isolated data.",
+      },
+      {
+        q: "Do you support white-labeling?",
+        a: "Fully. Apply your agency's branding to client portals, reports, and notification emails.",
+      },
+      {
+        q: "What integrations are available?",
+        a: "We integrate with Slack, HubSpot, Google Ads, Meta Ads, and 100+ tools via Zapier and native APIs.",
+      },
+      {
+        q: "Is there a trial period?",
+        a: "Yes — a full 14-day free trial with no credit card required, including all business features.",
+      },
+    ],
+  },
+  reviews: {
+    tag: "Business Reviews",
+    heading: "What They Say About Muhtawak",
+    testimonials: [
+      {
+        name: "E-commerce Store",
+        role: "Company Manager",
+        text: "Sales increased after using UGC content.",
+      },
+      {
+        name: "Startup",
+        role: "Operations Manager",
+        text: "We saved significant time and effort in production.",
+      },
+      {
+        name: "Marketing Agency",
+        role: "Growth Company Founder",
+        text: "A practical and fast solution for our clients.",
+      },
+    ],
+  },
+  video: {
+    heading: "Authentic Content That Delivers Results",
+    description:
+      "Stop settling for ordinary ads. Muhtawak gives your brand access to real creators who produce authentic, engaging content that resonates with your audience and drives conversions.",
+    points: [
+      "Content created by real users, not studios",
+      "Brief creators directly and review deliverables inside the app",
+      "Scale content volume without increasing costs",
+    ],
+  },
+  blogs: {
+    heading: "Our Latest Articles & News",
+    description:
+      "Tips, guides, and insights for content creators and brands on the Muhtawak platform.",
+    posts: [
+      {
+        img: "img/blog/b3.jpg",
+        date: "January 20, 2025",
+        title: "How to Create Content That Brands Actually Pay For?",
+        excerpt:
+          "Discover what brands look for when collaborating with content creators, and how to make your profile stand out on Muhtawak.",
+        author: "Muhtawak Team",
+        authorRole: "Writer",
+        authorImg: "img/blog/admin-img.png",
+      },
+      {
+        img: "img/blog/b4.jpg",
+        date: "February 15, 2025",
+        title: "5 Ways to Increase Your Earnings as a Content Creator",
+        excerpt:
+          "From choosing the right projects to building long-term brand relationships — here's how top creators maximize their income on the platform.",
+        author: "Muhtawak Team",
+        authorRole: "Writer",
+        authorImg: "img/blog/admin-img.png",
+      },
+      {
+        img: "img/blog/b5.jpg",
+        date: "March 01, 2025",
+        title: "Why Are Brands Shifting Toward Authentic Content Over Traditional Ads?",
+        excerpt:
+          "User-generated content outperforms ads in engagement and credibility. Learn how brands on Muhtawak leverage authentic creators.",
+        author: "Muhtawak Team",
+        authorRole: "Writer",
+        authorImg: "img/blog/admin-img.png",
+      },
+    ],
+  },
+  contact: {
+    heading: "Build Your Custom Package",
+    description:
+      "Have a question or want to collaborate? Leave your details and we'll get back to you as soon as possible.",
+    fields: {
+      name: "Company Name",
+      activity: "Type of Business",
+      goal: "Content Goal",
+      videos: "Number of Videos",
+      vidPeriod: "Video Duration",
+      platform: "Target Platform (Instagram, TikTok...)",
+      email: "Email Address",
+      phone: "Phone Number",
+      message: "Write your message...",
     },
+    button: "Send",
+  },
+},
   },
 
   ourFeatures: {
