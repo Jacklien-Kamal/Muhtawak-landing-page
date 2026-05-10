@@ -66,7 +66,7 @@ export default function HeroSection() {
 
               {/* Headline */}
               <h2
-                className="text-4xl md:text-7xl font-semibold text-[#190a32] mb-5 leading-tight"
+                className="text-3xl md:text-5xl font-semibold text-[#190a32] mb-5 leading-tight"
                 data-animation="fadeInUp"
                 data-delay=".4s"
               >
@@ -76,17 +76,28 @@ export default function HeroSection() {
 
               {/* Description */}
               <p
+                className="text-gray-600 text-base leading-relaxed mb-0"
+                data-animation="fadeInUp"
+                data-delay=".6s"
+                style={{ whiteSpace: "pre-line" }}
+              >
+                {hero.description}
+              </p>
+              <br></br>
+              <p
+
                 className="text-[#676f67] text-base leading-relaxed mb-0"
                 data-animation="fadeInUp"
                 data-delay=".6s"
+                style={{ whiteSpace: "pre-line" }}
               >
-                {hero.description}
+                {hero.subDes}
               </p>
 
               {/* CTA */}
               <div className="mt-[30px] mb-[30px]" data-animation="fadeInUp" data-delay=".8s">
                 <a
-                  href="#"
+                  href="#downloadApp"
                   className="
                     inline-block rounded-full px-[35px] py-[15px] no-underline
                     text-white font-medium text-base leading-none
@@ -109,11 +120,11 @@ export default function HeroSection() {
           </div>
 
           {/* ── Right Column ── */}
-          <div className={`w-full lg:w-[40%] `}>
+          <div className={`w-full lg:w-[43%] `}>
             <img
-              src="img/bg/mobile.png"
+              src={isRTL?"img/bg/phone-arr.png":"img/bg/phone-en.png"}
               alt="app preview"
-              className={`nd:-ml-[120px] md:${isRTL&&" mr-28"} md:mt-[200px] max-w-full`}
+              className={` md:ml-24 md:mt-80  max-w-full`}
             />
           </div>
 

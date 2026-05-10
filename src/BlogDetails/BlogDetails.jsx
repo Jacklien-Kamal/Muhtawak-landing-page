@@ -10,10 +10,7 @@ const C = {
   text:    '#666666',
 };
 
-/* ─── Real article content keyed by post index ──────────────────────
-   Keys 0, 1, 2 match posts[0..2] in roleContext.
-   Each key has 'en' and 'ar' versions.
-────────────────────────────────────────────────────────────────────── */
+/* ─── Article content ─────────────────────────────────────────────── */
 const ARTICLE_CONTENT = {
   0: {
     en: {
@@ -32,12 +29,12 @@ const ARTICLE_CONTENT = {
     ar: {
       body: [
         `إنشاء محتوى تدفع عليه العلامات التجارية لا يتعلق بامتلاك ملايين المتابعين، بل يتعلق بتقديم القيمة والأصالة والنتائج. العلامات التجارية على منصة محتواك تبحث بشكل متزايد عن صنّاع محتوى يفهمون جمهورهم، ويتواصلون بوضوح، وينتجون محتوى يبدو حقيقياً لا مكتوباً.`,
-        `أول ما تلاحظه العلامات التجارية هو تخصصك. صانع المحتوى الذي يركز على موضوع محدد — سواء كان الطبخ المنزلي أو السفر بميزانية محدودة أو اللياقة للمبتدئين — يكون أكثر قيمة بكثير من الشخص العام. تريد العلامات التجارية أن تعرف بالضبط من ستصل إليه حين تتعاون معك.`,
-        `بعد التخصص، الجودة أهم من الكمية. صانع محتوى لديه 2000 متابع متفاعل يعلّقون ويشاركون ويردون، أكثر جاذبية للعلامة التجارية من شخص لديه 50,000 متابع سلبي. معدل التفاعل هو المقياس الأهم حين تقيّم العلامات التجارية الشركاء المحتملين.`,
+        `أول ما تلاحظه العلامات التجارية هو تخصصك. صانع المحتوى الذي يركز على موضوع محدد — سواء كان الطبخ المنزلي أو السفر بميزانية محدودة أو اللياقة للمبتدئين — يكون أكثر قيمة بكثير من الشخص العام.`,
+        `بعد التخصص، الجودة أهم من الكمية. صانع محتوى لديه 2000 متابع متفاعل يعلّقون ويشاركون ويردون، أكثر جاذبية للعلامة التجارية من شخص لديه 50,000 متابع سلبي.`,
       ],
       quote: `"الأصالة هي عملة اقتصاد المحتوى. العلامات التجارية لا تريد الوصول فقط — بل تريد الثقة."`,
       quoteAuthor: 'فريق محتواك',
-      bodyAfterQuote: `أخيراً، محفظتك على محتواك هي عرضك التقديمي. تأكد من أنها تعرض أفضل أعمالك عبر أشكال مختلفة — فيديو وصورة ونص — وتتضمن أمثلة على أي تعاون سابق مع علامات تجارية. حتى لو كنت في بداياتك، فإن محفظة منظمة جيداً توصل رسالة الاحترافية والجدية لأي علامة تجارية تتصفح المنصة.`,
+      bodyAfterQuote: `أخيراً، محفظتك على محتواك هي عرضك التقديمي. تأكد من أنها تعرض أفضل أعمالك عبر أشكال مختلفة — فيديو وصورة ونص — وتتضمن أمثلة على أي تعاون سابق مع علامات تجارية.`,
       inlineImg: '/img/blog/b3.jpg',
       figureImg: '/img/blog/b3.jpg',
       tags: ['إنشاء المحتوى', 'صفقات العلامات التجارية', 'نصائح للصانعين'],
@@ -47,25 +44,25 @@ const ARTICLE_CONTENT = {
     en: {
       body: [
         `Growing your earnings on Muhtawak isn't just about taking every project that comes your way — it's about being strategic. The creators who earn the most consistently are the ones who understand how to position themselves, which projects to prioritize, and how to turn one-time collaborations into ongoing relationships.`,
-        `Start by completing your profile fully. Creators with complete profiles — including a clear bio, niche tags, and at least three portfolio pieces — receive up to 3x more brand inquiries than those with incomplete profiles. This is the single easiest thing you can do to increase your visibility on the platform immediately.`,
-        `Next, be selective about the projects you apply for. Focus on brands that align with your content style and values. A great collaboration in your niche is worth far more than three rushed projects outside it. Quality work in the right category builds your reputation faster and leads to repeat commissions.`,
+        `Start by completing your profile fully. Creators with complete profiles — including a clear bio, niche tags, and at least three portfolio pieces — receive up to 3x more brand inquiries than those with incomplete profiles.`,
+        `Next, be selective about the projects you apply for. Focus on brands that align with your content style and values. A great collaboration in your niche is worth far more than three rushed projects outside it.`,
       ],
       quote: `"Your rate grows when your results speak louder than your follower count."`,
       quoteAuthor: 'Muhtawak Team',
-      bodyAfterQuote: `Finally, communicate professionally and deliver on time — every single time. Brands on Muhtawak leave ratings after each collaboration, and a strong track record of reliability is the most powerful asset a creator can build. Creators with top ratings are featured first in brand searches and receive exclusive high-budget opportunities before anyone else.`,
+      bodyAfterQuote: `Finally, communicate professionally and deliver on time — every single time. Brands on Muhtawak leave ratings after each collaboration, and a strong track record of reliability is the most powerful asset a creator can build.`,
       inlineImg: '/img/blog/b4.jpg',
       figureImg: '/img/blog/b4.jpg',
       tags: ['Earnings', 'Creator Growth', 'Brand Partnerships'],
     },
     ar: {
       body: [
-        `زيادة أرباحك على محتواك لا تعني قبول كل مشروع يأتيك — بل تعني أن تكون استراتيجياً. الصانعون الذين يحققون أعلى دخل باستمرار هم من يعرفون كيف يضعون أنفسهم في الموضع الصحيح، وأي المشاريع يفضّلون، وكيف يحوّلون التعاون لمرة واحدة إلى علاقة مستمرة.`,
-        `ابدأ باستكمال ملفك الشخصي بالكامل. الصانعون الذين لديهم ملفات مكتملة — تشمل نبذة واضحة وعلامات التخصص وثلاث قطع محفظة على الأقل — يتلقون ما يصل إلى 3 أضعاف استفسارات العلامات التجارية مقارنة بمن لديهم ملفات ناقصة. هذا أبسط شيء يمكنك فعله لزيادة ظهورك على المنصة فوراً.`,
-        `بعد ذلك، كن انتقائياً في المشاريع التي تتقدم لها. ركّز على العلامات التجارية التي تتوافق مع أسلوب محتواك وقيمك. تعاون رائع في تخصصك يساوي أكثر بكثير من ثلاثة مشاريع متسرعة خارجه. العمل الجيد في الفئة الصحيحة يبني سمعتك بشكل أسرع ويؤدي إلى عمولات متكررة.`,
+        `زيادة أرباحك على محتواك لا تعني قبول كل مشروع يأتيك — بل تعني أن تكون استراتيجياً. الصانعون الذين يحققون أعلى دخل باستمرار هم من يعرفون كيف يضعون أنفسهم في الموضع الصحيح.`,
+        `ابدأ باستكمال ملفك الشخصي بالكامل. الصانعون الذين لديهم ملفات مكتملة يتلقون ما يصل إلى 3 أضعاف استفسارات العلامات التجارية مقارنة بمن لديهم ملفات ناقصة.`,
+        `بعد ذلك، كن انتقائياً في المشاريع التي تتقدم لها. ركّز على العلامات التجارية التي تتوافق مع أسلوب محتواك وقيمك.`,
       ],
       quote: `"سعرك يرتفع حين تتكلم نتائجك بصوت أعلى من عدد متابعيك."`,
       quoteAuthor: 'فريق محتواك',
-      bodyAfterQuote: `أخيراً، تواصل باحترافية وسلّم في الوقت المحدد — في كل مرة. العلامات التجارية على محتواك تترك تقييمات بعد كل تعاون، وسجل موثوقية قوي هو أقوى أصل يمكن لصانع المحتوى بناؤه. الصانعون ذوو التقييمات العالية يظهرون أولاً في بحث العلامات التجارية ويتلقون فرص ميزانية حصرية قبل أي شخص آخر.`,
+      bodyAfterQuote: `أخيراً، تواصل باحترافية وسلّم في الوقت المحدد — في كل مرة. العلامات التجارية على محتواك تترك تقييمات بعد كل تعاون، وسجل موثوقية قوي هو أقوى أصل يمكن لصانع المحتوى بناؤه.`,
       inlineImg: '/img/blog/b4.jpg',
       figureImg: '/img/blog/b4.jpg',
       tags: ['الأرباح', 'نمو الصانع', 'شراكات العلامات التجارية'],
@@ -75,25 +72,25 @@ const ARTICLE_CONTENT = {
     en: {
       body: [
         `The advertising landscape has shifted dramatically. Where brands once spent the majority of their budgets on polished studio productions and celebrity endorsements, an increasing number are now redirecting those same budgets toward user-generated content — and the results are undeniable.`,
-        `Studies consistently show that consumers trust content created by real people far more than content produced by brands themselves. UGC feels unfiltered, relatable, and honest. When a real person shows how a product fits into their actual daily life, viewers respond with the kind of engagement that no amount of production budget can manufacture.`,
-        `For brands operating on Muhtawak, the shift to UGC isn't just a trend — it's a fundamental change in how they approach their content strategy. By briefing creators directly through the platform, brands can receive dozens of unique content pieces in the time it would take to produce one traditional ad campaign.`,
+        `Studies consistently show that consumers trust content created by real people far more than content produced by brands themselves. UGC feels unfiltered, relatable, and honest.`,
+        `For brands operating on Muhtawak, the shift to UGC isn't just a trend — it's a fundamental change in how they approach their content strategy.`,
       ],
       quote: `"UGC converts at 4x the rate of brand-produced content — because people trust people."`,
       quoteAuthor: 'Muhtawak Team',
-      bodyAfterQuote: `The brands seeing the strongest results on Muhtawak are the ones who give creators clear briefs but genuine creative freedom. Over-directing a creator produces content that looks scripted and defeats the purpose. The magic of UGC is in the authentic voice of the creator — and smart brands know to let that voice come through.`,
+      bodyAfterQuote: `The brands seeing the strongest results on Muhtawak are the ones who give creators clear briefs but genuine creative freedom. The magic of UGC is in the authentic voice of the creator — and smart brands know to let that voice come through.`,
       inlineImg: '/img/blog/b5.jpg',
       figureImg: '/img/blog/b5.jpg',
       tags: ['UGC', 'Brand Marketing', 'Digital Ads'],
     },
     ar: {
       body: [
-        `تغيّر مشهد الإعلان بشكل جذري. حيث كانت العلامات التجارية تنفق معظم ميزانياتها على الإنتاجات الاستوديوية المصقولة وتأييدات المشاهير، بات عدد متزايد منها يعيد توجيه تلك الميزانيات نحو المحتوى الذي ينشئه المستخدمون — والنتائج لا جدال فيها.`,
-        `تُظهر الدراسات باستمرار أن المستهلكين يثقون في المحتوى الذي ينشئه أشخاص حقيقيون بكثير أكثر من المحتوى الذي تنتجه العلامات التجارية نفسها. يبدو UGC غير مُصفَّى وقابلاً للتواصل وصادقاً. حين يُظهر شخص حقيقي كيف يتناسب المنتج مع حياته اليومية الفعلية، يستجيب المشاهدون بنوع من التفاعل الذي لا يمكن لأي ميزانية إنتاج أن تصنعه.`,
-        `بالنسبة للعلامات التجارية العاملة على محتواك، فإن التحول نحو UGC ليس مجرد اتجاه — بل هو تغيير جوهري في كيفية تعاملها مع استراتيجية المحتوى. من خلال توجيه الصانعين مباشرة عبر المنصة، يمكن للعلامات التجارية الحصول على عشرات القطع الفريدة من المحتوى في الوقت الذي يستغرقه إنتاج حملة إعلانية تقليدية واحدة.`,
+        `تغيّر مشهد الإعلان بشكل جذري. حيث كانت العلامات التجارية تنفق معظم ميزانياتها على الإنتاجات الاستوديوية المصقولة وتأييدات المشاهير، بات عدد متزايد منها يعيد توجيه تلك الميزانيات نحو المحتوى الذي ينشئه المستخدمون.`,
+        `تُظهر الدراسات باستمرار أن المستهلكين يثقون في المحتوى الذي ينشئه أشخاص حقيقيون بكثير أكثر من المحتوى الذي تنتجه العلامات التجارية نفسها.`,
+        `بالنسبة للعلامات التجارية العاملة على محتواك، فإن التحول نحو UGC ليس مجرد اتجاه — بل هو تغيير جوهري في كيفية تعاملها مع استراتيجية المحتوى.`,
       ],
       quote: `"يحقق UGC معدل تحويل أعلى 4 مرات من المحتوى الذي تنتجه العلامات التجارية — لأن الناس يثقون بالناس."`,
       quoteAuthor: 'فريق محتواك',
-      bodyAfterQuote: `العلامات التجارية التي تحقق أقوى نتائج على محتواك هي تلك التي تعطي الصانعين توجيهات واضحة لكن مع حرية إبداعية حقيقية. التوجيه المفرط للصانع ينتج محتوى يبدو مكتوباً ويهزم الغرض. سحر UGC يكمن في الصوت الأصيل للصانع — والعلامات التجارية الذكية تعرف أن تترك ذلك الصوت يظهر.`,
+      bodyAfterQuote: `العلامات التجارية التي تحقق أقوى نتائج على محتواك هي تلك التي تعطي الصانعين توجيهات واضحة لكن مع حرية إبداعية حقيقية.`,
       inlineImg: '/img/blog/b5.jpg',
       figureImg: '/img/blog/b5.jpg',
       tags: ['المحتوى المستخدم', 'تسويق العلامات التجارية', 'الإعلانات الرقمية'],
@@ -101,7 +98,100 @@ const ARTICLE_CONTENT = {
   },
 };
 
-/* ─── helpers ─────────────────────────────────────────────────────── */
+/* ─── Dynamic OG meta tags injector ──────────────────────────────────
+   Injects/updates <meta> og: and twitter: tags in <head> so that
+   Facebook, Twitter, WhatsApp etc. scrape the right title,
+   description, and image when the share URL is crawled.
+────────────────────────────────────────────────────────────────────── */
+function setMeta(property, content) {
+  // try og: style (property attr)
+  let el = document.querySelector(`meta[property="${property}"]`);
+  if (!el) {
+    // try name attr (twitter:)
+    el = document.querySelector(`meta[name="${property}"]`);
+  }
+  if (!el) {
+    el = document.createElement('meta');
+    // twitter cards use name=, OG uses property=
+    if (property.startsWith('twitter:')) {
+      el.setAttribute('name', property);
+    } else {
+      el.setAttribute('property', property);
+    }
+    document.head.appendChild(el);
+  }
+  el.setAttribute('content', content);
+}
+
+function usePostMeta(post, article) {
+  useEffect(() => {
+    if (!post) return;
+
+    const pageUrl    = window.location.href;
+    const imageUrl   = article?.inlineImg
+      ? `${window.location.origin}${article.inlineImg}`
+      : '';
+    const description = post.excerpt || '';
+
+    // Page title
+    document.title = `${post.title} | Muhtawak`;
+
+    // Open Graph
+    setMeta('og:type',        'article');
+    setMeta('og:url',         pageUrl);
+    setMeta('og:title',       post.title);
+    setMeta('og:description', description);
+    setMeta('og:image',       imageUrl);
+    setMeta('og:site_name',   'Muhtawak');
+
+    // Twitter Card
+    setMeta('twitter:card',        'summary_large_image');
+    setMeta('twitter:url',         pageUrl);
+    setMeta('twitter:title',       post.title);
+    setMeta('twitter:description', description);
+    setMeta('twitter:image',       imageUrl);
+
+    // Cleanup: restore on unmount
+    return () => { document.title = 'Muhtawak'; };
+  }, [post, article]);
+}
+
+/* ─── Share helpers ───────────────────────────────────────────────── */
+const SHARE_BUTTONS = [
+  {
+    label: 'X (Twitter)',
+    icon: (
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622 5.912-5.622Zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+      </svg>
+    ),
+    getHref: (url, title) =>
+      `https://twitter.com/intent/tweet?url=${url}&text=${title}`,
+  },
+  {
+    label: 'Facebook',
+    icon: (
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+      </svg>
+    ),
+    // Facebook reads OG tags server-side; passing the URL is enough
+    getHref: (url) =>
+      `https://www.facebook.com/sharer/sharer.php?u=${url}`,
+  },
+ 
+  {
+    label: 'WhatsApp',
+    icon: (
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z" />
+      </svg>
+    ),
+    getHref: (url, title) => `https://wa.me/?text=${title}%20${url}`,
+  },
+];
+
+/* ─── UI helpers ──────────────────────────────────────────────────── */
 const TagLink = ({ children }) => (
   <a href="#" style={{
     display: 'inline-block', border: '2px solid #e5e5e5', padding: '8px 14px',
@@ -113,36 +203,24 @@ const TagLink = ({ children }) => (
   >{children}</a>
 );
 
-const SocialBtn = ({ icon }) => (
-  <a href="#" style={{
-    display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
-    width: 38, height: 38, borderRadius: '50%', border: '1px solid #eee',
-    color: C.text, fontSize: 15, marginLeft: 8, textDecoration: 'none', transition: 'all .2s',
-  }}
-    onMouseEnter={e => { e.currentTarget.style.background = C.grad; e.currentTarget.style.color = '#fff'; e.currentTarget.style.borderColor = 'transparent'; }}
-    onMouseLeave={e => { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.color = C.text; e.currentTarget.style.borderColor = '#eee'; }}
-  >{icon}</a>
-);
-
-const Widget = ({ children }) => (
-  <div style={{ border: '2px solid #f5f0f3', borderRadius: 10, padding: '26px 20px', marginBottom: 26, background: '#fff' }}>
-    {children}
-  </div>
-);
-
-const WidgetTitle = ({ children }) => (
-  <div style={{ marginBottom: 20, textAlign: 'center' }}>
-    <h4 style={{ fontSize: 18, fontWeight: 700, color: C.primary, margin: 0, display: 'inline-block', paddingBottom: 10, position: 'relative' }}>
-      {children}
-      <span style={{ position: 'absolute', bottom: 0, left: '50%', transform: 'translateX(-50%)', width: 32, height: 3, borderRadius: 2, background: C.grad }} />
-    </h4>
-  </div>
-);
-
-const inputBase = {
-  width: '100%', background: '#fff', border: 'none', borderRadius: 8,
-  padding: '13px 18px', fontSize: 14, outline: 'none', boxSizing: 'border-box',
-  boxShadow: '3px 4px 15px #0000001a', fontFamily: 'inherit', resize: 'vertical',
+const ShareBtn = ({ icon, label, getHref, postTitle }) => {
+  const handleClick = (e) => {
+    e.preventDefault();
+    const url   = encodeURIComponent(window.location.href);
+    const title = encodeURIComponent(postTitle || '');
+    window.open(getHref(url, title), '_blank', 'noopener,noreferrer,width=640,height=500');
+  };
+  return (
+    <a href="#" title={label} onClick={handleClick} style={{
+      display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
+      width: 38, height: 38, borderRadius: '50%', border: '1px solid #eee',
+      color: C.text, fontSize: 15, marginLeft: 8, textDecoration: 'none',
+      transition: 'all .2s', cursor: 'pointer',
+    }}
+      onMouseEnter={e => { e.currentTarget.style.background = C.grad; e.currentTarget.style.color = '#fff'; e.currentTarget.style.borderColor = 'transparent'; }}
+      onMouseLeave={e => { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.color = C.text; e.currentTarget.style.borderColor = '#eee'; }}
+    >{icon}</a>
+  );
 };
 
 function FallbackImg({ src, alt, height, style = {} }) {
@@ -153,12 +231,9 @@ function FallbackImg({ src, alt, height, style = {} }) {
 
 /* ─── Main ────────────────────────────────────────────────────────── */
 export default function BlogDetails() {
-  const { id }       = useParams();
-  const { content }  = useRole();
-  const { isRTL }    = useI18n();
-
-  const [form, setForm] = useState({ msg: '', name: '', email: '' });
-  const set = field => e => setForm(p => ({ ...p, [field]: e.target.value }));
+  const { id }      = useParams();
+  const { content } = useRole();
+  const { isRTL }   = useI18n();
 
   useEffect(() => { window.scrollTo(0, 0); }, [id]);
 
@@ -168,22 +243,11 @@ export default function BlogDetails() {
   const prevPost  = posts[postIndex - 1];
   const nextPost  = posts[postIndex + 1];
 
-  const related = posts
-    .map((p, i) => ({ ...p, i }))
-    .filter(p => p.i !== postIndex)
-    .slice(0, 2);
-
-  const recentPosts = posts
-    .map((p, i) => ({ ...p, i }))
-    .filter(p => p.i !== postIndex)
-    .slice(0, 4);
-
-  const categories = isRTL
-    ? [['أسلوب الحياة', 5], ['سفر', 34], ['موضة', 89], ['موسيقى', 92], ['تسويق', 56]]
-    : [['Lifestyle', 5], ['Travel', 34], ['Fashion', 89], ['Music', 92], ['Branding', 56]];
-
   const articleLang = isRTL ? 'ar' : 'en';
-  const article = ARTICLE_CONTENT[postIndex]?.[articleLang] || ARTICLE_CONTENT[0][articleLang];
+  const article     = ARTICLE_CONTENT[postIndex]?.[articleLang] || ARTICLE_CONTENT[0][articleLang];
+
+  // ← inject OG / Twitter meta tags dynamically
+  usePostMeta(post, article);
 
   if (!post) {
     return (
@@ -210,17 +274,11 @@ export default function BlogDetails() {
             {post.title}
           </h1>
           <nav style={{ display: 'flex', gap: 10, justifyContent: 'center', fontSize: 14, flexWrap: 'wrap', alignItems: 'center' }}>
-            <Link to="/" style={{ color: 'rgba(255,255,255,0.7)', textDecoration: 'none' }}>
-              {isRTL ? 'الرئيسية' : 'Home'}
-            </Link>
+            <Link to="/" style={{ color: 'rgba(255,255,255,0.7)', textDecoration: 'none' }}>{isRTL ? 'الرئيسية' : 'Home'}</Link>
             <span style={{ color: 'rgba(255,255,255,0.4)' }}>›</span>
-            <Link to="/#blog" style={{ color: 'rgba(255,255,255,0.7)', textDecoration: 'none' }}>
-              {isRTL ? 'المدونة' : 'Blog'}
-            </Link>
+            <Link to="/#blog" style={{ color: 'rgba(255,255,255,0.7)', textDecoration: 'none' }}>{isRTL ? 'المدونة' : 'Blog'}</Link>
             <span style={{ color: 'rgba(255,255,255,0.4)' }}>›</span>
-            <span style={{ color: '#ffb3d9', fontWeight: 600 }}>
-              {isRTL ? 'تفاصيل المقال' : 'Post Details'}
-            </span>
+            <span style={{ color: '#ffb3d9', fontWeight: 600 }}>{isRTL ? 'تفاصيل المقال' : 'Post Details'}</span>
           </nav>
         </div>
       </section>
@@ -229,8 +287,6 @@ export default function BlogDetails() {
       <section style={{ padding: '70px 0' }}>
         <div style={{ maxWidth: 1180, margin: '0 auto', padding: '0 20px' }}>
           <div style={{ display: 'flex', gap: 40, flexWrap: 'wrap', alignItems: 'flex-start' }}>
-
-            {/* ══ Article ══════════════════════════════════════ */}
             <div style={{ flex: '1 1 620px', minWidth: 0 }}>
 
               {/* Hero image */}
@@ -242,42 +298,34 @@ export default function BlogDetails() {
               {/* Meta row */}
               <div style={{
                 display: 'flex', flexWrap: 'wrap', gap: 16, marginBottom: 24,
-                paddingBottom: 20, borderBottom: '1px solid #f0e0ea',
-                fontSize: 13, alignItems: 'center',
+                paddingBottom: 20, borderBottom: '1px solid #f0e0ea', fontSize: 13, alignItems: 'center',
               }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+                   <div className='bg-gradient-to-r from-primary via-secondary to-third /90 w-10 mx-auto flex justify-center items-center h-10 rounded-full'>
                   <img
-                    src={post.authorImg || 'img/blog/admin-img.png'}
+                    src={'/img/logo/logo-white.png'}
                     alt={post.author}
-                    style={{ width: 40, height: 40, borderRadius: '50%', objectFit: 'cover', border: '2px solid #6b003e' }}
-                    onError={e => e.target.style.display = 'none'}
+                    style={{ width: '60%', height: '60%', objectFit: 'contain' }}
+                    onError={e => e.target.style.opacity = 0}
                   />
+                </div>
                   <div>
                     <div style={{ fontWeight: 700, color: C.primary, fontSize: 14 }}>{post.author}</div>
-                    <div style={{ color: '#aaa', fontSize: 12 }}>{post.authorRole}</div>
+                    <div style={{ color: '#aaa', fontSize: 12 }}>{post.date}</div>
                   </div>
                 </div>
-                <div style={{
-                  background: C.grad, color: '#fff', borderRadius: 20,
-                  padding: '5px 16px', fontSize: 12, fontWeight: 600,
-                }}>
-                  📅 {post.date}
-                </div>
+         
               </div>
 
-              {/* Excerpt as styled lead */}
+              {/* Excerpt lead */}
               <p style={{
                 fontSize: 16, color: '#444', lineHeight: 1.85, marginBottom: 28,
                 borderLeft: isRTL ? 'none' : '4px solid #6b003e',
                 borderRight: isRTL ? '4px solid #6b003e' : 'none',
-                paddingLeft: isRTL ? 0 : 20,
-                paddingRight: isRTL ? 20 : 0,
-                fontStyle: 'italic',
-              }}>
-                {post.excerpt}
-              </p>
+                paddingLeft: isRTL ? 0 : 20, paddingRight: isRTL ? 20 : 0, fontStyle: 'italic',
+              }}>{post.excerpt}</p>
 
-              {/* Article body paragraphs */}
+              {/* Body */}
               {article.body.map((para, i) => (
                 <p key={i} style={{ fontSize: 15, lineHeight: 1.9, color: '#555', marginBottom: 22 }}>{para}</p>
               ))}
@@ -293,83 +341,43 @@ export default function BlogDetails() {
                 background: C.grad, padding: '30px 44px 30px 76px', borderRadius: 14,
                 color: '#fff', lineHeight: 1.8, margin: '32px 0', position: 'relative', fontSize: 15,
               }}>
-                <span style={{
-                  position: 'absolute',
-                  [isRTL ? 'right' : 'left']: 22,
-                  top: 20, fontSize: 56, opacity: .15,
-                  lineHeight: 1, fontFamily: 'Georgia, serif',
-                }}>❝</span>
+                <span style={{ position: 'absolute', [isRTL ? 'right' : 'left']: 22, top: 20, fontSize: 56, opacity: .15, lineHeight: 1, fontFamily: 'Georgia, serif' }}>❝</span>
                 {article.quote}
-                <footer style={{ marginTop: 14, fontWeight: 700, fontSize: 13, opacity: 0.82 }}>
-                  — {article.quoteAuthor}
-                </footer>
+                <footer style={{ marginTop: 14, fontWeight: 700, fontSize: 13, opacity: 0.82 }}>— {article.quoteAuthor}</footer>
               </blockquote>
 
-              {/* Body after quote */}
-              <p style={{ fontSize: 15, lineHeight: 1.9, color: '#555', marginBottom: 28 }}>
-                {article.bodyAfterQuote}
-              </p>
+              <p style={{ fontSize: 15, lineHeight: 1.9, color: '#555', marginBottom: 28 }}>{article.bodyAfterQuote}</p>
 
-              {/* Figure image + pull text */}
+              {/* Figure float */}
               <div style={{ overflow: 'hidden', marginBottom: 38 }}>
                 <FallbackImg src={article.figureImg} alt="" height={190} style={{
-                  float: isRTL ? 'right' : 'left',
-                  width: 250, objectFit: 'cover', borderRadius: 10,
-                  [isRTL ? 'marginLeft' : 'marginRight']: 26,
-                  marginBottom: 12,
-                  boxShadow: '0 4px 20px rgba(107,0,62,0.1)',
+                  float: isRTL ? 'right' : 'left', width: 250, objectFit: 'cover', borderRadius: 10,
+                  [isRTL ? 'marginLeft' : 'marginRight']: 26, marginBottom: 12, boxShadow: '0 4px 20px rgba(107,0,62,0.1)',
                 }} />
                 <p style={{ fontSize: 15, lineHeight: 1.9, color: '#555' }}>
                   {isRTL
-                    ? 'منصة محتواك مصممة لتمكين كل صانع محتوى من الوصول إلى الفرص المناسبة بصرف النظر عن حجم متابعيه. ما يهم هو جودة ما تقدمه وقدرتك على بناء ثقة حقيقية مع الجمهور الذي يتفاعل معك بانتظام.'
-                    : 'Muhtawak is built to empower every creator to access the right opportunities regardless of follower count. What matters is the quality of what you deliver and your ability to build genuine trust with an audience that engages with you consistently.'}
+                    ? 'منصة محتواك مصممة لتمكين كل صانع محتوى من الوصول إلى الفرص المناسبة بصرف النظر عن حجم متابعيه.'
+                    : 'Muhtawak is built to empower every creator to access the right opportunities regardless of follower count.'}
                 </p>
               </div>
+                    
 
-              {/* Tags + Social share */}
-              <div style={{
-                display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap',
-                gap: 20, paddingTop: 24, borderTop: '1px solid #f0e0ea', marginBottom: 36,
-              }}>
-                <div>
-                  <h5 style={{ fontSize: 13, fontWeight: 700, color: C.primary, marginBottom: 10, textTransform: 'uppercase', letterSpacing: 1 }}>
-                    {isRTL ? 'الوسوم' : 'Tags'}
-                  </h5>
-                  {article.tags.map(t => <TagLink key={t}>{t}</TagLink>)}
-                </div>
-                <div style={{ textAlign: isRTL ? 'left' : 'right' }}>
-                  <h5 style={{ fontSize: 13, fontWeight: 700, color: C.primary, marginBottom: 10, textTransform: 'uppercase', letterSpacing: 1 }}>
-                    {isRTL ? 'مشاركة' : 'Share'}
-                  </h5>
-                  {['𝕏', '𝓟', '𝐟', '📷'].map((ic, i) => <SocialBtn key={i} icon={ic} />)}
-                </div>
-              </div>
-
-              {/* Prev / Next navigation */}
+              {/* Prev / Next */}
               {(prevPost || nextPost) && (
-                <div style={{
-                  display: 'flex', borderTop: '1px solid #f0e0ea', borderBottom: '1px solid #f0e0ea',
-                  marginBottom: 52,
-                }}>
+                <div style={{ display: 'flex', borderTop: '1px solid #f0e0ea', borderBottom: '1px solid #f0e0ea', marginBottom: 52 }}>
                   {prevPost ? (
                     <Link to={`/blog/${postIndex - 1}`} style={{
                       flex: 1, textDecoration: 'none', padding: '22px 20px',
                       borderRight: isRTL ? 'none' : (nextPost ? '1px solid #f0e0ea' : 'none'),
-                      borderLeft: isRTL ? (nextPost ? '1px solid #f0e0ea' : 'none') : 'none',
-                      transition: 'background .2s',
+                      borderLeft: isRTL ? (nextPost ? '1px solid #f0e0ea' : 'none') : 'none', transition: 'background .2s',
                     }}
                       onMouseEnter={e => e.currentTarget.style.background = '#fdf5f9'}
                       onMouseLeave={e => e.currentTarget.style.background = 'transparent'}
                     >
-                      <span style={{ fontSize: 11, textTransform: 'uppercase', letterSpacing: 2, color: '#bbb', display: 'block', marginBottom: 7 }}>
-                        {isRTL ? '← السابق' : '← Prev'}
-                      </span>
-                      <span style={{ fontSize: 14, fontWeight: 700, color: C.primary, lineHeight: 1.4, display: 'block' }}>
-                        {prevPost.title}
-                      </span>
+                      <span style={{ fontSize: 11, textTransform: 'uppercase', letterSpacing: 2, color: '#bbb', display: 'block', marginBottom: 7 }}>{isRTL ? '← السابق' : '← Prev'}</span>
+                      <span style={{ fontSize: 14, fontWeight: 700, color: C.primary, lineHeight: 1.4, display: 'block' }}>{prevPost.title}</span>
                     </Link>
                   ) : <div style={{ flex: 1 }} />}
-
                   {nextPost && (
                     <Link to={`/blog/${postIndex + 1}`} style={{
                       flex: 1, textDecoration: 'none', padding: '22px 20px',
@@ -378,85 +386,37 @@ export default function BlogDetails() {
                       onMouseEnter={e => e.currentTarget.style.background = '#fdf5f9'}
                       onMouseLeave={e => e.currentTarget.style.background = 'transparent'}
                     >
-                      <span style={{ fontSize: 11, textTransform: 'uppercase', letterSpacing: 2, color: '#bbb', display: 'block', marginBottom: 7 }}>
-                        {isRTL ? 'التالي →' : 'Next →'}
-                      </span>
-                      <span style={{ fontSize: 14, fontWeight: 700, color: C.primary, lineHeight: 1.4, display: 'block' }}>
-                        {nextPost.title}
-                      </span>
+                      <span style={{ fontSize: 11, textTransform: 'uppercase', letterSpacing: 2, color: '#bbb', display: 'block', marginBottom: 7 }}>{isRTL ? 'التالي →' : 'Next →'}</span>
+                      <span style={{ fontSize: 14, fontWeight: 700, color: C.primary, lineHeight: 1.4, display: 'block' }}>{nextPost.title}</span>
                     </Link>
                   )}
                 </div>
               )}
 
-              {/* Related posts */}
-              {/* {related.length > 0 && (
-                <div style={{ marginBottom: 52 }}>
-                  <h4 style={{ fontSize: 22, fontWeight: 700, color: C.primary, marginBottom: 24 }}>
-                    {isRTL ? 'مقالات ذات صلة' : 'Related Posts'}
-                  </h4>
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 24 }}>
-                    {related.map((p) => (
-                      <Link key={p.i} to={`/blog/${p.i}`} style={{ textDecoration: 'none' }}>
-                        <div style={{
-                          borderRadius: 12, overflow: 'hidden',
-                          boxShadow: '0 4px 24px rgba(107,0,62,0.1)', transition: 'transform .25s, box-shadow .25s',
-                        }}
-                          onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-6px)'; e.currentTarget.style.boxShadow = '0 14px 44px rgba(107,0,62,0.2)'; }}
-                          onMouseLeave={e => { e.currentTarget.style.transform = 'none'; e.currentTarget.style.boxShadow = '0 4px 24px rgba(107,0,62,0.1)'; }}
-                        >
-                          <img src={p.img} alt="" height={155} style={{ width: '100%', objectFit: 'cover', display: 'block' }} />
-                          <div style={{ padding: '16px 18px', background: '#fff' }}>
-                            <div style={{
-                              display: 'inline-block', background: C.grad, color: '#fff',
-                              fontSize: 11, fontWeight: 600, borderRadius: 12,
-                              padding: '3px 10px', marginBottom: 8,
-                            }}>{p.date}</div>
-                            <h3 style={{ margin: 0, fontSize: 14, fontWeight: 700, color: C.primary, lineHeight: 1.45 }}>{p.title}</h3>
-                          </div>
-                        </div>
-                      </Link>
-                    ))}
-                  </div>
-                </div>
-              )} */}
-
               {/* Author box */}
               <div style={{
-                background: 'linear-gradient(135deg,#fdf5f9 0%,#f5e6f0 100%)',
-                borderRadius: 16, padding: '44px 28px 32px',
-                textAlign: 'center', marginBottom: 50,
-                border: '1px solid #f0d8e8',
-                position: 'relative',
+                background: 'linear-gradient(135deg,#fdf5f9 0%,#f5e6f0 100%)', borderRadius: 16,
+                padding: '44px 28px 32px', textAlign: 'center', marginBottom: 50,
+                border: '1px solid #f0d8e8', position: 'relative',
               }}>
-                <div style={{
-                  position: 'absolute', top: -40, left: '50%', transform: 'translateX(-50%)',
-                  width: 82, height: 82, borderRadius: '50%', overflow: 'hidden',
-                  border: '4px solid #fff', boxShadow: '0 6px 24px rgba(107,0,62,0.22)',
-                  background: C.grad,
-                }}>
+                <div className='bg-gradient-to-r from-primary via-secondary to-third w-16 mx-auto flex justify-center items-center h-16 rounded-full'>
                   <img
-                    src={post.authorImg || 'img/blog/admin-img.png'}
+                    src={'/img/logo/logo-white.png'}
                     alt={post.author}
-                    style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                    style={{ width: '60%', height: '60%', objectFit: 'contain' }}
                     onError={e => e.target.style.opacity = 0}
                   />
                 </div>
                 <h5 style={{ fontSize: 20, fontWeight: 700, color: C.primary, marginBottom: 4 }}>{post.author}</h5>
-                <p style={{ fontSize: 13, color: '#9a0058', marginBottom: 14, fontWeight: 600 }}>{post.authorRole}</p>
                 <div style={{ marginBottom: 16 }}>
-                  {['𝐟', '𝕏', '📷', '𝓛'].map((ic, i) => <SocialBtn key={i} icon={ic} />)}
+                  {SHARE_BUTTONS.map(btn => (
+                    <ShareBtn key={btn.label} icon={btn.icon} label={btn.label} getHref={btn.getHref} postTitle={post.title} />
+                  ))}
                 </div>
-                <p style={{ fontSize: 14, maxWidth: 500, margin: '0 auto', lineHeight: 1.75, color: '#666' }}>
-                  {isRTL
-                    ? 'فريق محتواك مكرّس لتمكين صنّاع المحتوى والعلامات التجارية من التواصل بطريقة تحقق نتائج حقيقية وتبني علاقات مستدامة تدوم على المدى الطويل.'
-                    : 'The Muhtawak team is dedicated to empowering content creators and brands to connect in ways that drive real results and build lasting relationships for the long term.'}
-                </p>
+             
               </div>
 
-          
-            </div>{/* /article */}
-
+            </div>
           </div>
         </div>
       </section>

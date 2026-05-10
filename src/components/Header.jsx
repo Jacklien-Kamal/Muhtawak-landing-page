@@ -6,33 +6,39 @@ import { useRole } from '../hooks/roleContext';
 
 const Header = () => {
   const { locale, isRTL } = useI18n();
-  const [sticky, setSticky]       = useState(false);
+  const [sticky, setSticky] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [otherOpen, setOtherOpen]   = useState(false);
+  const [otherOpen, setOtherOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('');
   const { role } = useRole();
 
   const t = locale.nav;
 
-const navLinks = [
-  { label: t.home,       href: 'parallax' },
-  { label: t.creatorsWork,   href: 'creatorsWork' },
-  { label: t.downloadApp,   href: 'downloadApp' },
-  { label: t.howItWorks, href: 'how-it-works' },
-  ...(role === "Agency"
-    ? [{ label: t.pricing, href: 'pricing' }]
-    : []),
-  { label: t.features,   href: 'features' },
+  const navLinks = [
+    { label: t.home, href: 'parallax' },
+        { label: t.howItWorks, href: 'how-it-works' },
+            { label: t.features, href: 'features' },
+            { label: t.screenshots, href: 'screenshots' },
+
+    { label: t.reviews, href: 'reviews' },
+    { label: isRTL ? 'المدونة' : 'Blog', href: 'blog' },
+
+    ...(role === "Agency"
+      ? [{ label: t.creatorsWork, href: 'creatorsWork' }]
+      : []),
+    ...(role === "Agency"
+      ? [{ label: t.pricing, href: 'pricing' }]
+      : []),
 
 
-];
+  ];
 
   const otherLinks = [
-    // { label: isRTL ? 'تفاصيل المقال' : 'Blog Details', href: 'blog-details'  },
-    { label: t.reviews,    href: 'reviews' },
-    { label: isRTL ? 'المدونة' : 'Blog',         href: 'blog'          },
-      { label: t.contact,    href: 'contact' },
+        { label: t.downloadApp, href: 'downloadApp' },
 
+    ...(role === "Agency"
+      ? [{ label: t.contact, href: 'contact' }]
+      : []),
   ];
 
   // ── Sticky on scroll ──
@@ -91,14 +97,14 @@ const navLinks = [
           <div className="flex items-center justify-between py-4 lg:py-0">
 
             {/* ── Logo ── */}
-            <a href="/"  className="flex-shrink-0">
-              <img src="img/logo/logo.webp" alt="logo" className="h-10 w-auto" />
+            <a href="/" className="flex-shrink-0">
+              {!sticky ? <img src="/img/logo/logo.webp" alt="logo" className="h-10 w-auto" /> : <img src="/img/logo/logo-name-white.png" alt="logo" className="h-10 w-auto" />}
             </a>
 
             {/* ── Desktop Nav ── */}
             <nav className={`hidden lg:flex items-center gap-0 ${isRTL ? 'flex-row' : ''}`}>
               {navLinks.map((link) => (
-                <a  
+                <a
                   key={link.href}
                   href={`#${link.href}`}
                   onClick={(e) => scrollTo(e, link.href)}
@@ -158,7 +164,7 @@ const navLinks = [
 
             {/* ── Right: Language Switcher (desktop) ── */}
             <div className="hidden xl:flex items-center">
-              <LanguageSwitcher />
+              <LanguageSwitcher sticky={sticky} />
             </div>
 
             {/* ── Mobile Hamburger ── */}

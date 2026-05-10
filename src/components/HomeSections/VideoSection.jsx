@@ -24,8 +24,8 @@ export default function VideoSection() {
 
   return (
     <>
-      <section className="relative overflow-hidden py-2 pt-20" dir={isRTL ? 'rtl' : 'ltr'}>
-        <div className='bg-blue-50 px-4 sm:px-8 md:px-16 lg:px-28 xl:px-52'>
+      <section id="how-it-works" className="relative overflow-hidden py-2 pt-20" dir={isRTL ? 'rtl' : 'ltr'}>
+        <div className='bg-red-50 px-4 sm:px-8 md:px-16 lg:px-28 xl:px-52'>
 
           <div className="absolute right-0 top-1/2 -translate-y-1/2 z-0 pointer-events-none">
             <img src="img/shape/header-sape5.png" alt="" />
@@ -38,11 +38,11 @@ export default function VideoSection() {
 
               {/* DESKTOP (lg+): exact original layout */}
               <div className="hidden lg:block lg:w-6/12 w-full mt-64 lg:mt-0">
-                <div className={`absolute ${isRTL ? "-right-10" : "-left-10"} bottom-1/4 z-100 inline-block w-full max-w-3xl`}>
+                <div className={`absolute ${isRTL ? "-right-10" : "-left-10"} bottom-1/6 z-100 inline-block w-full max-w-3xl`}>
                   <img
                     src="https://htmldemo.zcubethemes.com/bingle/img/bg/video-img.png"
                     alt="video"
-                    className="w-full block rounded-md z-10"
+                    className="w-[90%] block rounded-md z-10"
                   />
                   <span
                     className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-28 h-28 rounded-full block z-20"
@@ -53,7 +53,7 @@ export default function VideoSection() {
                   />
                   <button
                     onClick={() => setIsModalOpen(true)}
-                    className={`popup-video absolute top-1/2 ${isRTL ? "right-[90%]" : "left-full"} -translate-x-1/2 -translate-y-1/2 w-20 h-20 rounded-full flex items-center justify-center z-30 border-0 cursor-pointer`}
+                    className={`popup-video absolute top-1/2 ${isRTL ? "right-[80%]" : "left-[90%]"} -translate-x-1/2 -translate-y-1/2 w-16 h-16 rounded-full flex items-center justify-center z-30 border-0 cursor-pointer`}
                     style={{
                       background: 'linear-gradient(135deg, #d20b52, #d27252)',
                       boxShadow: '0 0 0 14px rgba(214, 52, 132, 0.2)',
@@ -92,7 +92,7 @@ export default function VideoSection() {
                   {/* Play button — centered on image */}
                   <button
                     onClick={() => setIsModalOpen(true)}
-                    className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-14 h-14 rounded-full flex items-center justify-center z-30 border-0 cursor-pointer transition-transform duration-200 hover:scale-110"
+                    className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 rounded-full flex items-center justify-center z-30 border-0 cursor-pointer transition-transform duration-200 hover:scale-110"
                     style={{
                       background: 'linear-gradient(135deg, #d20b52, #d27252)',
                       boxShadow: '0 0 0 10px rgba(214, 52, 132, 0.2)',
@@ -113,17 +113,17 @@ export default function VideoSection() {
               </div>
 
               {/* ── Right: text content (shared, responsive tweaks only) ── */}
-              <div className="lg:w-7/12 w-full">
+              <div className="lg:w-[70%] w-full">
                 <div className={`${isRTL ? 'pr-0 lg:pr-12 text-right' : 'pl-0 lg:pl-12'}`}>
-                  <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#190a32] leading-tight mb-5 lg:w-[50%]">
+                  <h2 className="text-2xl sm:text-3xl lg:text-3xl font-bold text-primary leading-tight mb-5 lg:w-[80%]">
                     {heading}
                   </h2>
-                  <p className="text-gray-500 text-sm leading-7 mb-6">
+                  <p className="text-lg leading-7 mb-6">
                     {description}
                   </p>
                   <ul className="list-none m-0 p-0 space-y-3">
                     {points.map((point, i) => (
-                      <li key={i} className={`flex items-start text-sm text-gray-600 ${isRTL ? 'flex-row' : ''}`}>
+                      <li key={i} className={`flex items-start text-md text-gray-600 ${isRTL ? 'flex-row' : ''}`}>
                         <span className={`inline-flex items-center justify-center w-6 h-6 rounded-full border-2 border-[#d20b52] text-[#d20b52] text-xs shrink-0 mt-0.5 ${isRTL ? 'ml-3' : 'mr-3'}`}>
                           ✓
                         </span>

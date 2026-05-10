@@ -1,18 +1,18 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-import HeroSection        from './src/components/HomeSections/HeroSection';
-import OurFeatures        from './src/components/HomeSections/OurFeatures';
-import DownloadApp        from './src/components/HomeSections/DownloadApp';
-import HowAppWorkSection  from './src/components/HomeSections/HowAppWorkSection';
-import VideoSection       from './src/components/HomeSections/VideoSection';
-import Screenshots        from './src/components/HomeSections/Screenshots';
-import PricingSection     from './src/components/HomeSections/PricingSection';
-import Reviews            from './src/components/HomeSections/Reviews';
-import BlogsSection       from './src/components/HomeSections/BlogsSection';
-import ContactSection     from './src/components/HomeSections/ContactSection';
-import CreatorShowcase    from './src/components/HomeSections/PrevWorks';
-import { useRole }        from './src/hooks/roleContext';
+import HeroSection from './src/components/HomeSections/HeroSection';
+import OurFeatures from './src/components/HomeSections/OurFeatures';
+import DownloadApp from './src/components/HomeSections/DownloadApp';
+import HowAppWorkSection from './src/components/HomeSections/HowAppWorkSection';
+import VideoSection from './src/components/HomeSections/VideoSection';
+import Screenshots from './src/components/HomeSections/Screenshots';
+import PricingSection from './src/components/HomeSections/PricingSection';
+import Reviews from './src/components/HomeSections/Reviews';
+import BlogsSection from './src/components/HomeSections/BlogsSection';
+import ContactSection from './src/components/HomeSections/ContactSection';
+import CreatorShowcase from './src/components/HomeSections/PrevWorks';
+import { useRole } from './src/hooks/roleContext';
 
 /* ─── Reusable animated wrapper ─── */
 // استبدل FadeInSection بالكود ده
@@ -21,10 +21,10 @@ const FadeInSection = ({ children, direction = 'up', delay = 0 }) => {
   const variants = {
     hidden: {
       opacity: 0,
-      y: direction === 'up'   ?  50 :
-         direction === 'down' ? -50 : 0,
-      x: direction === 'left'  ?  50 :
-         direction === 'right' ? -50 : 0,
+      y: direction === 'up' ? 50 :
+        direction === 'down' ? -50 : 0,
+      x: direction === 'left' ? 50 :
+        direction === 'right' ? -50 : 0,
     },
     visible: {
       opacity: 1,
@@ -65,15 +65,11 @@ const Home = () => {
       </FadeInSection>
 
       {/* Creator Showcase — fade from right */}
-      <FadeInSection direction="right" delay={0.05}>
-        <CreatorShowcase />
-      </FadeInSection>
+      {role === 'Agency' && (
 
-      {/* Download / Choose — fade from left */}
-      <FadeInSection direction="left">
-        <DownloadApp />
-      </FadeInSection>
-
+        <FadeInSection direction="right" delay={0.05}>
+          <CreatorShowcase />
+        </FadeInSection>)}
       {/* How it works — fade from right */}
       <FadeInSection direction="right">
         <HowAppWorkSection />
@@ -84,10 +80,9 @@ const Home = () => {
         <VideoSection />
       </FadeInSection>
 
-      {/* Screenshots — fade up */}
-      <FadeInSection direction="up">
-        <Screenshots />
-      </FadeInSection>
+
+
+
 
       {/* Pricing — only Agency, fade up */}
       {role === 'Agency' && (
@@ -102,6 +97,11 @@ const Home = () => {
       <FadeInSection direction="right">
         <OurFeatures />
       </FadeInSection>
+
+      {/* Screenshots — fade up */}
+      <FadeInSection direction="up">
+        <Screenshots />
+      </FadeInSection>
       {/* Reviews — fade from left */}
       <FadeInSection direction="left">
         <Reviews />
@@ -110,11 +110,16 @@ const Home = () => {
       <FadeInSection direction="up">
         <BlogsSection />
       </FadeInSection>
-
+      {/* Download / Choose — fade from left */}
+      <FadeInSection direction="left">
+        <DownloadApp />
+      </FadeInSection>
       {/* Contact — fade up */}
+      {role === 'Agency' && (
+
       <FadeInSection direction="up">
         <ContactSection />
-      </FadeInSection>
+      </FadeInSection>)}
 
     </main>
   );

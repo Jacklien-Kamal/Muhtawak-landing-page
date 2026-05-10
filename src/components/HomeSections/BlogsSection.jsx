@@ -65,7 +65,7 @@ export default function BlogsSection() {
         <div className="flex justify-center items-center">
           <div className="w-full">
             <div className="text-center mb-[50px]">
-              <h2 className="text-[38px] font-semibold text-[#190a32] pb-[15px] mb-0 leading-snug text-center">
+              <h2 className="text-[38px] font-semibold text-primary pb-[15px] mb-0 leading-snug text-center">
                 {heading}
               </h2>
               <p className="text-sm text-[#666] leading-6">{description}</p>

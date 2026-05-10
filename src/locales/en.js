@@ -4,260 +4,251 @@ export const en = {
 
   roles: {
     Creator: {
-      badge: ["New", "Creator"],
-      hero: {
-        heading: "Muhtawak for",
-        highlight: "Creators",
+  badge: ["New", "Content Creator"],
+  hero: {
+    heading: "Muhtawak for",
+    highlight: "Content Creators",
+    description:
+      "You don't need to be an influencer to earn! With Muhtawak, brands connect you with the best opportunities to create authentic and impactful content, making income generation easy!",
+    subDes: "Whether you're a beginner or a pro, here you can:\n● Showcase your work\n● Receive direct requests\n● Build a steady income stream",
+    cta: "Start Creating",
+  },
+  features: {
+    sectionTag: "For Creators",
+    heading: "Everything a Creator Needs",
+    subheading:
+      "From portfolio showcasing to fan engagement, our tools are designed to amplify your creative voice.",
+    items: [
+      {
+        icon: "flaticon-settings",
+        title: "Portfolio Builder",
         description:
-          "You don't need to be an influencer to earn! With Muhtawak, brands connect you to the best opportunities to create authentic and impactful content, making it easy to generate income!",
-        cta: "Start Creating",
+          "Display your work beautifully with drag-and-drop tools that impress clients and fans alike.",
       },
-      features: {
-        sectionTag: "For Creators",
-        heading: "Everything a Creator Needs",
-        subheading:
-          "From portfolio showcasing to fan engagement, our tools are designed to amplify your creative voice.",
-        items: [
-          {
-            icon: "flaticon-settings",
-            title: "Portfolio Builder",
-            description:
-              "Beautifully display your work with drag-and-drop portfolio tools that impress clients and fans alike.",
-          },
-          {
-            icon: "flaticon-magic-wand",
-            title: "Content Scheduler",
-            description:
-              "Plan and auto-publish across platforms so you can focus on creating, not managing.",
-          },
-          {
-            icon: "flaticon-smartphone",
-            title: "Fan Engagement",
-            description:
-              "Connect with your audience through polls, Q&As, and exclusive content drops.",
-          },
-          {
-            icon: "flaticon-ui",
-            title: "Revenue Tools",
-            description:
-              "Sell digital products, offer subscriptions, and accept tips — all built right in.",
-          },
-          {
-            icon: "flaticon-paper-plane",
-            title: "Collab Network",
-            description:
-              "Find and connect with other creators for partnerships, duets, and joint projects.",
-          },
-          {
-            icon: "flaticon-help",
-            title: "Creator Analytics",
-            description:
-              "Understand what content resonates with deep audience insights and growth metrics.",
-          },
-        ],
-      },
-      download: {
-        heading: "Start Creating Content & Earning Today",
+      {
+        icon: "flaticon-magic-wand",
+        title: "Content Scheduling",
         description:
-          "You don't need to be an influencer to earn! Download Muhtawak, sign up for free, and connect with top brands looking for authentic content creators like you.",
-        points: [
-          "Sign up for free — no experience needed",
-          "Get real opportunities with known brands",
-          "Each project has a fixed payout — get paid directly",
-          "More content you create, more you earn",
-        ],
+          "Plan and auto-publish across platforms so you can focus on creating, not managing.",
       },
-      howItWorks: {
-        tag: "Creator Workflow",
-        heading: "Go From Idea to Published in Minutes",
-        steps: [
-          {
-            num: "01",
-            title: "Build Your Profile",
-            description:
-              "Set up your creator identity with a customizable profile and portfolio.",
-          },
-          {
-            num: "02",
-            title: "Upload Your Work",
-            description:
-              "Add your projects, videos, articles, or artwork with rich media support.",
-          },
-          {
-            num: "03",
-            title: "Publish & Earn",
-            description:
-              "Share with your audience and start earning through built-in monetization.",
-          },
-        ],
-      },
-      pricing: {
-        tag: "Agencys  Plans",
-        heading: "Our Plans for Agencies",
-        plans: [
-          {
-            name: "Package 16",
-            price: "5600.00  ",
-            period: "/month",
-            features: [
-              "16 videos ",
-              "Video with 60min duration",
-              "Priority Support",
-            ],
-            highlight: true,
-            cta: "Get Statred",
-          },
-          {
-            name: "Pro Package",
-            price: "1500.00  ",
-            period: "/month",
-            features: ["5 videos", "Video with 60min duration"],
-            highlight: false,
-            cta: "Go Pro ",
-          },
-        ],
-      },
-      faq: {
-        tag: "Creator FAQ",
-        heading: "Questions from Creators",
-        items: [
-          {
-            q: "How do I start earning money?",
-            a: "Enable monetization in your dashboard. You can sell products, set up subscriptions, or accept tips from day one.",
-          },
-          {
-            q: "Can I import my existing portfolio?",
-            a: "Yes! We support imports from Behance, Dribbble, and any public URL via our one-click import tool.",
-          },
-          {
-            q: "Is there a revenue split?",
-            a: "We only take 5% on transactions — one of the lowest rates in the industry. The rest is yours.",
-          },
-          {
-            q: "Can I collaborate with other creators?",
-            a: "Absolutely. Use the Collab Network to find partners or invite teammates to co-manage your profile.",
-          },
-        ],
-      },
-      reviews: {
-        tag: "Creator Stories",
-        heading: "Loved by Creators Worldwide",
-        testimonials: [
-          {
-            name: "Sofia R.",
-            role: "Illustrator",
-            text: "I tripled my client inquiries within a month of setting up my portfolio here. The tools are just chef's kiss.",
-          },
-          {
-            name: "Marcus T.",
-            role: "YouTuber",
-            text: "Finally a platform that actually helps me earn. The subscription feature alone pays for itself ten times over.",
-          },
-          {
-            name: "Lena K.",
-            role: "Photographer",
-            text: "The analytics helped me understand exactly what my audience loves. My engagement is up 200%.",
-          },
-          {
-            name: "Ahmed S.",
-            role: "Video Creator",
-            text: "Muhtawak connected me with brands I never thought would notice me. My income doubled in 3 months.",
-          },
-          {
-            name: "Nora J.",
-            role: "Lifestyle Blogger",
-            text: "The scheduling tools are a lifesaver. I plan a whole week of content in one sitting and it just runs.",
-          },
-          {
-            name: "Karim L.",
-            role: "Graphic Designer",
-            text: "Getting paid for what I love was always the dream. Muhtawak made it my reality — fast and easily.",
-          },
-        ],
-      },
-      video: {
-        heading: "Create Content That Brands Love",
+      {
+        icon: "flaticon-smartphone",
+        title: "Fan Engagement",
         description:
-          "Sign up, record, and earn — it really is that simple. Muhtawak connects creators with brands looking for authentic content, so you can turn your creativity into real income.",
-        points: [
-          "Work anytime without fixed hours",
-          "Get real opportunities with known brands",
-          "Earn a fixed amount for every content you create",
-        ],
+          "Connect with your audience through polls, Q&As, and exclusive content.",
       },
-      blogs: {
-        heading: "Our Latest Blog & News",
+      {
+        icon: "flaticon-ui",
+        title: "Income Tools",
         description:
-          "Tips, guides and insights for content creators and brands on the Muhtawak platform.",
-        posts: [
-          {
-            img: "img/blog/b3.jpg",
-            date: "20 Jan 2025",
-            title: "How to Create Content That Brands Actually Want to Pay For",
-            excerpt:
-              "Discover what top brands look for when hiring content creators — and how to make your profile stand out on Muhtawak.",
-            author: "Muhtawak Team",
-            authorRole: "Author",
-            authorImg: "img/blog/admin-img.png",
-          },
-          {
-            img: "img/blog/b4.jpg",
-            date: "15 Feb 2025",
-            title: "5 Ways to Grow Your Earnings as a Content Creator",
-            excerpt:
-              "From choosing the right projects to building long-term brand relationships — here is how creators maximize their income on the platform.",
-            author: "Muhtawak Team",
-            authorRole: "Author",
-            authorImg: "img/blog/admin-img.png",
-          },
-          {
-            img: "img/blog/b5.jpg",
-            date: "01 Mar 2025",
-            title: "Why Brands Are Shifting to Real UGC Over Traditional Ads",
-            excerpt:
-              "User-generated content outperforms polished ads in engagement and trust. Learn how brands on Muhtawak are leveraging authentic creators.",
-            author: "Muhtawak Team",
-            authorRole: "Author",
-            authorImg: "img/blog/admin-img.png",
-          },
-        ],
+          "Sell digital products, offer subscriptions, and accept tips — all built right into the app.",
       },
-      footer: {
-        about:
-          "Sed ut perspiciatis unde om is nerror sit voluptatem accustium dolorem tium totam rem aperam quae.",
-        companyNews: "Company News",
-        companyLinks: [
-          "Partners",
-          "About Us",
-          "Career",
-          "Reviews",
-          "Terms & Conditions",
-        ],
-        usefulLinks: "Useful Links",
-        usefulLinksList: [
-          "Home",
-          "About Us",
-          "Services",
-          "Project",
-          "Our Team",
-        ],
-        contactUs: "Contact Us",
-        address: "380 St Kilda Road, Melbourne, VIC 3004, Australia",
-        copyright: "© 2026 Muhtawak. All rights reserved",
-      },
-      contact: {
-        heading: "Get In Touch",
+      {
+        icon: "flaticon-paper-plane",
+        title: "Collaboration Network",
         description:
-          "Have a question or want to collaborate? Leave your details and we will get back to you as soon as possible.",
-        fields: {
-          name: "Your Name",
-          email: "Your Email",
-          phone: "Your Phone",
-          message: "Write your message...",
-        },
-        button: "Send Message",
+          "Find and connect with other creators for partnerships and joint projects.",
       },
+      {
+        icon: "flaticon-help",
+        title: "Creator Analytics",
+        description:
+          "Understand what resonates with your audience through in-depth analytics and growth metrics.",
+      },
+    ],
+  },
+  download: {
+    heading: "Download the Muhtawak App",
+    description: "Because opportunities aren't found… they're made.",
+    subDes: "With the app you can:",
+    points: [
+      "Manage your business easily from one place",
+      "Receive ready-made requests without searching",
+      "Communicate directly with brands",
+    ],
+  },
+  howItWorks: {
+    tag: "How It Works",
+    heading: "Start your Muhtawak journey in simple steps:",
+    steps: [
+      {
+        num: "01",
+        title: "Download the App",
+        description: "Start by downloading the Muhtawak app and register your account within minutes.",
+      },
+      {
+        num: "02",
+        title: "Create Your Profile",
+        description:
+          "Add your details, skills, and previous work so clients can get to know you.",
+      },
+      {
+        num: "03",
+        title: "Profile Review & Approval",
+        description:
+          "Our team reviews your profile to ensure content quality and suitability.",
+      },
+      {
+        num: "04",
+        title: "Receive Your Acceptance Notice",
+        description:
+          "Once approved, you'll get a notification confirming you've joined as a certified content creator.",
+      },
+      {
+        num: "05",
+        title: "Start Receiving Requests",
+        description:
+          "Browse or receive requests directly and start working with brands.",
+      },
+    ],
+  },
+  pricing: {
+    tag: "Creator Plans",
+    heading: "Our Plans for Businesses",
+    plans: [
+      {
+        name: "Package 16",
+        price: "5600.00",
+        period: "/month",
+        features: ["16 videos", "Video duration up to 60 minutes", "Priority support"],
+        highlight: true,
+        cta: "Get Started",
+      },
+      {
+        name: "Professional Package",
+        price: "1500.00",
+        period: "/month",
+        features: ["5 videos", "Video duration up to 60 minutes"],
+        highlight: false,
+        cta: "Get the Professional Package",
+      },
+    ],
+  },
+  faq: {
+    tag: "Creator FAQ",
+    heading: "Questions from Creators",
+    items: [
+      {
+        q: "How do I start earning money?",
+        a: "Activate monetization from your dashboard. You can sell products, set up subscriptions, or accept tips from day one.",
+      },
+      {
+        q: "Can I import my existing portfolio?",
+        a: "Yes! We support importing from Behance, Dribbble, and any public link via our one-click import tool.",
+      },
+      {
+        q: "Is there a revenue share?",
+        a: "We only take 5% on transactions — one of the lowest rates in the industry. The rest is yours.",
+      },
+      {
+        q: "Can I collaborate with other creators?",
+        a: "Absolutely. Use the Collaboration Network to find partners or invite team members to co-manage your profile.",
+      },
+    ],
+  },
+  reviews: {
+    tag: "What are they saying about Muhtawak?",
+    heading: "Loved by Creators Around the World",
+    testimonials: [
+      {
+        name: "Ahmed",
+        role: "Content Creator",
+        text: "The first platform that actually brought me clients consistently.",
+      },
+      {
+        name: "Noura",
+        role: "Content Creator",
+        text: "It made marketing myself so much easier.",
+      },
+      {
+        name: "Khaled",
+        role: "Photographer",
+        text: "The analytics helped me understand exactly what my audience loves. My engagement rate jumped 200%.",
+      },
+    ],
+  },
+  video: {
+    heading: "See How to Get Started in Minutes",
+    description: "Watch a video that walks you through the experience step by step.",
+    points: [
+      "Work anytime with no fixed hours",
+      "Get real opportunities with well-known brands",
+      "Earn a fixed amount for every piece of content you create",
+    ],
+  },
+  blogs: {
+    heading: "Latest Articles & News",
+    description:
+      "Tips, guides, and insights for content creators and brands on the Muhtawak platform.",
+    posts: [
+      {
+        img: "img/blog/b3.jpg",
+        date: "January 20, 2025",
+        title: "How to Create Content That Brands Actually Pay For",
+        excerpt:
+          "Discover what brands look for when collaborating with content creators, and how to make your profile stand out on Muhtawak.",
+        author: "Muhtawak Team",
+        authorRole: "Writer",
+        authorImg: "img/blog/admin-img.png",
+      },
+      {
+        img: "img/blog/b4.jpg",
+        date: "February 15, 2025",
+        title: "5 Ways to Increase Your Earnings as a Content Creator",
+        excerpt:
+          "From choosing the right projects to building long-term relationships with brands — here's how top creators maximize their income on the platform.",
+        author: "Muhtawak Team",
+        authorRole: "Writer",
+        authorImg: "img/blog/admin-img.png",
+      },
+      {
+        img: "img/blog/b5.jpg",
+        date: "March 01, 2025",
+        title: "Why Brands Are Shifting to Authentic Content Over Traditional Ads",
+        excerpt:
+          "User-generated content outperforms ads in engagement and credibility. Learn how brands on Muhtawak leverage authentic content creators.",
+        author: "Muhtawak Team",
+        authorRole: "Writer",
+        authorImg: "img/blog/admin-img.png",
+      },
+    ],
+  },
+  contact: {
+    heading: "Contact Us",
+    description:
+      "Have a question or want to collaborate? Leave your details and we'll get back to you as soon as possible.",
+    fields: {
+      name: "Name",
+      email: "Email Address",
+      phone: "Phone Number",
+      message: "Write your message...",
     },
+    button: "Send",
+  },
+  footer: {
+    about:
+      "Muhtawak connects creators with brands to produce authentic, engaging content that delivers real results.",
+    companyNews: "Company News",
+    companyLinks: [
+      "Partners",
+      "About Us",
+      "Careers",
+      "Reviews",
+      "Terms & Conditions",
+    ],
+    usefulLinks: "Useful Links",
+    usefulLinksList: [
+      "Home",
+      "About Us",
+      "Services",
+      "Projects",
+      "Our Team",
+    ],
+    contactUs: "Contact Us",
+    address: "Riyadh, Al-Mursalat, Digital Business Innovation Center",
+    copyright: "© 2026 All rights reserved to Muhtawak",
+  },
+},
 
     Agency: {
       footer: {
@@ -568,6 +559,8 @@ export const en = {
     howItWorks: "How It Works",
     pricing: "Pricing",
     faq: "FAQ",
+        screenshots: "Screenshots ",
+
     contact: "Contact",
     creatorsWork: "Creators Work",
     downloadApp: "Download App",

@@ -6,12 +6,12 @@ import { FaGooglePlay, FaCheckCircle } from 'react-icons/fa';
 export default function DownloadApp() {
   const { content } = useRole();
   const { locale, isRTL } = useI18n();
-  const { heading, description, points } = content.download;
+  const { heading, description, points ,subDes} = content.download;
 
   return (
     <section
     id='downloadApp'
-      className="relative pt-16 sm:pt-20 md:pt-24 lg:pt-[100px] pb-10 sm:pb-12 md:pb-[60px] overflow-hidden px-6 sm:px-8 md:px-16 lg:px-28 xl:px-52"
+      className="relative pt-16 sm:pt-20 md:pt-24 lg:pt-[100px] pb-10 sm:pb-12 md:pb-24 overflow-hidden px-6 sm:px-8 md:px-16 lg:px-28 xl:px-52"
       style={{
         backgroundImage: 'url(img/shape/header-sape3.png)',
         backgroundPosition: 'right center',
@@ -49,20 +49,29 @@ export default function DownloadApp() {
 
               {/* Heading */}
               <div className="mb-4 sm:mb-5 md:mb-[25px]">
-                <h2 className="text-2xl sm:text-3xl md:text-[34px] lg:text-[38px] font-semibold text-[#190a32] leading-tight">
+                <h2 className="text-2xl sm:text-3xl md:text-[34px] lg:text-[38px] font-semibold text-primary leading-tight">
                   {heading}
                 </h2>
               </div>
 
               {/* Description */}
+
               <p
-                className={`text-sm text-[#666666] leading-6 mb-3 sm:mb-4 md:mb-[15px] ${
+              style={{whiteSpace:"pre-line"}}
+                className={`text-md text-[#666666] leading-6 mb-3 sm:mb-4 md:mb-[15px] ${
                   isRTL ? 'pl-0 sm:pl-[30px] md:pl-[50px]' : 'pr-0 sm:pr-[30px] md:pr-[50px]'
                 }`}
               >
                 {description}
               </p>
-
+              <p
+              style={{whiteSpace:"pre-line"}}
+                className={`text-lg text-primary font-semibold leading-6 mb-3 sm:mb-4 md:mb-[15px] ${
+                  isRTL ? 'pl-0 sm:pl-[30px] md:pl-[50px]' : 'pr-0 sm:pr-[30px] md:pr-[50px]'
+                }`}
+              >
+                {subDes}
+              </p>
               {/* Bullet points */}
               <ul className="mb-6 sm:mb-7 md:mb-[30px] space-y-3 sm:space-y-4 md:space-y-[20px]">
                 {points.map((point, i) => (
@@ -81,7 +90,7 @@ export default function DownloadApp() {
 
                 {/* App Store */}
                 <a
-                  href="#"
+                  href="https://apps.apple.com/sa/app/muhtawak-%D9%85%D8%AD%D8%AA%D9%88%D8%A7%D9%83/id6739213042" target='_blank'
                   className="flex items-center gap-3 sm:gap-4 px-5 sm:px-6 md:px-[30px] py-[10px] rounded-[10px] text-white no-underline w-[50%] sm:w-auto sm:min-w-[200px] md:min-w-[241px] relative transition-all duration-300 hover:opacity-90"
                   style={{
                     background: 'linear-gradient(90deg, #6b003e 33%, #6b003e 66%, #6b003e)',
@@ -101,7 +110,7 @@ export default function DownloadApp() {
 
                 {/* Google Play — outlined style */}
                 <a
-                  href="#"
+                  href="https://play.google.com/store/apps/details?id=com.unicode.muhtawakApp&pli=1" target='_blank'
                   className="flex items-center gap-3 sm:gap-4 no-underline w-[50%] sm:w-auto sm:min-w-[220px] md:min-w-[262px] relative transition-all duration-300 hover:opacity-90 rounded-[10px]"
                   style={{
                     background: 'linear-gradient(90deg, #6b003e 33%, #6b003e 66%, #6b003e)',

@@ -91,7 +91,7 @@ export default function Screenshots() {
 
   return (
     <section
-      id="screen"
+      id="screenshots"
       className="relative pt-14 sm:pt-16 md:pt-20 lg:pt-[100px] pb-10 sm:pb-12 md:pb-[70px] overflow-hidden"
       style={{
         backgroundImage: 'url(img/shape/header-sape4.png)',
@@ -110,11 +110,11 @@ export default function Screenshots() {
                 {content.screenshots.label}
               </span>
             )}
-            <h2 className="text-2xl sm:text-3xl md:text-[34px] lg:text-[38px] font-semibold text-[#190a32] pb-3 md:pb-[15px] mb-0 leading-tight">
+            <h2 className="text-2xl sm:text-3xl md:text-[34px] lg:text-[38px] font-semibold text-primary pb-3 md:pb-[15px] mb-0 leading-tight">
               {content?.screenshots?.heading
                 ?? (locale.lang === 'ar' ? 'لقطات شاشة التطبيق' : 'Our App Screenshots')}
             </h2>
-            <p className="text-sm text-[#666666] leading-6 mb-0 mt-3 sm:mt-4">
+            <p className="text-lg text-[#666666] leading-6 mb-0 mt-3 sm:mt-4">
               {content?.screenshots?.subheading
                 ?? (locale.lang === 'ar'
                   ? 'اكتشف واجهة التطبيق السهلة والجذابة من خلال لقطات الشاشة.'
