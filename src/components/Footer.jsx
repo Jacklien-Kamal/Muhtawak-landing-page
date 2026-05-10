@@ -4,10 +4,29 @@ import { useI18n } from '../hooks/i18nContext'
 import { BsWhatsapp } from 'react-icons/bs'
 
 export default function Footer() {
-  const { content } = useRole()
-  const { isRTL } = useI18n()
+  const { content,role } = useRole()
+  const { isRTL ,locale} = useI18n()
   const { about, companyNews, companyLinks, contactUs, address, copyright } = content.footer
+    const t = locale.nav;
 
+  const navLinks = [
+    { label: t.home, href: 'parallax' },
+        { label: t.howItWorks, href: 'how-it-works' },
+            { label: t.features, href: 'features' },
+            { label: t.screenshots, href: 'screenshots' },
+
+    { label: t.reviews, href: 'reviews' },
+    { label: isRTL ? 'المدونة' : 'Blog', href: 'blog' },
+
+    ...(role === "Agency"
+      ? [{ label: t.creatorsWork, href: 'creatorsWork' }]
+      : []),
+    ...(role === "Agency"
+      ? [{ label: t.pricing, href: 'pricing' }]
+      : []),
+
+
+  ];
   return (
     <footer
       className="relative w-full"
@@ -56,12 +75,12 @@ export default function Footer() {
 
             {/* ── Col 2: Company News ── */}
             <div className={isRTL ? 'text-right' : 'text-left'}>
-              <SectionHeading title={companyNews} />
+              <SectionHeading title={isRTL?"روابط سريعة":"Quick Actions"} />
               <ul className="space-y-3">
-                {companyLinks.map((item, i) => (
+                {navLinks.map((item, i) => (
                   <li key={i}>
-                    <a href="#" className="text-white/80 text-sm hover:text-white transition-all duration-200 block">
-                      {item}
+                    <a href={"#"+item.href} className="text-white/80 underline underline-offset-5 text-sm hover:text-white transition-all duration-200 block">
+                      {item.label}
                     </a>
                   </li>
                 ))}

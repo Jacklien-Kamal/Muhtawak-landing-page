@@ -240,7 +240,7 @@ export const ar = {
           "التقييمات",
           "الشروط والأحكام",
         ],
-        usefulLinks: "روابط مفيدة",
+        usefulLinks: "روابط سريعة",
         usefulLinksList: [
           "الرئيسية",
           "من نحن",
