@@ -17,7 +17,7 @@ export function I18nProvider({ children }) {
     const saved = localStorage.getItem('muhtawak_lang');
     if (saved && LANGUAGES[saved]) return saved;
     const browser = navigator.language?.slice(0, 2);
-    return LANGUAGES[browser] ? browser : 'en';
+    return LANGUAGES[browser] ? browser : 'ar';
   };
 
   const [lang, setLang] = useState(getInitialLang);

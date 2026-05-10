@@ -5,7 +5,7 @@ import { useI18n } from './i18nContext';
 const RoleContext = createContext(null);
 
 export function RoleProvider({ children }) {
-  const [role, setRole] = useState('Agency'); // 'Creator' | 'Agency'
+  const [role, setRole] = useState('Creator'); // 'Creator' | 'Agency'
   const { locale } = useI18n();
 
   // Content is always sourced from the active locale → auto-updates on lang switch
