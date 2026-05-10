@@ -98,7 +98,7 @@ const Header = () => {
 
             {/* ── Logo ── */}
             <a href="/" className="flex-shrink-0">
-              {!sticky ? <img src="/img/logo/logo.webp" alt="logo" className="h-10 w-auto" /> : <img src="/img/logo/logo-name-white.png" alt="logo" className="h-10 w-auto" />}
+              {!sticky ?<span> <img src="/img/logo/logo-name-white.png" alt="logo" className="h-8 w-auto md:hidden" /> <img src="/img/logo/logo.webp" alt="logo" className="hidden md:block h-10 w-auto" /> </span>: <img src="/img/logo/logo-name-white.png" alt="logo" className="h-8 md:h-10 w-auto" />}
             </a>
 
             {/* ── Desktop Nav ── */}
