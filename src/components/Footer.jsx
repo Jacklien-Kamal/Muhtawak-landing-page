@@ -67,7 +67,7 @@ export default function Footer() {
                   <BsGooglePlay className="text-white text-lg shrink-0" />
                   <div className={isRTL ? 'text-right' : 'text-left'}>
                     <p className="text-white/60 text-[9px] leading-tight">{isRTL ? 'احصل عليه من' : 'GET IT ON'}</p>
-                    <p className="text-white font-semibold text-sm leading-tight">Google Play</p>
+                    <p className="text-white font-semibold text-sm leading-tight">{isRTL ? 'جوجل بلاي' : 'Google Play'}</p>
                   </div>
                 </a>
                 <a
@@ -80,7 +80,7 @@ export default function Footer() {
                   <GrAppleAppStore className="text-white text-lg shrink-0" />
                   <div className={isRTL ? 'text-right' : 'text-left'}>
                     <p className="text-white/60 text-[9px] leading-tight">{isRTL ? 'حمّل من' : 'Download on the'}</p>
-                    <p className="text-white font-semibold text-sm leading-tight">App Store</p>
+                    <p className="text-white font-semibold text-sm leading-tight">{isRTL ? 'اب ستور' : 'App Store'}</p>
                   </div>
                 </a>
               </div>
