@@ -1,31 +1,27 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Header   from './components/Header';
-import Footer   from './components/Footer';
-import Home     from '../Home';
-
-import { I18nProvider } from './hooks/i18nContext';
-import { RoleProvider } from './hooks/roleContext';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import Home        from '../Home';
 import BlogDetails from './BlogDetails/BlogDetails';
+import { I18nProvider } from './hooks/i18nContext';
+import { RoleProvider }  from './hooks/roleContext';
+import Layout from './components/Layout/Layout';
+
+const router = createBrowserRouter([
+  {
+    element: <Layout />,
+    children: [
+      { path: '/',         element: <Home /> },
+      { path: '/blog/:id', element: <BlogDetails /> },
+      { path: '*',         element: <Home /> },
+    ],
+  },
+]);
 
 function App() {
   return (
     <I18nProvider>
       <RoleProvider>
-        <BrowserRouter>
-          <div className="font-poppins text-bingle-gray">
-            <Header />
-
-            <Routes>
-              <Route path="/"              element={<Home />} />
-              <Route path="/blog/:id"      element={<BlogDetails />} />
-              {/* fallback → home */}
-              <Route path="*"              element={<Home />} />
-            </Routes>
-
-            <Footer />
-          </div>
-        </BrowserRouter>
+        <RouterProvider router={router} />
       </RoleProvider>
     </I18nProvider>
   );
