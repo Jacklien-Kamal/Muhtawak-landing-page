@@ -83,12 +83,12 @@ export default function DownloadApp() {
               </ul>
 
               {/* ── Store Buttons ── */}
-              <div className={`flex  flex-row  gap-4 sm:gap-5 md:gap-6 ${isRTL ? 'items-start sm:flex-row' : ''}`}>
+              <div className={`flex flex-col  md:flex-row  gap-4 sm:gap-5 md:gap-6 ${isRTL ? 'items-start sm:flex-row' : ''}`}>
 
                 {/* App Store */}
                 <a
                   href="https://apps.apple.com/sa/app/muhtawak-%D9%85%D8%AD%D8%AA%D9%88%D8%A7%D9%83/id6739213042" target='_blank'
-                  className="flex items-center gap-3 sm:gap-4 px-5 sm:px-6 md:px-[30px] py-[10px] rounded-[10px] text-white no-underline w-[50%] sm:w-auto sm:min-w-[200px] md:min-w-[241px] relative transition-all duration-300 hover:opacity-90"
+                  className="flex items-center gap-3 sm:gap-4 px-5 sm:px-6 md:px-[30px] py-[10px] rounded-[10px] text-white no-underline md:w-[50%] sm:w-auto sm:min-w-[200px] md:min-w-[241px] relative transition-all duration-300 hover:opacity-90"
                   style={{
                     background: 'linear-gradient(90deg, #6b003e 33%, #6b003e 66%, #6b003e)',
                     boxShadow: '3px 4px 25px rgba(198,58,149,0.5)',
@@ -108,7 +108,7 @@ export default function DownloadApp() {
                 {/* Google Play — outlined style */}
                 <a
                   href="https://play.google.com/store/apps/details?id=com.unicode.muhtawakApp&pli=1" target='_blank'
-                  className="flex items-center gap-3 sm:gap-4 no-underline w-[50%] sm:w-auto sm:min-w-[220px] md:min-w-[262px] relative transition-all duration-300 hover:opacity-90 rounded-[10px]"
+                  className="flex items-center gap-3 sm:gap-4 no-underline md:w-[50%] sm:w-auto sm:min-w-[220px] md:min-w-[262px] relative transition-all duration-300 hover:opacity-90 rounded-[10px]"
                   style={{
                     background: 'linear-gradient(90deg, #6b003e 33%, #6b003e 66%, #6b003e)',
                     padding: '1px',

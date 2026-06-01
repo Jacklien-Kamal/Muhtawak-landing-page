@@ -12,6 +12,7 @@
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
     "@tailwindcss/vite": "^4.2.1",
+    "antd": "^6.4.3",
     "firebase": "^12.13.0",
     "framer-motion": "^12.35.2",
     "hls.js": "^1.6.15",
