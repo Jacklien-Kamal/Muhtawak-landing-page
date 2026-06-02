@@ -15,7 +15,7 @@ export default function HeroSection() {
   return (
     <section
       id="parallax"
-      className="relative flex overflow-hidden min-h-[900px] -mt-[118px] z-[1] bg-center bg-cover px-3 md:px-32"
+      className="relative flex overflow-hidden min-h-[1000px] -mt-[118px] z-[1] bg-center bg-cover px-3 md:px-32"
       style={{
         backgroundImage: locale.lang === 'ar'?'url(img/bg/flip-pink-header-bg.png)':'url(img/bg/pink-header-bg.png)',
         backgroundPosition:locale.lang === 'ar'? 'left 0':'right 0',
@@ -117,7 +117,7 @@ export default function HeroSection() {
           </div>
 
           {/* ── Right Column ── */}
-          <div className={`w-[60%] lg:w-[43%] `}>
+          <div className={`w-[60%] lg:w-[38%] `}>
             <img
               src={isRTL?"img/bg/phone-arr.png":"img/bg/phone-en.png"}
               alt="app preview"

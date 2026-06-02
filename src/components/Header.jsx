@@ -107,7 +107,7 @@ const Header = () => {
             </a>
 
             {/* ── Desktop Nav ── */}
-            <nav className={`hidden lg:flex items-center gap-0 ${isRTL ? 'flex-row' : ''}`}>
+            <nav className={`hidden ps-26 lg:flex items-center gap-0 ${isRTL ? 'flex-row' : ''}`}>
               {navLinks.map((link) => (
                 <a
                   key={link.href}
@@ -117,7 +117,7 @@ const Header = () => {
                     'relative block  font-medium text-sm transition-colors duration-300 px-5 py-[34px]',
                     isActive(link.href)
                       ? 'text-[#f88765]'
-                      : 'text-white hover:text-[#f4a0cc]',
+                      : 'text-[#f8d0e5] hover:text-[#f4a0cc]',
                   ].join(' ')}
                 >
                   {link.label}
