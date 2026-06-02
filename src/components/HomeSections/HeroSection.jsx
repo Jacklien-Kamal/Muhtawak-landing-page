@@ -27,7 +27,7 @@ export default function HeroSection() {
       <div className="absolute z-[9]" style={{ top: '70px', left: '48%' }} />
 
       <div className="container mx-auto px-4">
-        <div className="flex md:flex-wrap items-center">
+        <div className="flex  lg:flex-wrap items-center">
 
           {/* ── Left Column ── */}
           <div className="w-full lg:w-1/2">
@@ -117,7 +117,7 @@ export default function HeroSection() {
           </div>
 
           {/* ── Right Column ── */}
-          <div className={`w-[60%] lg:w-[38%] `}>
+          <div className={`hidden md:block w-[60%] lg:w-[38%] `}>
             <img
               src={isRTL?"img/bg/phone-arr.png":"img/bg/phone-en.png"}
               alt="app preview"
