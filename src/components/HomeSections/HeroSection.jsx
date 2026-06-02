@@ -34,10 +34,10 @@ export default function HeroSection() {
             <div className={`relative z-[999] pt-[285px] pb-[5px] ${isRTL ? 'text-right' : 'text-left'}`}>
 
               {/* Role Switcher */}
-              <div className="mb-[30px]">
+              <div className="mb-[30px] ">
                 <div
-                  className="w-80 inline-flex rounded-full p-[5px] gap-1"
-                  style={{ background: '#f0ebf8' }}
+                  className="w-[280px] md:w-80 inline-flex rounded-full md:p-[5px] gap-1 mx-auto"
+                  style={{ background: '#f0ebf8'  }}
                 >
                   {['Creator', 'Agency'].map((r) => (
                     <button
@@ -47,7 +47,7 @@ export default function HeroSection() {
                         'px-10 py-2 rounded-full border-none font-semibold text-sm cursor-pointer transition-all duration-300',
                         role === r
                           ? 'text-white shadow-[3px_4px_15px_rgba(198,58,149,0.35)]'
-                          : 'bg-transparent text-xl text-[#782551]',
+                          : 'bg-transparent md:text-xl text-[#782551]',
                       ].join(' ')}
                       style={
                         role === r
