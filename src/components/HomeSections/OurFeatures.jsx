@@ -13,13 +13,13 @@ const FEATURE_IMAGES = {
     'img/bg/f2.png',
   ],
   Agency: [
-    'https://muhtawak.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FfastDelivery.80cef0ae.jpg&w=640&q=75',
-    'https://muhtawak.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2ForiginalContent.94656b25.jpg&w=640&q=75',
-    'https://muhtawak.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FcompetitiveCosts.386e62d1.jpg&w=640&q=75',
-    'https://muhtawak.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FfastDelivery.80cef0ae.jpg&w=640&q=75',
-    'https://muhtawak.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2ForiginalContent.94656b25.jpg&w=640&q=75',
-    'https://muhtawak.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FcompetitiveCosts.386e62d1.jpg&w=640&q=75',
-    'https://muhtawak.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FcompetitiveCosts.386e62d1.jpg&w=640&q=75',
+   'img/bg/a1.png',
+    'img/bg/a4.png',
+    'img/bg/a2.png',
+    'img/bg/a1.png',
+    'img/bg/a3.png',
+    'img/bg/a2.png',
+    'img/bg/a2.png',
   ],
 };
 
@@ -95,7 +95,7 @@ export default function OurFeatures() {
         backgroundRepeat: 'no-repeat',
       }}
     >
-      <div className="mx-auto px-4 sm:px-8 md:px-16 lg:px-28 xl:px-52">
+      <div className="mx-auto px-2 sm:px-8 md:px-16 lg:px-28 xl:px-32">
 
         {/* ── Section Title ── */}
         <div className="flex justify-center">
@@ -103,17 +103,17 @@ export default function OurFeatures() {
             <h2 className="text-2xl sm:text-3xl md:text-[34px] lg:text-[38px] font-semibold text-primary pb-1 mb-0 leading-tight">
               {t.heading}
             </h2>
-            <p className="text-lg text-gray-700 leading-6 mb-0 mt-1 ">
+            <p className="text-base md:text-lg text-gray-700 leading-6 mb-0 mt-1 ">
               {t[role].subheading}
             </p>
-            <p className="text-md text-[#666666] leading-6 mb-0 mt-3 sm:mt-4">
+            <p className="text-sm md:text-md text-[#666666] leading-6 mb-0 mt-3 sm:mt-4">
               {t[role].description}
             </p>
           </div>
         </div>
 
         {/* ── Carousel Wrapper ── */}
-        <div className="relative">
+        <div className="relative mx-2">
 
           {/* Prev Button */}
           <button
@@ -158,7 +158,7 @@ export default function OurFeatures() {
                     <div
                       onMouseEnter={() => setActiveIndex(index)}
                       onTouchStart={() => setActiveIndex(index)}
-                      className="text-center px-4 sm:px-6 md:px-[30px] py-8 sm:py-10 md:py-[50px] rounded-[10px] cursor-pointer transition-all duration-300 bg-white h-full"
+                      className="text-center px-4 sm:px-6 md:px-[30px] py-0 sm:py-10 md:py-[50px] rounded-[10px] cursor-pointer transition-all duration-300 bg-white h-full"
                     >
                       {/* Image */}
                       <div className="flex justify-center items-center mb-4 sm:mb-5">
@@ -185,12 +185,12 @@ export default function OurFeatures() {
                       </p>
 
                       {/* Icon badge */}
-                      <div className="flex justify-center mb-0 mt-6 sm:mt-8 md:mt-9">
+                      <div className="flex justify-center mb-1 md:mt-6 sm:mt-8 md:mt-9">
                         <span
                           className={[
-                            'w-12 h-12 sm:w-14 sm:h-14 cursor-pointer rounded-full flex items-center justify-center text-base sm:text-lg font-semibold transition-all duration-300',
+                            'w-9 h-9 sm:w-14 sm:h-14 cursor-pointer rounded-full flex items-center justify-center text-base sm:text-lg font-semibold transition-all duration-300',
                             isActive
-                              ? 'text-white bg-[#782551] shadow-[3px_4px_25px_rgba(198,58,149,0.5)]'
+                              ? 'text-white bg-[#782551] '
                               : 'text-[#782551] border-2 border-[#782551] bg-white',
                           ].join(' ')}
                         >

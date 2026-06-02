@@ -92,7 +92,7 @@ const Header = () => {
     <header className="relative z-[999]">
       <div
         className={[
-          'w-full px-3 md:px-52 fixed top-0 left-0 z-[9999] transition-all duration-500',
+          'w-full px-3 md:px-32 fixed top-0 left-0 z-[9999] transition-all duration-500',
           sticky
             ? 'bg-[#782551] text-white shadow-[0_10px_15px_rgba(25,25,25,0.1)]'
             : 'bg-[#782551] lg:bg-transparent text-[#190a32]',

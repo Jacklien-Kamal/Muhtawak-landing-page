@@ -51,7 +51,7 @@ export default function BlogsSection() {
   return (
     <section
       id="blog"
-      className="relative pt-[70px] pb-[70px] md:px-52"
+      className="relative pt-8 pb-8 md:pt-[70px] md:pb-[70px] md:px-32"
       dir={isRTL ? 'rtl' : 'ltr'}
       style={{
         backgroundImage: 'url(img/shape/header-sape8.png)',
@@ -59,16 +59,18 @@ export default function BlogsSection() {
         backgroundRepeat: 'no-repeat',
       }}
     >
-      <div className="mx-auto px-4">
+      <div className="mx-auto px-3 md:px-4">
 
         {/* Section Header */}
         <div className="flex justify-center items-center">
           <div className="w-full">
-            <div className="text-center mb-[50px]">
-              <h2 className="text-[38px] font-semibold text-primary pb-[15px] mb-0 leading-snug text-center">
+            <div className="text-center mb-6 md:mb-[50px]">
+              <h2 className="text-[22px] md:text-[38px] font-semibold text-primary pb-2 md:pb-[15px] mb-0 leading-snug text-center">
                 {heading}
               </h2>
-              <p className="text-sm text-[#666] leading-6">{description}</p>
+              <p className="text-xs md:text-sm text-[#666] leading-5 md:leading-6 px-2 md:px-0">
+                {description}
+              </p>
             </div>
           </div>
         </div>
@@ -95,21 +97,21 @@ export default function BlogsSection() {
             }}
           >
             {posts.map((post, i) => (
-              <div key={i} className="w-full flex-shrink-0 px-2">
+              <div key={i} className="w-full flex-shrink-0 px-1">
                 <BlogCard post={post} index={i} isRTL={isRTL} mobile />
               </div>
             ))}
           </div>
 
           {/* Dot indicators */}
-          <div className="flex justify-center items-center gap-[10px] mt-5 mb-2">
+          <div className="flex justify-center items-center gap-[8px] mt-3 mb-1">
             {posts.map((_, i) => (
               <button
                 key={i}
                 onClick={() => { goTo(i); startAuto() }}
-                className="h-[5px] rounded-full border-none cursor-pointer p-0 transition-all duration-300"
+                className="h-[4px] rounded-full border-none cursor-pointer p-0 transition-all duration-300"
                 style={{
-                  width: i === current ? '50px' : '20px',
+                  width: i === current ? '36px' : '14px',
                   background: i === current ? '#782551' : 'rgba(120,37,81,0.3)',
                 }}
               />
@@ -125,24 +127,28 @@ export default function BlogsSection() {
 function BlogCard({ post, index, isRTL, mobile }) {
   return (
     <div className={`${mobile ? 'w-full' : 'lg:w-1/3 w-full px-4'}`}>
-      <div className="mb-[30px] bg-white overflow-hidden rounded-[10px] shadow-[3px_4px_25px_rgba(0,0,0,0.1)] transition-shadow duration-300 hover:shadow-[0px_10px_80px_rgba(193,193,193,0.41)]">
+      <div className="mb-4 md:mb-[30px] bg-white overflow-hidden rounded-[8px] md:rounded-[10px] shadow-[3px_4px_25px_rgba(0,0,0,0.1)] transition-shadow duration-300 hover:shadow-[0px_10px_80px_rgba(193,193,193,0.41)]">
 
         {/* Thumbnail */}
         <div className="overflow-hidden">
           <Link to={`/blog/${index}`}>
-            <img src={post.img} alt="img" className="w-full h-48 object-cover transition-all duration-300" />
+            <img
+              src={post.img}
+              alt="img"
+              className="w-full h-32 md:h-48 object-cover transition-all duration-300"
+            />
           </Link>
         </div>
 
         {/* Content */}
-        <div className={`bg-white px-[30px] pt-[40px] pb-[30px] relative z-10 ${isRTL ? 'text-right' : ''}`}>
+        <div className={`bg-white px-4 md:px-[30px] pt-5 md:pt-[40px] pb-4 md:pb-[30px] relative z-10 ${isRTL ? 'text-right' : ''}`}>
 
           {/* Meta */}
-          <div className="mb-[40px]">
+          <div className="mb-3 md:mb-[40px]">
             <ul className={`flex gap-2 ${isRTL ? 'justify-end' : ''}`}>
               <li>
                 <span
-                  className="text-xs text-white uppercase shadow-[3px_4px_15px_rgba(210,45,74,0.3)] rounded-[13px] px-5 py-[5px]"
+                  className="text-[10px] md:text-xs text-white uppercase shadow-[3px_4px_15px_rgba(210,45,74,0.3)] rounded-[10px] md:rounded-[13px] px-3 md:px-5 py-[3px] md:py-[5px]"
                   style={{ background: 'linear-gradient(90deg,#6b003e,#6b003e)' }}
                 >
                   {post.date}
@@ -152,28 +158,30 @@ function BlogCard({ post, index, isRTL, mobile }) {
           </div>
 
           {/* Title */}
-          <h4 className="text-[18px] font-semibold text-[#190a32] mb-5 h-12 leading-[1.3]">
+          <h4 className="text-[14px] md:text-[18px] font-semibold text-[#190a32] mb-2 md:mb-5 leading-[1.3] line-clamp-2 md:h-12">
             <Link to={`/blog/${index}`} className="hover:text-[#782551] transition-colors duration-300">
               {post.title}
             </Link>
           </h4>
 
           {/* Excerpt */}
-          <p className="text-sm text-[#666] leading-6 h-20 mb-[35px]">{post.excerpt}</p>
+          <p className="text-[11px] md:text-sm text-[#666] leading-[1.5] md:leading-6 line-clamp-3 md:h-20 mb-3 md:mb-[35px]">
+            {post.excerpt}
+          </p>
 
           {/* Author */}
-          <div className="border-t border-[#d7d7d7] pt-[30px]">
-            <ul className={`flex items-center gap-3 ${isRTL ? 'flex-row' : ''}`}>
+          <div className="border-t border-[#d7d7d7] pt-3 md:pt-[30px]">
+            <ul className={`flex items-center gap-2 md:gap-3 ${isRTL ? 'flex-row' : ''}`}>
               <li>
                 <img
                   src={post.authorImg || 'img/blog/admin-img.png'}
                   alt="author"
-                  className="rounded-full border-2 border-white shadow-[3px_4px_12px_rgba(0,0,0,0.15)] bg-[#D7D7D7] -mt-[14px]"
+                  className="w-8 h-8 md:w-auto md:h-auto rounded-full border-2 border-white shadow-[3px_4px_12px_rgba(0,0,0,0.15)] bg-[#D7D7D7]"
                 />
               </li>
-              <li className="text-sm text-[#666]">
-                <h6 className="text-[#190a32] font-semibold text-base">{post.author}</h6>
-                {post.authorRole}
+              <li className="text-[10px] md:text-sm text-[#666]">
+                <h6 className="text-[#190a32] font-semibold text-xs md:text-base leading-tight">{post.author}</h6>
+                <span className="text-[10px] md:text-sm">{post.authorRole}</span>
               </li>
             </ul>
           </div>

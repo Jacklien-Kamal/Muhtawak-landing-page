@@ -88,7 +88,7 @@ export default function Reviews() {
   return (
     <section
       id="reviews"
-      className="relative pt-14 sm:pt-16 md:pt-20 lg:pt-[100px] pb-10 sm:pb-12 md:pb-[70px] px-4 sm:px-8 md:px-16 lg:px-28 xl:px-52"
+      className="relative pt-14 sm:pt-16 md:pt-20 lg:pt-[100px] pb-10 sm:pb-12 md:pb-[70px] px-4 sm:px-8 md:px-16 lg:px-28 xl:px-32"
       dir={isRTL ? 'rtl' : 'ltr'}
     >
       <div
@@ -106,9 +106,9 @@ export default function Reviews() {
         <div className="flex flex-wrap">
 
           {/* ── Section Title ── */}
-          <div className="w-full lg:w-1/2 mb-6 sm:mb-8 md:mb-10">
+          <div className="w-full lg:w-1/2 mb-0 sm:mb-8 md:mb-10">
             <div className={isRTL ? 'text-right' : ''}>
-              <h2 className="text-2xl sm:text-3xl md:text-[34px] lg:text-[38px] font-semibold text-primary pb-3 md:pb-[15px] mb-0 leading-tight">
+              <h2 className={`${isRTL ? 'text-center md:text-right' : 'text-center md:text-left'} text-xl sm:text-3xl md:text-[34px] lg:text-[38px] font-semibold text-primary pb-3 md:pb-[15px] mb-0 leading-tight`}>
                 {tag}
               </h2>
             </div>
@@ -137,7 +137,7 @@ export default function Reviews() {
 
                   return (
                     <div key={`${role}-${currentPage}-${index}`}>
-                      <div className="relative bg-white rounded-[10px] shadow-[3px_4px_15px_rgba(0,0,0,0.1)] mx-1 sm:mx-[10px] p-4 sm:p-5 mt-4 sm:mt-6 md:mt-[30px] mb-4 sm:mb-6 md:mb-[30px]">
+                      <div className="relative bg-white rounded-[10px] shadow-[3px_4px_15px_rgba(0,0,0,0.1)] mx-3 sm:mx-[10px] p-4 sm:p-5 mt-4 sm:mt-6 md:mt-[30px] mb-4 sm:mb-6 md:mb-[30px]">
 
                         {/* Quote icon */}
                         <div className={`absolute top-3 ${isRTL ? 'left-4' : 'right-4'}`}>
@@ -156,7 +156,7 @@ export default function Reviews() {
                         </div>
 
                         {/* Review text */}
-                        <p className={`text-[13px] sm:text-[14px] text-[#666666] leading-6 mb-0 h-20 ${isRTL ? 'text-right' : 'text-left'}`}>
+                        <p className={`text-xs sm:text-[14px] text-[#666666] leading-6 mb-0 h-20 ${isRTL ? 'text-right' : 'text-left'}`}>
                           {testimonial.text}
                         </p>
 

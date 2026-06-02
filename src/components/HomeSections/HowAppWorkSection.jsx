@@ -18,7 +18,7 @@ export default function HowAppWorkSection() {
   return (
     <section
 id="how-it-works"
-      className="relative pt-10 sm:pt-12 md:pt-16 lg:pt-[70px] pb-12 sm:pb-16 md:pb-20 lg:pb-[100px] px-6 sm:px-8 md:px-16 lg:px-28 xl:px-56"
+      className="relative pt-10 sm:pt-12 md:pt-16 lg:pt-[70px] pb-12 sm:pb-16 md:pb-20 lg:pb-[100px] px-6 sm:px-8 md:px-16 lg:px-28 xl:px-32"
       dir={isRTL ? 'rtl' : 'ltr'}
       style={{
         backgroundImage: 'url(img/shape/header-sape4.png)',
@@ -42,7 +42,7 @@ id="how-it-works"
               )}
 
               {/* Heading */}
-              <h2 className="text-2xl sm:text-3xl md:text-[34px] lg:text-3xl font-semibold  leading-tight mb-0">
+              <h2 className="text-xl sm:text-3xl md:text-[34px] lg:text-3xl font-semibold  leading-tight mb-0">
                 {heading}
               </h2>
 

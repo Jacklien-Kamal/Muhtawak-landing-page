@@ -115,16 +115,16 @@ export default function VideoSection() {
               {/* ── Right: text content (shared, responsive tweaks only) ── */}
               <div className="lg:w-[70%] w-full">
                 <div className={`${isRTL ? 'pr-0 lg:pr-12 text-right' : 'pl-0 lg:pl-12'}`}>
-                  <h2 className="text-2xl sm:text-3xl lg:text-3xl font-bold text-primary leading-tight mb-5 lg:w-[80%]">
+                  <h2 className="text-xl sm:text-3xl lg:text-3xl font-bold text-primary leading-tight  lg:w-[80%]">
                     {heading}
                   </h2>
-                  <p className="text-lg leading-7 mb-6">
+                  <p className="md:text-lg leading-7 my-3 md:my-6">
                     {description}
                   </p>
                   <ul className="list-none m-0 p-0 space-y-3">
                     {points.map((point, i) => (
                       <li key={i} className={`flex items-start text-md text-gray-600 ${isRTL ? 'flex-row' : ''}`}>
-                        <span className={`inline-flex items-center justify-center w-6 h-6 rounded-full border-2 border-[#d20b52] text-[#d20b52] text-xs shrink-0 mt-0.5 ${isRTL ? 'ml-3' : 'mr-3'}`}>
+                        <span className={`inline-flex items-center justify-center w-4 h-4 md:w-6 md:h-6 rounded-full border-2 border-[#d20b52] text-[#d20b52] text-[8px] md:text-xs shrink-0 mt-0.5 ${isRTL ? 'ml-3' : 'mr-3'}`}>
                           ✓
                         </span>
                         {point}

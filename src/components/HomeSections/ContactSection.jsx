@@ -15,7 +15,7 @@ export default function ContactSection() {
   const [form, setForm] = useState({
     name: '', activity: '', goal: '', platform: '', phone: '',
   })
-  const [status, setStatus] = useState('idle') // idle | sending | success | error
+  const [status, setStatus] = useState('idle')
 
   const handleChange = (e) =>
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }))
@@ -23,7 +23,6 @@ export default function ContactSection() {
   const handleSubmit = async (e) => {
     e.preventDefault()
     setStatus('sending')
-
     try {
       await emailjs.send(
         EMAILJS_SERVICE_ID,
@@ -34,7 +33,7 @@ export default function ContactSection() {
           goal:     form.goal,
           platform: form.platform,
           phone:    form.phone,
-          to_email: 'info@muhtawak.app',   // يوصل على الإيميل ده
+          to_email: 'info@muhtawak.app',
         },
         EMAILJS_PUBLIC_KEY
       )
@@ -47,12 +46,12 @@ export default function ContactSection() {
   }
 
   const inputClass =
-    'w-full h-[80px] px-[40px] bg-[#f4f4fe] border-0 text-[15px] text-black rounded-[10px] shadow-[3px_4px_15px_rgba(0,0,0,0.1)] placeholder-[#8990b0] focus:outline-none focus:ring-2 focus:ring-[#782551] transition-all duration-300'
+    'w-full h-[42px] md:h-[80px] px-4 md:px-[40px] bg-[#f4f4fe] border border-primary text-[13px] md:text-[15px] text-black rounded-[8px] md:rounded-[10px]  placeholder-[#8990b0] focus:outline-none focus:ring-2 focus:ring-[#782551] transition-all duration-300'
 
   return (
     <section
       id="contact"
-      className="relative pt-[50px] pb-[100px] overflow-hidden md:px-52"
+      className="relative pt-8 md:pt-[50px] pb-12 md:pb-[100px] overflow-hidden px-4 md:px-56"
       dir={isRTL ? 'rtl' : 'ltr'}
       style={{
         backgroundImage: 'url(img/shape/header-sape8.png)',
@@ -61,11 +60,11 @@ export default function ContactSection() {
         backgroundRepeat: 'no-repeat',
       }}
     >
-      <div className="container mx-auto px-4">
-        <div className="flex flex-wrap items-center -mx-4">
+      <div className="container mx-auto px-0 md:px-4">
+        <div className="flex flex-wrap items-center md:-mx-4">
 
-          {/* Illustration */}
-          <div className="w-full lg:w-1/2 px-4 mb-10 lg:mb-0">
+          {/* Illustration — hidden on mobile to save space */}
+          <div className="hidden lg:block w-full lg:w-1/2 px-4 mb-10 lg:mb-0">
             <div className={`${isRTL ? 'mr-0 ml-[-160px]' : 'ml-[-160px] mr-0'} max-lg:ml-0 max-lg:mr-0`}>
               <img
                 src={isRTL ? 'img/bg/image2.png' : 'img/bg/image.webp'}
@@ -76,15 +75,22 @@ export default function ContactSection() {
           </div>
 
           {/* Form */}
-          <div className="w-full lg:w-1/2 px-4">
-            <div className={`mb-[40px] ${isRTL ? 'text-right' : ''}`}>
-              <h2 className="text-[38px] font-semibold text-[#190a32] leading-snug mb-3">
+          <div className="w-full lg:w-1/2 px-0 md:px-4">
+            <div className={`flex items-center  gap-4 md:gap-0 md:justify-start justify-center mb-5 md:mb-[40px] ${isRTL ? 'text-right' : ''}`}>
+              <h2 className="text-[22px] md:text-[38px] font-semibold text-[#190a32] leading-snug mb-2 md:mb-3">
                 {heading}
               </h2>
+                <div className={`md:hidden ${isRTL ? 'mr-0 ml-[-160px]' : 'ml-[-160px] mr-0'} max-lg:ml-0 max-lg:mr-0`}>
+              <img
+                src={isRTL ? 'img/bg/image2.png' : 'img/bg/image.webp'}
+                alt="contact illustration"
+                className="w-full max-w-[50px] mx-auto lg:mx-0"
+              />
+            </div>
             </div>
 
             <form className="w-full" onSubmit={handleSubmit}>
-              <div className="flex flex-wrap -mx-3">
+              <div className="flex flex-wrap md:-mx-3">
 
                 {[
                   { name: 'name',     placeholder: fields.name,     type: 'text'   },
@@ -93,7 +99,7 @@ export default function ContactSection() {
                   { name: 'platform', placeholder: fields.platform, type: 'text'   },
                   { name: 'phone',    placeholder: fields.phone,    type: 'number' },
                 ].map(({ name, placeholder, type }) => (
-                  <div key={name} className="w-full px-3 mb-5">
+                  <div key={name} className="w-full md:px-3 mb-3 md:mb-5">
                     <input
                       type={type}
                       name={name}
@@ -106,28 +112,28 @@ export default function ContactSection() {
                   </div>
                 ))}
 
-                {/* Feedback messages */}
+                {/* Feedback */}
                 {status === 'success' && (
-                  <div className="w-full px-3 mb-4">
-                    <p className="text-green-600 font-medium">
+                  <div className="w-full md:px-3 mb-3 md:mb-4">
+                    <p className="text-green-600 text-sm font-medium">
                       {isRTL ? '✅ تم الإرسال بنجاح!' : '✅ Sent successfully!'}
                     </p>
                   </div>
                 )}
                 {status === 'error' && (
-                  <div className="w-full px-3 mb-4">
-                    <p className="text-red-500 font-medium">
+                  <div className="w-full md:px-3 mb-3 md:mb-4">
+                    <p className="text-red-500 text-sm font-medium">
                       {isRTL ? '❌ حدث خطأ، حاول مرة أخرى.' : '❌ Something went wrong, try again.'}
                     </p>
                   </div>
                 )}
 
                 {/* Submit */}
-                <div className={`w-full px-3 ${isRTL ? 'text-right' : ''}`}>
+                <div className={`w-full md:px-3 ${isRTL ? 'text-right' : ''}`}>
                   <button
                     type="submit"
                     disabled={status === 'sending'}
-                    className="inline-block px-[35px] py-[15px] rounded-[50px] text-white text-[16px] font-medium leading-none border-none cursor-pointer transition-all duration-300 hover:opacity-90 shadow-[3px_4px_25px_rgba(198,58,149,0.5)] disabled:opacity-60"
+                    className="inline-block px-6 py-[11px] md:px-[35px] md:py-[15px] rounded-[50px] text-white text-[13px] md:text-[16px] font-medium leading-none border-none cursor-pointer transition-all duration-300 hover:opacity-90 shadow-[3px_4px_25px_rgba(198,58,149,0.5)] disabled:opacity-60 w-full"
                     style={{ background: 'linear-gradient(90deg, #6b003e, #6b003e)' }}
                   >
                     {status === 'sending'

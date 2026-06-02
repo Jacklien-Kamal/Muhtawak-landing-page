@@ -73,7 +73,7 @@ export const en = {
     steps: [
       {
         num: "01",
-        title: "Download the App",
+        title: "Download App",
         description: "Start by downloading the Muhtawak app and register your account within minutes.",
       },
       {
@@ -281,7 +281,7 @@ export const en = {
     description: "Real content… that sells more",
     subDes:
       "With Muhtawak you can order UGC videos made exclusively for you by creators who understand your audience — no hassle, transparent pricing",
-    cta: "Download the App Now",
+    cta: "Download App Now",
   },
   features: {
     sectionTag: "For Businesses",
@@ -344,7 +344,7 @@ export const en = {
     steps: [
       {
         num: "01",
-        title: "Download the App",
+        title: "Download App",
         description: "Download the Muhtawak app and start your journey effortlessly.",
       },
       {

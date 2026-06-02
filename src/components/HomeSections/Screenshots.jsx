@@ -104,17 +104,17 @@ export default function Screenshots() {
 
         {/* ── Section Title ── */}
         <div className="flex justify-center">
-          <div className="w-full lg:w-8/12 text-center px-4 sm:px-6 md:px-10 mb-8 sm:mb-10 md:mb-[50px]">
+          <div className="w-full lg:w-8/12 text-center px-4 sm:px-6 md:px-10 mb-0 sm:mb-10 md:mb-[50px]">
             {content?.screenshots?.label && (
               <span className="text-sm sm:text-base font-medium uppercase text-[#782551] tracking-[2px] block mb-3 sm:mb-5">
                 {content.screenshots.label}
               </span>
             )}
-            <h2 className="text-2xl sm:text-3xl md:text-[34px] lg:text-[38px] font-semibold text-primary pb-3 md:pb-[15px] mb-0 leading-tight">
+            <h2 className="text-2xl sm:text-3xl md:text-[34px] lg:text-[38px] font-semibold text-primary pb-0 md:pb-[15px] mb-0 leading-tight">
               {content?.screenshots?.heading
                 ?? (locale.lang === 'ar' ? 'لقطات شاشة التطبيق' : 'Our App Screenshots')}
             </h2>
-            <p className="text-lg text-[#666666] leading-6 mb-0 mt-3 sm:mt-4">
+            <p className="text-sm md:text-lg text-[#666666] leading-6 mb-0 mt-3 sm:mt-4">
               {content?.screenshots?.subheading
                 ?? (locale.lang === 'ar'
                   ? 'اكتشف واجهة التطبيق السهلة والجذابة من خلال لقطات الشاشة.'
@@ -172,7 +172,7 @@ export default function Screenshots() {
         </div>
 
         {/* ── Pagination dots ── */}
-        <div className="flex justify-center gap-2 mt-6 sm:mt-8">
+        <div className="flex justify-center gap-2 mt-0 sm:mt-8">
           {slides.map((_, i) => (
             <button
               key={i}
