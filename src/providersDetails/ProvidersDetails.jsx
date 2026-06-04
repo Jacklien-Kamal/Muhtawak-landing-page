@@ -12,6 +12,7 @@ const providers = [
     status: 'متاح',
     link: 'https://example.com',
   },
+  
   {
     id: 2,
     initials: 'مز',
