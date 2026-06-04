@@ -1,6 +1,6 @@
 import React from 'react'
 // import { ExternalLinkIcon } from 'lucide-react'
-import { useI18n } from '../../hooks/i18nContext'
+import { useI18n } from '../hooks/i18nContext'
 
 const providers = [
   {

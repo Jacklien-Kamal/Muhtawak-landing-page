@@ -5,7 +5,7 @@ import BlogDetails from './BlogDetails/BlogDetails';
 import { I18nProvider } from './hooks/i18nContext';
 import { RoleProvider }  from './hooks/roleContext';
 import Layout from './components/Layout/Layout';
-import ProvidersDetails from './assets/providersDetails/providersDetails';
+import ProvidersDetails from './providersDetails/providersDetails';
 
 const router = createBrowserRouter([
   {
