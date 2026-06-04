@@ -603,4 +603,20 @@ export const en = {
     button: "Send Message",
     creatorsWork: "creators Works",
   },
+
+  banners: {
+  recommendedProviders: {
+    title: "Recommended Service Providers",
+    description: "Browse the best verified service providers",
+    button: "View Providers",
+    Featured:"Featured"
+  }
+},
+
+bannersDetails:{
+    recommendedProviders:{
+      title:" Recommended service providers",
+      des:"Here all recommended providers will appear"
+    }
+  }
 };

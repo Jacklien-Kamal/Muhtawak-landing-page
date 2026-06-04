@@ -52,7 +52,7 @@ export default function Footer() {
               </div>
 
               <p className="text-white text-sm leading-7 w-full sm:w-[80%] mb-5 sm:mb-6">
-                {about}
+                {about} 
               </p>
 
               {/* Store Buttons */}

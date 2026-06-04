@@ -14,6 +14,7 @@ import ContactSection from './src/components/HomeSections/ContactSection';
 import CreatorShowcase from './src/components/HomeSections/PrevWorks';
 import { useRole } from './src/hooks/roleContext';
 import AgencyHowAppWorkSection from './src/components/HomeSections/AgencyHowAppWork';
+import Banar from './src/components/HomeSections/Banar';
 
 /* ─── Reusable animated wrapper ─── */
 // استبدل FadeInSection بالكود ده
@@ -113,11 +114,15 @@ const Home = () => {
       <FadeInSection direction="up">
         <BlogsSection />
       </FadeInSection>
+      <Banar/>
+
       {/* Download / Choose — fade from left */}
       <FadeInSection direction="left">
         <DownloadApp />
       </FadeInSection>
+
       {/* Contact — fade up */}
+
       {role === 'Agency' && (
 
       <FadeInSection direction="up">
