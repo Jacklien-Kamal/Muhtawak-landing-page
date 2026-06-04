@@ -24,6 +24,8 @@ function Layout() {
 
                     <FaWhatsapp className="text-2xl md:text-4xl text-white " />
             </a>
+
+            
             </Tooltip>
             <Footer />
         </div>
