@@ -5,16 +5,16 @@ import BlogDetails from './BlogDetails/BlogDetails';
 import { I18nProvider } from './hooks/i18nContext';
 import { RoleProvider }  from './hooks/roleContext';
 import Layout from './components/Layout/Layout';
-import ProvidersDetails from './providersDetails/providersDetails';
+import ProvidersDetails from './ProvidersDetails/ProvidersDetailss';
 
 const router = createBrowserRouter([
   {
     element: <Layout />,
     children: [
       { path: '/',         element: <Home /> },
+      {path: "providersDetails" , element:<ProvidersDetails/>}
       { path: '/blog/:id', element: <BlogDetails /> },
       { path: '*',         element: <Home /> },
-      {path: "providersDetails" , element:<ProvidersDetails/>}
     ],
   },
 ]);
