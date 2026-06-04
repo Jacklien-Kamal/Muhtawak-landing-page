@@ -42,7 +42,7 @@ useEffect(()=>{
   return (
     <div
       dir={isRTL ? 'rtl' : 'ltr'}
-      className="flex flex-col items-center px-6 md:px-12 pb-20 pt-40 bg-primary"
+      className="flex flex-col items-center px-6 md:px-12 pb-20 pt-44 bg-primary mb-20"
     >
       {/* Header */}
       <div className="flex items-center gap-3 mb-3">
