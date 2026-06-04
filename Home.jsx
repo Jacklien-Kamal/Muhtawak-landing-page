@@ -84,7 +84,6 @@ const Home = () => {
         <VideoSection />
       </FadeInSection>
 
-
       {/* Features — fade from right */}
       <FadeInSection direction="right">
         <OurFeatures />
@@ -92,6 +91,9 @@ const Home = () => {
 
 
 
+<FadeInSection direction="up">
+        <Banar />
+      </FadeInSection>
 
       {/* Pricing — only Agency, fade up */}
       {role === 'Agency' && (
@@ -114,7 +116,6 @@ const Home = () => {
       <FadeInSection direction="up">
         <BlogsSection />
       </FadeInSection>
-      <Banar/>
 
       {/* Download / Choose — fade from left */}
       <FadeInSection direction="left">

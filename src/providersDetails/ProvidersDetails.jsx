@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 // import { ExternalLinkIcon } from 'lucide-react'
 import { useI18n } from '../hooks/i18nContext'
 
@@ -35,20 +35,22 @@ const providers = [
 
 export default function ProvidersDetails() {
   const { locale, isRTL } = useI18n()
-
+useEffect(()=>{
+  window.scrollTo(0,0)
+},[])
   return (
     <div
       dir={isRTL ? 'rtl' : 'ltr'}
-      className="flex flex-col items-center px-6 md:px-12 py-10 mt-10"
+      className="flex flex-col items-center px-6 md:px-12 pb-20 pt-40 bg-primary"
     >
       {/* Header */}
       <div className="flex items-center gap-3 mb-3">
-        <h1 className="text-3xl md:text-4xl font-bold text-[#782551] tracking-tight">
+        <h1 className="text-3xl md:text-4xl font-bold text-white tracking-tight">
           {locale.bannersDetails.recommendedProviders.title}
         </h1>
       </div>
 
-      <p className="text-gray-500 text-base max-w-xl text-center leading-relaxed mb-10">
+      <p className="text-gray-200 text-base max-w-xl text-center leading-relaxed mb-10">
         {locale.bannersDetails.recommendedProviders.des}
       </p>
 
